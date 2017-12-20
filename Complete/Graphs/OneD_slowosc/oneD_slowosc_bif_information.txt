@@ -1,0 +1,10 @@
+The actual tipping: -0.046500
+ Estimate: -0.050036
+The slow tip: -0.074893
+The osc tip: 0.115901
+Absolute error: 0.003536
+Tipping Criteria: >0.500000
+epsilon=0.050000
+lambda=0.800000
+A=1.000000
+Omega=10.985605
