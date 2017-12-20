@@ -1,7 +1,7 @@
 % Create an epsilon comparison plot an lambda comparison plot
 
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\Complete\Functions')
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 
 %Hyperparameter
 criteria=.2;
@@ -58,6 +58,9 @@ str = {['\epsilon= ' num2str(eps)],...
    ['A= ' num2str(A)], ['Tip. Crit > ' num2str(criteria)]};
 annotation('textbox', pos, 'String', str, 'FitBoxToText', 'on');
 
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
+print('-f1','oneD_slowosc_lambdacomp','-dpdf')
+
 % This will compare epsilon over a single choice in lambda
 n=20;
 
@@ -109,4 +112,7 @@ pos = [.6 .2 .5 .5];
 str = {['\lambda= ' num2str(lambda)],...
    ['A= ' num2str(A)], ['Tip. Crit > ' num2str(criteria)]};
 annotation('textbox', pos, 'String', str, 'FitBoxToText', 'on');
+
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
+print('-f2','oneD_slowosc_epscomp','-dpdf')
 

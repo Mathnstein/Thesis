@@ -1,11 +1,11 @@
 %Full analysis of one-dimensional slow+osc
 
 %Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\Complete\Functions')
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 
 %Initial values and set up
 eps = .05;
-lambda = 2;
+lambda = .8;
 Omega = eps^(-lambda);
 A = 1;
 
@@ -149,6 +149,9 @@ plot(truetipvec, yvec, 'k')
 xlabel('\mu'); ylabel('x')
 title('')
 
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
+print('-f1','oneD_slowosc_bif','-dpdf')
+
 %Print a report of frequency and tipping comparison values
 fprintf('The actual tipping: %f\n Estimate: %f\n', truetip, region2boundary)
 fprintf('The slow tip: %f\n', slowtip)
@@ -156,49 +159,3 @@ fprintf('The osc tip: %f\n', muosc)
 fprintf('Absolute error: %f\n', abserror)
 fprintf('Tipping Criteria: >%f\n', criteria)
 
-
-% %(2) Comparison plot
-% 
-% %Establish the range of episilon values
-% low=.01;
-% up=.1;
-% fprintf('Lower Omega=%f, Upper Omega=%f\n',low^(-lambda),up^(-lambda))
-% epsvec=linspace(low,up,40);
-% tipvec=zeros(1,length(epsvec));
-% truetip=zeros(1,length(epsvec));
-% 
-% %For loop to track the tipping for each epsilon
-% for i=1:length(epsvec)
-%     eps=epsvec(i);
-%     A=eps*(2.33811)*Omega*pi/4+1;
-%     Omega=eps^(-lambda);
-%     mudel=eps*(-2.33811);
-%     muosc=4*abs(A)/(pi*Omega);
-%     
-%     h=min(.01,2*pi/(10*Omega));
-%     start=1.5;stop=-1;
-%     time=abs(stop-start)/eps;
-%     muInit=start;
-%     yInit=1-sqrt(1+muInit);
-% 
-%     yDE=@(t,y,mu)(-mu+2*abs(y)-y*abs(y)+A*sin(Omega*t));
-%     muDE=@(t,y,mu)(-eps);
-% 
-%     %Numerical Solution
-%     [~,y,mu]=RK2sys(yDE,muDE,yInit,muInit,0,time,h);
-% 
-%     tipvec(i)=eps^(-1/3)*(pi^2*muosc/8)^(1/3)*(mudel+muosc);
-%     truetip(i)=mu(find(y<2*eps,1,'last')); 
-% end
-%  
-% figure(2)
-% plot(epsvec,tipvec,'k','linewidth',2);
-% hold on
-% plot(epsvec,truetip,'r*');
-% xlabel('\epsilon');ylabel('\mu-\mu_{ns}')
-% dim = [0.2 0.5 0.3 0.3];
-% str = {
-%   ['\lambda=' num2str(lambda)],['\epsilon\in [' num2str(low) ', ' num2str(up) ']'],...
-%   ['\Omega\in [' num2str(low^(-lambda)) ', ' num2str(up^(-lambda)) ']']};
-% annotation('textbox',dim,'String',str,'FitBoxToText','on');
-% 
