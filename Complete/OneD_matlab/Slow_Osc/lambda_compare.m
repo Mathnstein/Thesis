@@ -50,16 +50,16 @@ figure(1)
 plot(lambdavec, truetipvec, 'r*')
 hold on
 plot(lambdavec, estimatedtipvec, 'k')
-plot(lambdavec, slowtipvec, 'b')
-xlabel('\lambda'); ylabel('\mu')
-
-pos = [.6 .2 .5 .5];
-str = {['\epsilon= ' num2str(eps)],...
-   ['A= ' num2str(A)], ['Tip. Crit > ' num2str(criteria)]};
-annotation('textbox', pos, 'String', str, 'FitBoxToText', 'on');
+plot(lambdavec, slowtipvec, 'b--')
+xlabel('\lambda'); ylabel('\mu');
 
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-print('-f1','oneD_slowosc_lambdacomp','-dpdf')
+fileID = fopen('oneD_slowosc_lambdacomp_information.txt','w');
+fprintf(fileID,'epsilon=%f\n',lambda);
+fprintf(fileID,'A=%f\n',A);
+fprintf(fileID,'tipping criteria=%f\n',criteria);
+fclose(fileID);
+print('-f1','oneD_slowosc_lambdacomp','-djpeg')
 
 % This will compare epsilon over a single choice in lambda
 n=20;
@@ -105,14 +105,14 @@ figure(2)
 plot(epsvec, truetipvec, 'r*')
 hold on
 plot(epsvec, estimatedtipvec, 'k')
-plot(epsvec, slowtipvec, 'b')
+plot(epsvec, slowtipvec, 'b--')
 xlabel('\epsilon'); ylabel('\mu')
 
-pos = [.6 .2 .5 .5];
-str = {['\lambda= ' num2str(lambda)],...
-   ['A= ' num2str(A)], ['Tip. Crit > ' num2str(criteria)]};
-annotation('textbox', pos, 'String', str, 'FitBoxToText', 'on');
-
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-print('-f2','oneD_slowosc_epscomp','-dpdf')
+fileID = fopen('oneD_slowosc_epscomp_information.txt','w');
+fprintf(fileID,'lambda=%f\n',lambda);
+fprintf(fileID,'A=%f\n',A);
+fprintf(fileID,'tipping criteria=%f\n',criteria);
+fclose(fileID);
+print('-f2','oneD_slowosc_epscomp','-djpeg')
 

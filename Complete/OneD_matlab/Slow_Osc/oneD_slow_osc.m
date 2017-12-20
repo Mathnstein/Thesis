@@ -140,7 +140,7 @@ h3 = ezplot(z, [-1, 1.5, 1, 2.5]);
 set(h3, 'color', 'r', 'linewidth', 2)
 
 %plots the numerical solution and the region dividers
-plot(mu, y, 'k--')
+plot(mu, y, 'k--', 'linewidth', 1.2)
 plot(region1x, yvec, 'g')
 plot(region2x, yvec, 'b')
 plot(truetipvec, yvec, 'k')
@@ -150,12 +150,18 @@ xlabel('\mu'); ylabel('x')
 title('')
 
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-print('-f1','oneD_slowosc_bif','-dpdf')
+print('-f1','oneD_slowosc_bif','-djpeg')
 
 %Print a report of frequency and tipping comparison values
-fprintf('The actual tipping: %f\n Estimate: %f\n', truetip, region2boundary)
-fprintf('The slow tip: %f\n', slowtip)
-fprintf('The osc tip: %f\n', muosc)
-fprintf('Absolute error: %f\n', abserror)
-fprintf('Tipping Criteria: >%f\n', criteria)
+fileID = fopen('oneD_slowosc_bif_information.txt','w');
+fprintf(fileID,'The actual tipping: %f\n Estimate: %f\n', truetip, region2boundary);
+fprintf(fileID,'The slow tip: %f\n', slowtip);
+fprintf(fileID,'The osc tip: %f\n', muosc);
+fprintf(fileID,'Absolute error: %f\n', abserror);
+fprintf(fileID,'Tipping Criteria: >%f\n', criteria);
+fprintf(fileID,'epsilon=%f\n',eps);
+fprintf(fileID,'lambda=%f\n',lambda);
+fprintf(fileID,'A=%f\n',A);
+fprintf(fileID,'Omega=%f',Omega);
+fclose(fileID);
 

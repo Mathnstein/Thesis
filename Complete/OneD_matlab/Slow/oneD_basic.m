@@ -1,7 +1,7 @@
 %Bifurcation diagram for slow pass w/o osc
 
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\Complete\Functions')
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 
 %Initial values and set up
 h=.01;
@@ -45,6 +45,15 @@ plot(mu,y,'k--','linewidth',2)
 xlabel('\mu');ylabel('x')
 title('')
 %legend('Ramped Solution','Equilibrium')
+
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_Basic')
+print('-f1','oneD_bif_diagram','-djpeg');
+
+fileID = fopen('oneD_bif_diagram_information.txt','w');
+fprintf(fileID,'tipping actual =%f\n',tipactual);
+fprintf(fileID,'tipping estimate =%f\n',tipdelayed);
+fprintf(fileID,'epsilon=%f\n',eps);
+fclose(fileID);
 
 %Comparison plot
 epsvec=linspace(.001,.1,20);
