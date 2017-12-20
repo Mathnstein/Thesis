@@ -1,0 +1,3 @@
+tipping actual =-0.017500
+tipping estimate =-0.023026
+epsilon=0.010000
