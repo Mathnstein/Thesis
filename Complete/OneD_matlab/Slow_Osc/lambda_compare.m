@@ -47,7 +47,7 @@ end
 
 %Check to see minimum lambda holds
 minlambda = 1+3/2*log(2.33811*(pi/2)^(4/3)/(6*A^(2/3)))/log(eps);
-miny = min(truetipvec);
+miny = min(truetipvec)-eps;
 maxy = max(truetipvec);
 yvec = linspace(miny,maxy,50);
 xvec = minlambda*ones(1,50);
