@@ -150,10 +150,10 @@ xlabel('\mu'); ylabel('x')
 title('')
 
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-print('-f1','oneD_slowosc_bif','-djpeg')
+print('-f1','slowosc_bif','-djpeg')
 
 %Print a report of frequency and tipping comparison values
-fileID = fopen('oneD_slowosc_bif_information.txt','w');
+fileID = fopen('slowosc_bif_information.txt','w');
 fprintf(fileID,'The actual tipping: %f\n Estimate: %f\n', truetip, region2boundary);
 fprintf(fileID,'The slow tip: %f\n', slowtip);
 fprintf(fileID,'The osc tip: %f\n', muosc);

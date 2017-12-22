@@ -60,12 +60,12 @@ plot(lambdavec, slowtipvec, 'b--')
 plot(xvec,yvec,'r')
 xlabel('\lambda'); ylabel('\mu');
 
-fileID = fopen('oneD_slowosc_lambdacomp_information.txt','w');
+fileID = fopen('slowosc_lambdacomp_information.txt','w');
 fprintf(fileID,'epsilon=%f\n',lambda);
 fprintf(fileID,'A=%f\n',A);
 fprintf(fileID,'tipping criteria=%f\n',criteria);
 fclose(fileID);
-print('-f1','oneD_slowosc_lambdacomp','-djpeg')
+print('-f1','slowosc_lambdacomp','-djpeg')
 
 % This will compare epsilon over a single choice in lambda
 epsvec = linspace(.005,.02,n);
@@ -75,7 +75,7 @@ slowtipvec = zeros(1,n);
 
 %Set up for an example of each case
 lambdavec = [.8, 1.3];
-delete('oneD_slowosc_epscomp_information.txt')
+delete('slowosc_epscomp_information.txt')
 for k=2:3
     lambda = lambdavec(k-1);
     
@@ -106,7 +106,7 @@ for k=2:3
         slowtipvec(i) = eps * log(eps)/2;
     end
     
-    fileID = fopen('oneD_slowosc_epscomp_information.txt','a');
+    fileID = fopen('slowosc_epscomp_information.txt','a');
     fprintf(fileID,'Case= %f\n',k);
     fprintf(fileID,'lambda=%f\n',lambda);
     fprintf(fileID,'A=%f\n',A);
@@ -122,5 +122,5 @@ for k=2:3
 end
 
  
-    print('-f2', 'oneD_slowosc_epscomp_case2', '-djpeg')
-    print('-f3', 'oneD_slowosc_epscomp_case3', '-djpeg')
+    print('-f2', 'slowosc_epscomp_case2', '-djpeg')
+    print('-f3', 'slowosc_epscomp_case3', '-djpeg')
