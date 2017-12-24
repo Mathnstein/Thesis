@@ -1,7 +1,10 @@
 %Bifurcation diagram for slow pass w/o osc
 
+criteria=.7;
+
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_Basic')
 
 %Initial values and set up
 h=.01;
@@ -23,7 +26,7 @@ tipdelayed=eps*log(eps)/2;
 tipxdel=tipdelayed*ones(1,100);
 tipy=linspace(min(y),max(y),100);
 
-tipactual=mu(find(y>.05,1)-1);
+tipactual=mu(find(y>criteria,1)-1);
 dif=abs(tipdelayed-tipactual);
 fprintf('The difference in predicted tip for eps=%f is %f\n',eps,dif)
 
@@ -46,13 +49,13 @@ xlabel('\mu');ylabel('x')
 title('')
 %legend('Ramped Solution','Equilibrium')
 
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_Basic')
-print('-f1','oneD_bif_diagram','-djpeg');
+print('-f1','slow_bif_diagram','-djpeg');
 
-fileID = fopen('oneD_bif_diagram_information.txt','w');
+fileID = fopen('slow_bif_diagram_information.txt','w');
 fprintf(fileID,'tipping actual =%f\n',tipactual);
 fprintf(fileID,'tipping estimate =%f\n',tipdelayed);
 fprintf(fileID,'epsilon=%f\n',eps);
+fprintf(fileID,'Criteria=%f\', criteria);
 fclose(fileID);
 
 %Comparison plot
@@ -75,7 +78,7 @@ for i=1:length(epsvec)
     [~,y,mu]=RK2sys(yDE,muDE,yInit,muInit,0,time,h);
 
     tipdelayedvec(i)=eps*log(eps);
-    tipactualvec(i)=mu(find(y>1,1));
+    tipactualvec(i)=mu(find(y>criteria,1));
     
 end
 figure(2)
@@ -83,4 +86,7 @@ plot(epsvec,tipdelayedvec,'k','linewidth',2);
 hold on
 plot(epsvec,tipactualvec,'r*');
 xlabel('\epsilon');ylabel('\mu-\mu_{ns}')
+
+
+print('-f2','slow_epscomp','-djpeg');
 

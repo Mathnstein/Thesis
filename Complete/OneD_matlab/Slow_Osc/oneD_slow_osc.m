@@ -8,6 +8,7 @@ eps = .05;
 lambda = .8;
 Omega = eps^(-lambda);
 A = 1;
+criteria=.2;
 
 mudel = eps * (-2.33811);
 muosc = 4 * abs(A)/(pi * Omega);
@@ -28,7 +29,6 @@ muDE = @(t, y, mu)(-eps);
 
 %I use the solution passing epsilon as tipping here.
 %Comparison
-criteria=.5;
 truetip = mu(find(y < criteria, 1, 'last'));
 region1boundary = 2 * abs(A)/Omega;
 region2boundary = muosc + mudel * (pi * B/2)^(1/3);
@@ -115,7 +115,7 @@ plot(mu, asymp, 'r')
 plot(region1x, yvec, 'g')
 plot(region2x, yvec, 'b')
 plot(tipping, yvec, 'r-.')
-plot(truetipvec, yvec, 'k')
+plot(truetipvec, yvec, 'k--')
 
 pos = [.6 .2 .5 .5];
 str = {
@@ -143,7 +143,7 @@ set(h3, 'color', 'r', 'linewidth', 2)
 plot(mu, y, 'k--', 'linewidth', 1.2)
 plot(region1x, yvec, 'g')
 plot(region2x, yvec, 'b')
-plot(truetipvec, yvec, 'k')
+plot(truetipvec, yvec, 'k--')
 
 %Label the graph
 xlabel('\mu'); ylabel('x')

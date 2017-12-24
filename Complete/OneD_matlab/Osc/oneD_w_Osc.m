@@ -2,7 +2,8 @@
 %(1)A dynamics plot and a (2)comparison plot against frequency will be produced
 
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\Complete\Functions')
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_w_Osc')
  
 %Analysis
 
@@ -27,6 +28,7 @@ for i=1:N
     xfinal(i)=x(t2/h-N+i);
 end
  
+% Here is the application of the root finding algorithm. Now unneccessry. 
  
 %Search for bifurcation
 n=3000;
@@ -76,18 +78,20 @@ xmid=middle(mumid);
  
 %(1) Dynamics plot
 figure(1)
-%plot(mu,y,'r-.')
-plot(muper,xfinal,'k--','linewidth',2)
-hold on
-%plot(tipxdel,tipy,'r')
-xlim([stop,start])
-plot(mulower,xlower,'r','linewidth',2)
-hold on
-plot(mumid,xmid,'k:')
-plot(muupper,xupper,'r','linewidth',2)
-xlabel('\mu')
-ylabel('x')
- 
+    %plot(mu,y,'r-.')
+    plot(muper,xfinal,'k--','linewidth',2)
+    hold on
+    %plot(tipxdel,tipy,'r')
+    xlim([stop,start])
+    plot(mulower,xlower,'r','linewidth',2)
+    hold on
+    plot(mumid,xmid,'k:')
+    plot(muupper,xupper,'r','linewidth',2)
+    xlabel('\mu')
+    ylabel('x')
+
+print('-f1','osc_bif','-djpeg')
+
 %{
 
 %(2) Comparison plot
@@ -122,9 +126,12 @@ for i=1:length(invOmegavec)
 end
  
 figure(2)
-plot(invOmegavec,bifvec,'k','linewidth',2);
-hold on
-plot(invOmegavec,bifactualvec,'r*');
-xlabel('\Omega^{-1}');ylabel('\mu-\mu_{ns}')
+    plot(invOmegavec,bifvec,'k','linewidth',2);
+    hold on
+    plot(invOmegavec,bifactualvec,'r*');
+    xlabel('\Omega^{-1}');ylabel('\mu-\mu_{ns}')
+
+
+print('-f2','osc_Omegacomp','-djpeg')
 
 %}
