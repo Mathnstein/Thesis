@@ -1,6 +1,8 @@
 %Full analysis of One D w/ Osc.
 %(1)A dynamics plot and a (2)comparison plot against frequency will be produced
 
+critera =.2;
+
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_w_Osc')
@@ -10,7 +12,7 @@ cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_w_Osc')
 %Set up step size and parameter grid
 h=.01;
 A=1;
-invOmega=10;
+Omega=10;
 start=1;stop=-1;
 yInit=1-sqrt(1+start);
 
@@ -23,7 +25,7 @@ for i=1:N
     t1=0;
     t2=30;
     xinit=1-sqrt(1+muper(i));
-    xDE=@(t,x)(-muper(i)+2*abs(x)-x*abs(x)+A*sin(invOmega*t));
+    xDE=@(t,x)(-muper(i)+2*abs(x)-x*abs(x)+A*sin(Omega*t));
     [t,x]=RK2(xDE,xinit,t1,t2,h);
     xfinal(i)=x(t2/h-N+i);
 end
@@ -55,10 +57,16 @@ for i=1:n
     
 end
 
-bif=m/invOmega;
+bif=m/Omega;
+region1 = 2*A/Omega;
  
-tipactual=muper(find(xfinal>1,1));
+tipactual=muper(find(xfinal>criteria,1));
 tipactualper=tipactual*ones(1,100);
+
+bifvec = bif*ones(1,100);
+region1vec = region1*ones(1,100);
+tipy = linspace(-1,2,100);
+
 dif=abs(tipactual-bif);
 fprintf('The difference in predicted tip for fixed parameter is %f\n',dif)
  
@@ -77,7 +85,7 @@ xmid=middle(mumid);
  
  
 %(1) Dynamics plot
-figure(1)
+f1=figure(1);
     %plot(mu,y,'r-.')
     plot(muper,xfinal,'k--','linewidth',2)
     hold on
@@ -90,7 +98,16 @@ figure(1)
     xlabel('\mu')
     ylabel('x')
 
-print('-f1','osc_bif','-djpeg')
+print('-f1','osc_bif_diagram','-djpeg')
+
+%Zoom
+plot(bifvec, tipy, 'b')
+plot(region1vec, tipy, 'g')
+plot(tipactualper, tipy, 'k--')
+xlim([0 .35])
+ylim([-.25 .3])
+
+print('-f1','osc_bif_diagram_zoom','-djpeg');
 
 %{
 
@@ -121,8 +138,8 @@ for i=1:length(invOmegavec)
     end
  
     bifvec(i)=4*abs(A)*invOmega/(pi);
-    cutoff=1;
-    bifactualvec(i)=muper(find(yfinal>cutoff,1));
+    critera=.2;
+    bifactualvec(i)=muper(find(yfinal>criteria,1));
 end
  
 figure(2)

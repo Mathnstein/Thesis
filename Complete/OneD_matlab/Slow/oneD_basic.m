@@ -1,6 +1,6 @@
 %Bifurcation diagram for slow pass w/o osc
 
-criteria=.7;
+criteria=.5;
 
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
@@ -27,14 +27,14 @@ tipxdel=tipdelayed*ones(1,100);
 tipy=linspace(min(y),max(y),100);
 
 tipactual=mu(find(y>criteria,1)-1);
+truetipvec=tipactual*ones(1,100);
 dif=abs(tipdelayed-tipactual);
 fprintf('The difference in predicted tip for eps=%f is %f\n',eps,dif)
 
 %Figures
 
-figure(1)
+f1=figure(1); % Full picture
 
-%plot(tipxdel,tipy,'b-.')
 syms mu1 x
 z=@(mu,y)(-mu+2*abs(y)-y*abs(y));
 h1=ezplot(z,[-1,1.5,-.6,2.5]);
@@ -51,11 +51,20 @@ title('')
 
 print('-f1','slow_bif_diagram','-djpeg');
 
+%Zoom
+plot(tipxdel, tipy, 'b')
+plot(truetipvec, tipy, 'k--')
+xlim([-.05 .1])
+ylim([-.05 .15])
+
+print('-f1','slow_bif_diagram_zoom','-djpeg');
+
+
 fileID = fopen('slow_bif_diagram_information.txt','w');
 fprintf(fileID,'tipping actual =%f\n',tipactual);
 fprintf(fileID,'tipping estimate =%f\n',tipdelayed);
 fprintf(fileID,'epsilon=%f\n',eps);
-fprintf(fileID,'Criteria=%f\', criteria);
+fprintf(fileID,'Criteria=%f\n', criteria);
 fclose(fileID);
 
 %Comparison plot

@@ -16,7 +16,7 @@ B = eps^(lambda-1) * abs(A);
 
 %Numerics
 h = min(.01, 2 * pi/(10 * Omega));
-start = 1.5; stop = -.5;
+start = 1.5; stop = -1;
 time = abs(stop - start)/eps;
 muInit = start;
 yInit = 1-sqrt(1 + muInit);
@@ -138,19 +138,23 @@ h2 = ezplot(z, [-1, 1.5, -.6, 0]);
 set(h2, 'color', 'r', 'linewidth', 2)
 h3 = ezplot(z, [-1, 1.5, 1, 2.5]);
 set(h3, 'color', 'r', 'linewidth', 2)
-
-%plots the numerical solution and the region dividers
 plot(mu, y, 'k--', 'linewidth', 1.2)
-plot(region1x, yvec, 'g')
-plot(region2x, yvec, 'b')
-plot(truetipvec, yvec, 'k--')
 
 %Label the graph
 xlabel('\mu'); ylabel('x')
 title('')
 
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-print('-f1','slowosc_bif','-djpeg')
+print('-f1','slowosc_bif_diagram','-djpeg')
+
+
+%zoom
+plot(region1x, yvec, 'g')
+plot(region2x, yvec, 'b')
+plot(truetipvec, yvec, 'k--')
+xlim([-.1 .5])
+ylim([-.3 .5])
+print('-f1', 'slowosc_bif_diagram_zoom','-djpeg')
 
 %Print a report of frequency and tipping comparison values
 fileID = fopen('slowosc_bif_information.txt','w');
