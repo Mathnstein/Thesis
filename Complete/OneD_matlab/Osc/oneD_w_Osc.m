@@ -1,7 +1,7 @@
-%Full analysis of One D w/ Osc.
+%Full tanalysis of One D w/ Osc.
 %(1)A dynamics plot and a (2)comparison plot against frequency will be produced
 
-critera =.2;
+criteria =.2;
 
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
@@ -9,7 +9,7 @@ cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_w_Osc')
  
 %Analysis
 
-%Set up step size and parameter grid
+%Set up sep size and parameter grid
 h=.01;
 A=1;
 Omega=10;
@@ -109,7 +109,7 @@ ylim([-.25 .3])
 
 print('-f1','osc_bif_diagram_zoom','-djpeg');
 
-%{
+%{ 
 
 %(2) Comparison plot
 invOmegavec=linspace(.001,.3,20);
