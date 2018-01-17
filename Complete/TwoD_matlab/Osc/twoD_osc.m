@@ -14,8 +14,6 @@ criteria = .2;
 
 %Start on NS stable branch
 %Works for n3<1
-%In progress for making work for n3>1
-
 %Parameters
 n=400;
 eta1=4;eta3=.375;
@@ -47,7 +45,7 @@ for i=1:length(eta2)
 end
 
 %-------------------------------------------------
-%Osc system 
+%Osc system bif values
 
 mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
 muosc = mosc/Omega+eta1*eta3;
@@ -89,7 +87,6 @@ xlim([start,stop])
 %title(['V Equilibria for \epsilon=' num2str(eps)])
 xlabel('\eta_2')
 ylabel('V')
-%legend('Numerical w/ Fixed \eta_2','Ramped System','Tipping Criteria','Tipping Point: \lambda_1')
 
 print('-f1','osc_bif_diagram','-djpeg')
 
@@ -101,6 +98,23 @@ ylim([-.15 .2])
 
 print('-f1','osc_bif_diagram_zoom','-djpeg');
 
+% T plot
+V=linspace(-2,2,n);
+T=zeros(length(V),1);
+func=@(V)(eta1/(1+abs(V)));
+for i=1:length(V)
+    T(i)=func(V(i));
+end
+figure(2)
+plot(V,T,'r','linewidth',2)
+hold on
+plot(vOscTimeSeries,tOscTimeSeries,'k','linewidth',2)
+xlabel('V')
+ylabel('T')
+xlim([Min Max])
+ylim([1.7 eta1])
+
+print('-f2','osc_bif_Tplot','-djpeg');
 
 fprintf('The error is= %f\n',error)
 %{
