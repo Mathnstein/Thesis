@@ -4,8 +4,8 @@
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 
 %Initial values and set up
-eps = .05;
-lambda = .8;
+eps = .001;
+lambda = 1/3;
 Omega = eps^(-lambda);
 A = 1;
 criteria=.2;

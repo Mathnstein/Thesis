@@ -10,12 +10,12 @@ criteria=.2;
 A = 1;
 
 % This will compare lambda over a single choice in epsilon
-lambdavec = linspace(.5,1.5,n);
+lambdavec = linspace(1/6,1.3,n);
 
 truetipvec = zeros(1,n);
 estimatedtipvec = zeros(1,n);
 slowtipvec = zeros(1,n);
-eps = .01;
+eps = .005;
 
 for i = 1:length(lambdavec)
 %Initial values and set up
@@ -46,19 +46,20 @@ slowtipvec(i) = eps*log(eps)/2;
 end
 
 %Check to see minimum lambda holds
-minlambda = 1+3/2*log(2.33811*(pi/2)^(4/3)/(6*A^(2/3)))/log(eps);
+%minlambda = 1+3/2*log(2.33811*(pi/2)^(4/3)/(6*A^(2/3)))/log(eps);
 miny = min(truetipvec)-eps;
 maxy = max(truetipvec);
-yvec = linspace(miny,maxy,50);
-xvec = minlambda*ones(1,50);
+%yvec = linspace(miny,maxy,50);
+%xvec = minlambda*ones(1,50);
 
 figure(1)
 plot(lambdavec, truetipvec, 'r*')
 hold on
 plot(lambdavec, estimatedtipvec, 'k')
 plot(lambdavec, slowtipvec, 'b--')
-plot(xvec,yvec,'r')
+%plot(xvec,yvec,'r')
 xlabel('\lambda'); ylabel('\mu');
+xlim([1/6 1.3])
 
 fileID = fopen('slowosc_lambdacomp_information.txt','w');
 fprintf(fileID,'epsilon=%f\n',lambda);
@@ -68,13 +69,13 @@ fclose(fileID);
 print('-f1','slowosc_lambdacomp','-djpeg')
 
 % This will compare epsilon over a single choice in lambda
-epsvec = linspace(.005,.02,n);
+epsvec = linspace(.005,.01,n);
 truetipvec = zeros(1,n);
 estimatedtipvec = zeros(1,n);
 slowtipvec = zeros(1,n);
 
 %Set up for an example of each case
-lambdavec = [.8, 1.3];
+lambdavec = [.5, 1.3];
 delete('slowosc_epscomp_information.txt')
 for k=2:3
     lambda = lambdavec(k-1);
