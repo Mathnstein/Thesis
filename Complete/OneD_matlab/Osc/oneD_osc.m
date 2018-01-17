@@ -1,4 +1,4 @@
-%Full tanalysis of One D w/ Osc.
+%Full analysis of OneD Osc.
 %(1)A dynamics plot and a (2)comparison plot against frequency will be produced
 
 criteria =.2;
@@ -30,44 +30,17 @@ for i=1:N
     xfinal(i)=x(t2/h-N+i);
 end
  
-% Here is the application of the root finding algorithm. Now unneccessry. 
- 
-%Search for bifurcation
-n=3000;
-range=linspace(0,3,n);
-
-%Create range of candidate values
-potentialval=fliplr(linspace(0,A,n));
-
-%Create a logic loop to find bifurcation
-truth=zeros(1,n+1);
-truth(1)=1;
-
-for i=1:n
-    if truth(i)==1
-        fun=@(x)(abs(-A*cos(x)+potentialval(i)));
-        equation=@(m)(-m+(1/pi)*integral(fun,0,2*pi));
-        [m,root]=root_algorithm(equation,range);
-        %Condition to continue or stop at bif
-         if isa(root,'double')
-            truth(i+1)=1;
-         end
-    else
-    end
-    
-end
-
-bif=m/Omega;
+bif=4*abs(A)/(pi*Omega);
 region1 = 2*A/Omega;
  
-tipactual=muper(find(xfinal>criteria,1));
-tipactualper=tipactual*ones(1,100);
+bifactual=muper(find(xfinal>criteria,1));
+bifactualvec=bifactual*ones(1,100);
 
 bifvec = bif*ones(1,100);
 region1vec = region1*ones(1,100);
-tipy = linspace(-1,2,100);
+yvec = linspace(-1,2,100);
 
-dif=abs(tipactual-bif);
+dif=abs(bifactual-bif);
 fprintf('The difference in predicted tip for fixed parameter is %f\n',dif)
  
  
@@ -101,9 +74,9 @@ f1=figure(1);
 print('-f1','osc_bif_diagram','-djpeg')
 
 %Zoom
-plot(bifvec, tipy, 'b')
-plot(region1vec, tipy, 'g')
-plot(tipactualper, tipy, 'k--')
+plot(bifvec, yvec, 'b')
+plot(region1vec, yvec, 'g')
+plot(bifactualvec, yvec, 'k--')
 xlim([0 .35])
 ylim([-.25 .3])
 
@@ -138,7 +111,6 @@ for i=1:length(invOmegavec)
     end
  
     bifvec(i)=4*abs(A)*invOmega/(pi);
-    critera=.2;
     bifactualvec(i)=muper(find(yfinal>criteria,1));
 end
  
