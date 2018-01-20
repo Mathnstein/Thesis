@@ -1,3 +1,7 @@
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Stommel')
+
+
 %Standard orientation bif plot
 eta3=0.375;
 eta1=4;
@@ -19,6 +23,7 @@ xlabel('\eta_2')
 ylabel('V')
 title('')
 axis([.5 2.5 -.5 1.5])
+print('-f1','V_bif','-djpeg');
 
 %Saddle orientation
 
@@ -36,6 +41,7 @@ title('')
 
 eta1=4;
 eta3=1.875;
+print('-f2','V_bif_reverse','-djpeg');
 
 figure(3)
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
@@ -55,16 +61,44 @@ ylabel('V')
 title('')
 axis([6.5 8.5 -1 .5])
 
-%T equilibrium
+print('-f3','V_bif_collapse','-djpeg');
 
-eta1=4;
-V=linspace(-2,2,500);
-T=zeros(length(V),1);
+%T equilibrium
+eta1 = 4; eta3 = 3/8;
+
+% Locate the smooth bifurcation
+derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
+r = roots(derivative);
+Vsmooth = r(real(r)>=0&imag(r)==0);
+smootheta2 = Vcurve(Vsmooth,eta1,eta3);
+
+% T plot
+m=400;
+Vlow=linspace(-2,0,m);
+Vmid=linspace(0,Vsmooth,m);
+Vup = linspace(Vsmooth,2,m);
+Tlow=zeros(m,1);
+Tmid = zeros(m,1);
+Tup = zeros(m,1);
+
 func=@(V)(eta1/(1+abs(V)));
-for i=1:length(V)
-    T(i)=func(V(i));
+for i=1:m
+    Tlow(i) = func(Vlow(i));
+    Tmid(i) = func(Vmid(i));
+    Tup(i) = func(Vup(i));
 end
+
+close(figure(4))
 figure(4)
-plot(V,T,'r','linewidth',2)
+plot(Vlow,Tlow,'r','linewidth',2)
+hold on
+plot(Vmid,Tmid, 'k-.')
+plot(Vup,Tup,'r','linewidth',2)
 xlabel('V')
 ylabel('T')
+print('-f4','T_equil','-djpeg');
+
+function eta2 = Vcurve(V,eta1,eta3)
+    T0 = eta1/(1+abs(V));
+    eta2 = eta1+eta3*(T0-V)-T0-V*abs(V);
+end

@@ -61,9 +61,15 @@ bifactualvec = bifactual*ones(1,300);
 
 error = abs(bifactual-muosc);
 
+% Locate the smooth bifurcation
+derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
+r = roots(derivative);
+Vsmooth = r(real(r)>=0&imag(r)==0);
+smootheta2 = Vcurve(Vsmooth,eta1,eta3);
+
 
 %--------------------Plot the dynamics plot--------------------------
-
+close(figure(1))
 figure(1)
 %plot(eta2,vSteady,'r')
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
@@ -75,7 +81,7 @@ h2=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,0]);
 set(h2,'color','r','linewidth',2)
 hold on
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,.426651,1.5]);
+h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,Vsmooth,1.5]);
 set(h3,'color','r','linewidth',2)
 
 xlabel('\eta_2')
@@ -99,22 +105,41 @@ ylim([-.15 .2])
 print('-f1','osc_bif_diagram_zoom','-djpeg');
 
 % T plot
-V=linspace(-2,2,n);
-T=zeros(length(V),1);
+m=5*n;
+Vlow=linspace(-1,0,m);
+Vmid=linspace(0,Vsmooth,m);
+Vup = linspace(Vsmooth,1.5,m);
+Tlow=zeros(m,1);
+Tmid = zeros(m,1);
+Tup = zeros(m,1);
+
 func=@(V)(eta1/(1+abs(V)));
-for i=1:length(V)
-    T(i)=func(V(i));
+for i=1:m
+    Tlow(i) = func(Vlow(i));
+    Tmid(i) = func(Vmid(i));
+    Tup(i) = func(Vup(i));
 end
+
+close(figure(2))
 figure(2)
-plot(V,T,'r','linewidth',2)
+plot(Vlow,Tlow,'r','linewidth',2)
 hold on
-plot(vOscTimeSeries,tOscTimeSeries,'k','linewidth',2)
+plot(Vmid,Tmid, 'k-.')
+plot(Vup,Tup,'r','linewidth',2)
+plot(vOscTimeSeries,tOscTimeSeries,'k--','linewidth',2)
 xlabel('V')
 ylabel('T')
 xlim([Min Max])
 ylim([1.7 eta1])
 
 print('-f2','osc_bif_Tplot','-djpeg');
+
+xlim([-.1 .11])
+ylim([3.7 4.01])
+print('-f2','osc_bif_Tplot_zoom','-djpeg');
+
+
+%print('-f2','slow_bif_Tplot_zoom','-djpeg');
 
 fprintf('The error is= %f\n',error)
 %{
@@ -159,8 +184,9 @@ for i=1:M
     bifactualvec(i) = eta2(find(Vfinal>criteria,1));
     
 end
- 
-figure(2)
+
+close(figure(3))
+figure(3)
     plot(invOmegavec,bifpredvec,'k','linewidth',2);
     hold on
     plot(invOmegavec,bifactualvec,'r*');
@@ -169,3 +195,9 @@ figure(2)
  print('-f2','osc_Omegacomp','-djpeg')
 
 %}
+
+% Calculates the V curve
+function eta2 = Vcurve(V,eta1,eta3)
+    T0 = eta1/(1+abs(V));
+    eta2 = eta1+eta3*(T0-V)-T0-V*abs(V);
+end
