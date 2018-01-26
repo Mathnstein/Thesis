@@ -47,8 +47,10 @@ end
 %-------------------------------------------------
 %Osc system bif values
 
+caseIboundary = abs(A)*(eta1*(1-eta3)-eta3)/Omega+eta1*eta3;
 mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
 muosc = mosc/Omega+eta1*eta3;
+
 
 bifactual = eta2(find(vOscTimeSeries>criteria,1));
 
@@ -56,8 +58,10 @@ Min = min(vOscTimeSeries);
 Max = max(vOscTimeSeries);
 
 yvec = linspace(Min,Max,300);
+caseIvec = caseIboundary* ones(1,300);
 bifpredvec = muosc* ones(1,300);
 bifactualvec = bifactual*ones(1,300);
+
 
 error = abs(bifactual-muosc);
 
@@ -71,7 +75,6 @@ smootheta2 = Vcurve(Vsmooth,eta1,eta3);
 %--------------------Plot the dynamics plot--------------------------
 close(figure(1))
 figure(1)
-%plot(eta2,vSteady,'r')
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,1.5]);
 set(h1,'linestyle','-.','color','k')
@@ -95,6 +98,13 @@ xlabel('\eta_2')
 ylabel('V')
 
 print('-f1','osc_bif_diagram','-djpeg')
+
+plot(caseIvec,yvec,'g')
+plot(bifpredvec,yvec,'b')
+xlim([1.54 1.66])
+ylim([-.1 .1])
+
+print('-f1','osc_cases','-djpeg');
 
 %Zoom
 plot(bifpredvec,yvec,'b')
@@ -142,7 +152,7 @@ print('-f2','osc_bif_Tplot_zoom','-djpeg');
 %print('-f2','slow_bif_Tplot_zoom','-djpeg');
 
 fprintf('The error is= %f\n',error)
-%{
+
 %(2) Comparison plot
 invOmegavec=linspace(.001,.3,20);
 M=length(invOmegavec);
@@ -180,8 +190,8 @@ for i=1:M
     end
  
     mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
-    bifpredvec(i) = mosc*invOmega+eta1*eta3;
-    bifactualvec(i) = eta2(find(Vfinal>criteria,1));
+    bifpredvec(i) = mosc*invOmega;
+    bifactualvec(i) = eta2(find(Vfinal>criteria,1))-eta1*eta3;
     
 end
 
@@ -190,11 +200,11 @@ figure(3)
     plot(invOmegavec,bifpredvec,'k','linewidth',2);
     hold on
     plot(invOmegavec,bifactualvec,'r*');
-    xlabel('\Omega^{-1}');ylabel('\eta_2-{\eta_2}_{ns}')
+    xlabel('\Omega^{-1}');ylabel('\eta_2-\eta_{2ns}')
     
- print('-f2','osc_Omegacomp','-djpeg')
+ print('-f3','osc_Omegacomp','-djpeg')
 
-%}
+
 
 % Calculates the V curve
 function eta2 = Vcurve(V,eta1,eta3)
