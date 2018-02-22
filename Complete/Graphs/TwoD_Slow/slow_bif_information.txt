@@ -1,0 +1,6 @@
+The actual tipping: 1.450900
+ Estimate: 1.450173
+Absolute error: 0.000727
+Tipping Criteria: >0.500000
+epsilon=0.010000
+lambda_1 used = -0.924225, lambda_2 not used = 2.299225

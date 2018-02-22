@@ -1,9 +1,3 @@
-%This script produces:
-%i) A plot containing a prediction on tipping for the 2-D Stommel model    
-% along with the ramped numerical solution.
-%ii) A plot comparing the actual tipping solution vs the asymptotic
-%solution for different choices of epsilon.
-
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Osc')
