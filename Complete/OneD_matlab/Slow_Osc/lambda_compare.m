@@ -1,8 +1,3 @@
-% Create an epsilon comparison plot and a lambda comparison plot
-
-% Load function folder and set working directory
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
 
@@ -54,7 +49,6 @@ if value == 1 || value == 3
     end
 
     %Check to see minimum lambda holds
-    %minlambda = 1+3/2*log(2.33811*(pi/2)^(4/3)/(6*A^(2/3)))/log(eps);
     miny = min(truetipvec)-eps;
     maxy = max(truetipvec);
     %yvec = linspace(miny,maxy,50);

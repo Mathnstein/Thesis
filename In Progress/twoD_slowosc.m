@@ -1,28 +1,31 @@
 % Load function folder
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Slow')
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_SlowOsc')
 
-criteria = .5;
-% Previous criteria was -C(1,1), the eigvector component
+criteria = .2;
+
+% Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
+value = 3;
+
+% Start parallel pooling
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Code Begin%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Start on NS stable branch
 % Works for n3<1
 
 % Hyperparameters
-n = 400;
 eta1 = 4; eta3 = .375;
-h = .01;
-eps = .01;
-lambda = 1;
+eps = .005;
+lambda = .7;
 Omega = eps^(-lambda);
-A=1;
-B=1;
+A=2;
+B=2;
 
 %-------------------------------------------------
 % System 
-start = eta1*eta3-1;stop=eta1*eta3+1;
-time = (stop-start)/(abs(eps));
+start = eta1*eta3-1; stop=eta1*eta3+1;
+time = (stop-start)/(eps);
 
 % Non-dim Stommel Equations
 vDE = @(t,V,T,eta2)((eta1-eta2)-V*abs(V)-T+eta3*(T-V)+A*sin(Omega*t));
@@ -32,6 +35,7 @@ eta2DE = @(t,V,T,eta2)(-eps);
 eta2Init = stop;
 vInit = -stop/eta1+eta3;
 tInit = eta1/(1-vInit);
+h = min(.01,2*pi/(10*Omega));
 
 % Solve equations for numerical soln, step size h
 [~,Vnum,Tnum,eta2num] = RK2sys3(vDE,tDE,eta2DE,vInit,tInit,eta2Init,0,time,h);
@@ -44,15 +48,19 @@ eta2num = eta2num(100:end);
 Min = min(Vnum);
 Max = max(Vnum);
 
-% Determine the tipping points for each case
-A=[eta3 1-eta3;eta1 1];
-[C,eigs] = eig(A);
-eig1 = eigs(1,1);
-eig2 = eigs(2,2);
-tippred1 = eta1*eta3-eps*log(eps)/eig1;
-tippred1vec = tippred1*ones(1,n);
-yvec = linspace(Min,Max,n);
+% REDUCED: Determine the tipping points for each case
+if lambda>1
+    tippredRED = eta1*eta3+eps*log(eps)/(eta1-eta3-eta1*eta3);
+else
+    %K = A-(1-eta3)*B;
+    K = A;
+    scaledcoef = eps^(lambda-1)*K;
+    c0 = 2*eta1*(1-eta3)*scaledcoef/pi;
+    c1 = eta1*(1-eta3)/(pi*scaledcoef);
+    tippredRED = eta1*eta3+eps*(c0-eta3^2/(4*c1)-c1^(-1/3)*2.3381);
+end
 
+yvec = linspace(Min,Max,n);
 tipactual=eta2num(find(Vnum>criteria,1));
 tipactualvec=tipactual*ones(1,n);
 
@@ -81,13 +89,7 @@ xlim([start,stop])
 xlabel('\eta_2')
 ylabel('V')
 
-
-%Zoom
-
-plot(tippred1vec,yvec,'b')
-plot(tipactualvec,yvec,'k--')
-
-
+print('-f1','slowosc_bif_diagram','-djpeg');
 
 % Locate the smooth bifurcation
 derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
@@ -96,7 +98,7 @@ Vsmooth = r(real(r)>=0&imag(r)==0);
 smootheta2 = Vcurve(Vsmooth,eta1,eta3);
 
 % T plot
-m=5*n;
+m=500;
 Vlow=linspace(-1,0,m);
 Vmid=linspace(0,Vsmooth,m);
 Vup = linspace(Vsmooth,1.5,m);
@@ -110,6 +112,7 @@ for i=1:m
     Tmid(i) = func(Vmid(i));
     Tup(i) = func(Vup(i));
 end
+
 close(figure(2))
 figure(2)
 plot(Vlow,Tlow,'r','linewidth',2)
@@ -122,7 +125,11 @@ ylabel('T')
 xlim([-.75 Max])
 ylim([1.5 eta1])
 
+print('-f2','slowosc_Tplot','-djpeg');
+
 fprintf('The tipping is eta2= %f\n',tipactual)
+fprintf('The reduced estimated tipping is eta2 = %f\n',tippredRED)
+
 
 % Calculates the V curve
 function eta2 = Vcurve(V,eta1,eta3)
