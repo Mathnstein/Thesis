@@ -58,18 +58,17 @@ xmid=middle(mumid);
  
  
 %(1) Dynamics plot
-f1=figure(1);
-    %plot(mu,y,'r-.')
-    plot(muper,xfinal,'k--','linewidth',2)
-    hold on
-    %plot(tipxdel,tipy,'r')
-    xlim([stop,start])
-    plot(mulower,xlower,'r','linewidth',2)
-    hold on
-    plot(mumid,xmid,'k:')
-    plot(muupper,xupper,'r','linewidth',2)
-    xlabel('\mu')
-    ylabel('x')
+close(figure(1))
+figure(1);
+plot(muper,xfinal,'k--','linewidth',2)
+hold on
+xlim([stop,start])
+plot(mulower,xlower,'r','linewidth',2)
+hold on
+plot(mumid,xmid,'k:')
+plot(muupper,xupper,'r','linewidth',2)
+xlabel('\mu')
+ylabel('x')
 
 print('-f1','osc_bif_diagram','-djpeg')
 

@@ -2,26 +2,31 @@
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Osc')
 
-criteria = .2;
+% Zoom: 0 = No, 1 = Yes
+zoom=1;
+
+% Comparison: 0 = No, 1 = Yes
+comp =0;
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Code Begin%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Start on NS stable branch
 %Works for n3<1
 %Parameters
-n=400;
-eta1=4;eta3=.375;
-A=1; B=1; Omega=30;
-h=min(.01,2*pi/(10*Omega));
+n = 800;
+eta1 = 4; eta3 = 3/8;
+nsbif = eta1*eta3;
+A = 1; B = 1; Omega = 30;
+h = min(.01, 2*pi/(10*Omega));
 
 %Fixed parameter system
-start=eta1*eta3-.5;stop=eta1*eta3+1;
+start = nsbif-.5; stop = nsbif+1;
 eta2=fliplr(linspace(start,stop,n));
 vOscTimeSeries=zeros(1,length(eta2));
 tOscTimeSeries=vOscTimeSeries;
 
 %Create equilibrium vector
-for i=1:length(eta2)
+parfor i=1:length(eta2)
     %Non-dim Stommel Equations    
     vDEosc=@(t,V,T)((eta1-eta2(i))-V*abs(V)-T+eta3*(T-V)+A*sin(Omega*t));
     tDEosc=@(t,V,T)(eta1-T*(1+abs(V))+B*sin(Omega*t));
@@ -31,19 +36,27 @@ for i=1:length(eta2)
     
     
     %Solve equations for long term equilibrium, step size h
-    [~,Vosc,Tosc] = RK2sys(vDEosc,tDEosc,vInit,tInit,0,100,h);
+    [~,Vosc,Tosc] = RK2sys(vDEosc,tDEosc,vInit,tInit,0,50,h);
     
     %Keep steady state
-    vOscTimeSeries(i) = Vosc(floor(100/h)-n+i);
-    tOscTimeSeries(i) = Tosc(floor(100/h)-n+i);
+    vOscTimeSeries(i) = Vosc(floor(50/h)-n+i);
+    tOscTimeSeries(i) = Tosc(floor(50/h)-n+i);
 end
+
+% Locate the smooth bifurcation
+derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
+r = roots(derivative);
+Vsmooth = r(imag(r)==0);
+smootheta2 = Vcurve(Vsmooth,eta1,eta3);
 
 %-------------------------------------------------
 %Osc system bif values
 
+criteria = Vsmooth;
+
 caseIboundary = abs(A)*(eta1*(1-eta3)-eta3)/Omega+eta1*eta3;
 mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
-muosc = mosc/Omega+eta1*eta3;
+muosc = mosc/Omega+nsbif;
 
 
 bifactual = eta2(find(vOscTimeSeries>criteria,1));
@@ -59,27 +72,22 @@ bifactualvec = bifactual*ones(1,300);
 
 error = abs(bifactual-muosc);
 
-% Locate the smooth bifurcation
-derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
-r = roots(derivative);
-Vsmooth = r(real(r)>=0&imag(r)==0);
-smootheta2 = Vcurve(Vsmooth,eta1,eta3);
-
-
 %--------------------Plot the dynamics plot--------------------------
 close(figure(1))
 figure(1)
-z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,1.5]);
+z=@(eta2,V)(eta1-eta2-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V));
+h1=fimplicit(z,[nsbif-1,nsbif+1,-.5,1.5]);
 set(h1,'linestyle','-.','color','k')
 hold on
-z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h2=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,0]);
+h2=fimplicit(z,[nsbif-1,nsbif+1,-.5,0]);
 set(h2,'color','r','linewidth',2)
 hold on
-z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,Vsmooth,1.5]);
+h3=fimplicit(z,[nsbif-1,nsbif+1,Vsmooth,1.5]);
 set(h3,'color','r','linewidth',2)
+
+% Remove vectorized warning, not important for speed
+[~,war]=lastwarn();
+warning('off',war);
 
 xlabel('\eta_2')
 ylabel('V')
@@ -93,20 +101,18 @@ ylabel('V')
 
 print('-f1','osc_bif_diagram','-djpeg')
 
-plot(caseIvec,yvec,'g')
-plot(bifpredvec,yvec,'b')
-xlim([1.54 1.66])
-ylim([-.1 .1])
-
-print('-f1','osc_cases','-djpeg');
-
 %Zoom
-plot(bifpredvec,yvec,'b')
-plot(bifactualvec,yvec,'k--')
-xlim([1.5 1.7])
-ylim([-.15 .2])
-
-print('-f1','osc_bif_diagram_zoom','-djpeg');
+if zoom==1
+    plot(caseIvec,yvec,'g')
+    plot(bifpredvec,yvec,'b')
+    xlim([nsbif caseIboundary+2/Omega])
+    ylim([-.1 .1])
+    print('-f1','osc_cases','-djpeg');
+    
+    plot(bifpredvec,yvec,'b')
+    xlim([nsbif muosc+2/Omega])
+    print('-f1','osc_bif_diagram_zoom','-djpeg');
+end
 
 % T plot
 m=5*n;
@@ -138,65 +144,69 @@ ylim([1.7 eta1])
 
 print('-f2','osc_bif_Tplot','-djpeg');
 
-xlim([-.1 .11])
-ylim([3.7 4.01])
-print('-f2','osc_bif_Tplot_zoom','-djpeg');
-
+if zoom==1
+    xlim([-.1 .11])
+    ylim([eta1-.2 eta1])
+    print('-f2','osc_bif_Tplot_zoom','-djpeg');
+end
 
 %print('-f2','slow_bif_Tplot_zoom','-djpeg');
 
 fprintf('The error is= %f\n',error)
 
-%(2) Comparison plot
-invOmegavec=linspace(.001,.3,20);
-M=length(invOmegavec);
-bifpredvec=zeros(1,M);
-bifactualvec=zeros(1,M);
- 
-for i=1:M
-    invOmega=invOmegavec(i);
-    %Make sure to have a time step that will capture highly oscillatory
-    %pieces
-    h=min(.01,2*pi*invOmega/(5));
-    start=eta1*eta3-.5;stop=eta1*eta3+1;
-    %Have a parameter grid fine enough to see the different bifurcation
-    %locations for highly oscillatory cases
-    eta2=fliplr(linspace(start,stop,200));
-    N=length(eta2);
-    Vfinal=zeros(1,M);
-    Tfinal=zeros(1,M);
-    
-     
-    %Numerical Solution
-    for j=1:N
-        vDEosc=@(t,V,T)((eta1-eta2(j))-V*abs(V)-T+eta3*(T-V)+A*sin(t/invOmega));
-        tDEosc=@(t,V,T)(eta1-T*(1+abs(V))+B*sin(t/invOmega));
-    
-        vInit=-eta2(j)/eta1+eta3;
-        tInit=eta1/(1-vInit);
-    
-    
-        %Solve equations for long term equilibrium, step size h
-        [~,Vosc,Tosc] = RK2sys(vDEosc,tDEosc,vInit,tInit,0,100,h);
-    
-         Vfinal(j)=Vosc(end);
-         Tfinal(j)=Tosc(end);
-    end
- 
-    mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
-    bifpredvec(i) = mosc*invOmega;
-    bifactualvec(i) = eta2(find(Vfinal>criteria,1))-eta1*eta3;
-    
-end
 
-close(figure(3))
-figure(3)
+if comp ==1
+    %(2) Comparison plot
+    invOmegavec=linspace(.001,.2,20);
+    M=length(invOmegavec);
+    bifpredvec=zeros(1,M);
+    bifactualvec=zeros(1,M);
+
+    parfor i=1:M
+        invOmega=invOmegavec(i);
+        %Make sure to have a time step that will capture highly oscillatory
+        %pieces
+        h=min(.01,2*pi*invOmega/(5));
+        start = nsbif-.5; stop = nsbif+1;
+        %Have a parameter grid fine enough to see the different bifurcation
+        %locations for highly oscillatory cases
+        eta2=fliplr(linspace(start,stop,400));
+        N=length(eta2);
+        Vfinal=zeros(1,M);
+        Tfinal=zeros(1,M);
+
+
+        %Numerical Solution
+        for j=1:N
+            vDEosc=@(t,V,T)((eta1-eta2(j))-V*abs(V)-T+eta3*(T-V)+A*sin(t/invOmega));
+            tDEosc=@(t,V,T)(eta1-T*(1+abs(V))+B*sin(t/invOmega));
+
+            vInit=-eta2(j)/eta1+eta3;
+            tInit=eta1/(1-vInit);
+
+
+            %Solve equations for long term equilibrium, step size h
+            [~,Vosc,Tosc] = RK2sys(vDEosc,tDEosc,vInit,tInit,0,50,h);
+
+             Vfinal(j)=Vosc(end);
+             Tfinal(j)=Tosc(end);
+        end
+
+        mosc = 2*eta1*(1-eta3)/(pi*abs(A))-pi*abs(A)*eta3^2/(4*eta1*(1-eta3));
+        bifpredvec(i) = mosc*invOmega;
+        bifactualvec(i) = eta2(find(Vfinal>criteria,1))-eta1*eta3;
+
+    end
+
+    close(figure(3))
+    figure(3)
     plot(invOmegavec,bifpredvec,'k','linewidth',2);
     hold on
     plot(invOmegavec,bifactualvec,'r*');
     xlabel('\Omega^{-1}');ylabel('\eta_2-\eta_{2ns}')
-    
- print('-f3','osc_Omegacomp','-djpeg')
+
+     print('-f3','osc_Omegacomp','-djpeg')
+end
 
 
 

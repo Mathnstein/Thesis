@@ -8,7 +8,10 @@
 addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Slow')
 
-criteria = .5;
+
+% Zoom? 0=No, 1=Yes
+zoom = 1;
+
 % Previous criteria was -C(1,1), the eigvector component
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Code Begin%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -16,14 +19,22 @@ criteria = .5;
 % Works for n3<1
 
 % Parameters
-n = 400;
-eta1 = 4; eta3 = .375;
+n = 600; %Fine-ness of T-plot
+eta1 = 4; eta3 = 3/8;
+nsbif = eta1*eta3;
+
+% Check parameters
+a = eta3/(1-eta3);
+if eta1< a
+    fprintf('eta1<eta3/(1-eta3), the exponential estimate will fail\n')
+    pause
+end
 h = .01;
 
 %-------------------------------------------------
 % Slow system 
 eps = .01;
-start = eta1*eta3-1;stop=eta1*eta3+1;
+start = nsbif-1;stop=nsbif+1;
 time = (stop-start)/(abs(eps));
 
 % Non-dim Stommel Equations
@@ -46,12 +57,19 @@ eta2num = eta2num(100:end);
 Min = min(Vnum);
 Max = max(Vnum);
 
+% Locate the smooth bifurcation
+derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
+r = roots(derivative);
+Vsmooth = r(imag(r)==0);
+smootheta2 = Vcurve(Vsmooth,eta1,eta3);
+
 % Determine the tipping points for each case
+criteria = Vsmooth;
 A=[eta3 1-eta3;eta1 1];
 [C,eigs] = eig(A);
 eig1 = eigs(1,1);
 eig2 = eigs(2,2);
-tippred1 = eta1*eta3-eps*log(eps)/eig1;
+tippred1 = nsbif-eps*log(eps)/eig1;
 tippred1vec = tippred1*ones(1,n);
 yvec = linspace(Min,Max,n);
 
@@ -62,17 +80,19 @@ tipactualvec=tipactual*ones(1,n);
 
 close(figure(1))
 figure(1)
-z = @(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h1 = ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,1.5]);
+z = @(eta2,V)(eta1-eta2-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V));
+h1 = fimplicit(z,[nsbif-1,nsbif+1,-.5,1.5]);
 set(h1,'linestyle','-.','color','k')
 hold on
-z = @(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h2 = ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,0]);
+h2 = fimplicit(z,[nsbif-1,nsbif+1,-.5,0]);
 set(h2,'color','r','linewidth',2)
 hold on
-z = @(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
-h3 = ezplot(z,[eta1*eta3-1,eta1*eta3+1,.426651,1.5]);
+h3 = fimplicit(z,[nsbif-1,nsbif+1,Vsmooth,1.5]);
 set(h3,'color','r','linewidth',2)
+
+% Remove vectorized warning, not important for speed
+[~,war]=lastwarn();
+warning('off',war);
 
 xlabel('\eta_2')
 ylabel('V')
@@ -87,20 +107,13 @@ print('-f1','slow_bif_diagram','-djpeg');
 
 
 %Zoom
-
-plot(tippred1vec,yvec,'b')
-plot(tipactualvec,yvec,'k--')
-xlim([1.44 1.6])
-ylim([-.05 .2])
-
-print('-f1','slow_bif_diagram_zoom','-djpeg');
-
-
-% Locate the smooth bifurcation
-derivative = [-2 -(eta3+4) -2*(eta3+1) eta1-eta3*(eta1+1)];
-r = roots(derivative);
-Vsmooth = r(real(r)>=0&imag(r)==0);
-smootheta2 = Vcurve(Vsmooth,eta1,eta3);
+if zoom == 1
+    plot(tippred1vec,yvec,'b')
+    plot(tipactualvec,yvec,'k--')
+    xlim([tipactual-eps nsbif+.1])
+    ylim([-.05 .2])
+    print('-f1','slow_bif_diagram_zoom','-djpeg');
+end
 
 % T plot
 m=5*n;
@@ -126,15 +139,17 @@ plot(Vup,Tup,'r','linewidth',2)
 plot(Vnum,Tnum,'k--','linewidth',2)
 xlabel('V')
 ylabel('T')
-xlim([-.75 Max])
-ylim([1.5 eta1])
+
 
 print('-f2','slow_bif_Tplot','-djpeg');
 
-xlim([-.05 .1])
-ylim([3.8 4.01])
+% Zoom
+if zoom == 1
+    xlim([-.05 .1])
+    ylim([eta1-.2 eta1])
+    print('-f2','slow_bif_Tplot_zoom','-djpeg');
+end
 
-print('-f2','slow_bif_Tplot_zoom','-djpeg');
 
 error = abs(tipactual-tippred1);
 
@@ -186,6 +201,7 @@ close(figure(3))
 figure(3)
 plot(epsvec,tipvec1,'k','linewidth',2)
 hold on
+plot(epsvec,tipvec2,'g', 'linewidth', 2)
 plot(epsvec,tipactualvec,'r*')
 hold off
 xlabel('\epsilon')

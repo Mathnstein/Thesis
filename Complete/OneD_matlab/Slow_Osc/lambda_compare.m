@@ -1,7 +1,14 @@
+%Full analysis of one-dimensional slow+osc
+
+%Load function folder
+addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
+
+
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
 
-value = 2;
+value = 1;
 
 %Hyperparameters
 n=30;
@@ -10,7 +17,7 @@ A = 1;
 
 if value == 1 || value == 3
     lower =.5;
-    upper = 1.3;
+    upper = 2;
 
     % This will compare lambda over a single choice in epsilon
     lambdavec = linspace(lower,upper,n);
@@ -18,9 +25,9 @@ if value == 1 || value == 3
     truetipvec = zeros(1,n);
     estimatedtipvec = zeros(1,n);
     slowtipvec = zeros(1,n);
-    eps = .005;
+    eps = .01;
 
-    for i = 1:length(lambdavec)
+    parfor i = 1:length(lambdavec)
     %Initial values and set up
     lambda = lambdavec(i);
     Omega = eps^(-lambda);
@@ -44,7 +51,7 @@ if value == 1 || value == 3
 
     %Comparison
     truetipvec(i) = mu(find(y < criteria, 1, 'last'));
-    estimatedtipvec(i) = muosc + mudel * (pi * B/2)^(1/3);
+    estimatedtipvec(i) = muosc + mudel * eps^((lambda-1)/3)*(pi * abs(A)/2)^(1/3);
     slowtipvec(i) = eps*log(eps)/2;
     end
 
@@ -85,7 +92,7 @@ if value == 2 || value == 3
     for k=2:3
         lambda = lambdavec(k-1);
 
-        for i = 1:length(epsvec)
+        parfor i = 1:length(epsvec)
             %Initial values and set up
             eps = epsvec(i);
             Omega = eps^(-lambda);

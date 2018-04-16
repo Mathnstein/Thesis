@@ -37,18 +37,20 @@ f1=figure(1); % Full picture
 
 syms mu1 x
 z=@(mu,y)(-mu+2*abs(y)-y*abs(y));
-h1=ezplot(z,[-1,1.5,-.6,2.5]);
+h1=fimplicit(z,[-1,1.5,-.6,2.5]);
 set(h1,'linestyle',':','color','k')
 hold on
-h2=ezplot(z,[-1,1.5,-.6,0]);
+h2=fimplicit(z,[-1,1.5,-.6,0]);
 set(h2,'color','r','linewidth', 2)
-h3=ezplot(z,[-1,1.5,1,2.5]);
+h3=fimplicit(z,[-1,1.5,1,2.5]);
 set(h3,'color','r','linewidth', 2)
 plot(mu,y,'k--','linewidth',2)
 xlabel('\mu');ylabel('x')
 title('')
-%legend('Ramped Solution','Equilibrium')
 
+% Remove vectorized warning, not important for speed
+[~,war]=lastwarn();
+warning('off',war);
 print('-f1','slow_bif_diagram','-djpeg');
 
 %Zoom
