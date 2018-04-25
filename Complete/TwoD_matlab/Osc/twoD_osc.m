@@ -124,7 +124,7 @@ Vmid = linspace(0,Vsmooth,m);
 Vup = linspace(Vsmooth,1.5,m);
 
 
-func=@(V)(eta1/(1+abs(V)));
+func=@(V)(eta1./(1+abs(V)));
 
 Tlow = func(Vlow);
 Tmid = func(Vmid);
