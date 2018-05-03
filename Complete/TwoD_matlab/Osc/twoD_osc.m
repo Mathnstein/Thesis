@@ -82,6 +82,7 @@ yvec = linspace(-1,2,300);
 caseIvec = caseIboundary* ones(1,300);
 bifpredvec = muosc* ones(1,300);
 
+
 % Phase plot time series
 close(figure(3))
 figure(3)
@@ -109,6 +110,10 @@ plot(linspace(nsbif-1,nsbif+1,100),zeros(1,100),'k')
 % Parameter ranges
 plot(bifpredvec, yvec, 'b--','linewidth',2)
 plot(caseIvec, yvec, 'g--','linewidth',2)
+xlim([nsbif 2.3])
+ylim([-.5 .3])
+
+print('-f3','osc_cases','-djpeg')
 
 % Phase plane time series
 plot(eta2vec(1)*ones(1,length(Vbefore)),Vbefore,'color',c{1},'linewidth',2)

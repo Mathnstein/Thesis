@@ -5,8 +5,8 @@
 %solution for different choices of epsilon.
 
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Slow')
+addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\TwoD_Slow')
 
 
 % Zoom? 0=No, 1=Yes
@@ -64,7 +64,7 @@ Vsmooth = r(imag(r)==0);
 smootheta2 = Vcurve(Vsmooth,eta1,eta3);
 
 % Determine the tipping points for each case
-criteria = Vsmooth;
+criteria = .5;
 A=[eta3 1-eta3;eta1 1];
 [C,eigs] = eig(A);
 eig1 = eigs(1,1);
@@ -93,9 +93,9 @@ set(h3,'color','r','linewidth',2)
 % Remove vectorized warning, not important for speed
 [~,war]=lastwarn();
 warning('off',war);
-
-xlabel('\eta_2')
-ylabel('V')
+set(gca,'fontsize',14)
+xlabel('\eta_2','fontsize',20)
+ylabel('V','fontsize',20)
 title('')
 hold on
 plot(eta2num,Vnum,'k--','linewidth',2)
@@ -108,8 +108,8 @@ print('-f1','slow_bif_diagram','-djpeg');
 
 %Zoom
 if zoom == 1
-    plot(tippred1vec,yvec,'b')
-    plot(tipactualvec,yvec,'k--')
+    plot(tippred1vec,yvec,'b--','linewidth',2)
+    plot(tipactualvec,yvec,'k','linewidth',2)
     xlim([tipactual-eps nsbif+.1])
     ylim([-.05 .2])
     print('-f1','slow_bif_diagram_zoom','-djpeg');
@@ -137,8 +137,9 @@ hold on
 plot(Vmid,Tmid, 'k-.')
 plot(Vup,Tup,'r','linewidth',2)
 plot(Vnum,Tnum,'k--','linewidth',2)
-xlabel('V')
-ylabel('T')
+set(gca,'fontsize',14)
+xlabel('V','fontsize',20)
+ylabel('T','fontsize',20)
 
 
 print('-f2','slow_bif_Tplot','-djpeg');
@@ -201,11 +202,12 @@ close(figure(3))
 figure(3)
 plot(epsvec,tipvec1,'k','linewidth',2)
 hold on
-plot(epsvec,tipvec2,'g', 'linewidth', 2)
+plot(epsvec,tipvec2,'b', 'linewidth', 2)
 plot(epsvec,tipactualvec,'r*')
 hold off
-xlabel('\epsilon')
-ylabel('\eta_2-\eta_{2ns}')
+set(gca,'fontsize',14)
+xlabel('\epsilon','fontsize',20)
+ylabel('\eta_2-\eta_{2ns}','fontsize',20)
 
 print('-f3','slow_epscomp','-djpeg')
 
