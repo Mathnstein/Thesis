@@ -3,8 +3,8 @@
 criteria =.2;
 
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_w_Osc')
+addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_w_Osc')
  
 % Time Series
 
@@ -36,7 +36,7 @@ for i=1:N
     [t,x]=RK2(xDE,xinit,t1,t2,h);
     figure(1)
     hold on
-    P1 = plot(t,x);
+    P1 = plot(t,x,'linewidth',2);
     set(gca,'Xdir','reverse')
     c{i} = get(P1,'Color');
     if i == 1
@@ -50,8 +50,8 @@ for i=1:N
         labs{i}='\mu after bifurcation';
     end
 end
-xlabel('t')
-ylabel('x')
+xlabel('\bf{Time}')
+ylabel('\bf{x}')
 legend(labs,'Location','west')
 
 print('-f1','osc_timeseries','-djpeg')
@@ -79,15 +79,15 @@ plot(mulower,xlower,'r','linewidth',2)
 hold on
 plot(mumid,xmid,'k:')
 plot(muupper,xupper,'r','linewidth',2)
-xlabel('\mu')
-ylabel('x')
+xlabel('\bf{\mu}')
+ylabel('\bf{x}')
 
 % x=0 axis
 plot(linspace(-1,1,100),zeros(1,100),'k')
 
 % Parameter ranges
-plot(bifvec, yvec, 'b--')
-plot(region1vec, yvec, 'g--')
+plot(bifvec, yvec, 'b--','linewidth',2)
+plot(region1vec, yvec, 'g--','linewidth',2)
 
 % Phase plane time series
 plot(muper(1)*ones(1,length(xbefore)),xbefore,'color',c{1},'linewidth',2)

@@ -1,6 +1,6 @@
 % Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_SlowOsc')
+addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\TwoD_SlowOsc')
 
 criteria = .2;
 
@@ -48,6 +48,8 @@ eta2num = eta2num(100:end);
 Min = min(Vnum);
 Max = max(Vnum);
 
+n=100;
+
 % REDUCED: Determine the tipping points for each case
 if lambda>1
     Mat = [eta3 1-eta3;eta1 1];
@@ -61,7 +63,7 @@ else
     tippredRED = eta1*eta3+eps*(c0-eta3^2/(4*c1)-c1^(-1/3)*2.3381);
 end
 
-n=100;
+
 yvec = linspace(Min,Max,n);
 tipactual=eta2num(find(Vnum>criteria,1));
 tipactualvec=tipactual*ones(1,n);
@@ -88,31 +90,36 @@ set(h3,'color','r','linewidth',2)
 [~,war]=lastwarn();
 warning('off',war);
 
-xlabel('\eta_2')
-ylabel('V')
+set(gca,'fontsize',14)
+xlabel('\eta_2','fontsize',20)
+ylabel('V','fontsize',20)
 title('')
 hold on
 plot(eta2num,Vnum,'k--','linewidth',2)
 xlim([start,stop])
-xlabel('\eta_2')
-ylabel('V')
-
-
 
 % Zoom
 if zoom ==1
-    if lambda>1
+    if lambda>1.5
         print('-f1','slowosc_bif_diagram_large','-djpeg');
-        plot(tippredREDvec,yvec,'b')
-        plot(tipactualvec,yvec,'k--')
-        plot(tippredlargevec,yvec,'g')
-        xlim([tipactual-.1 tipactual+.1])
+        plot(tippredREDvec,yvec,'b--','linewidth',2)
+        plot(tipactualvec,yvec,'k','linewidth',2)
+        plot(tippredlargevec,yvec,'g--','linewidth',2)
+        xlim([tipactual-.05 tipactual+.1])
         ylim([-.05 .2])
         print('-f1','slowosc_bif_diagram_large_zoom','-djpeg');
+    elseif lambda>1
+        print('-f1','slowosc_bif_diagram_medium','-djpeg');
+        plot(tippredREDvec,yvec,'b--','linewidth',2)
+        plot(tipactualvec,yvec,'k','linewidth',2)
+        plot(tippredlargevec,yvec,'g--','linewidth',2)
+        xlim([tipactual-.1 tipactual+.1])
+        ylim([-.05 .2])
+        print('-f1','slowosc_bif_diagram_medium_zoom','-djpeg');
     else
         print('-f1','slowosc_bif_diagram_small','-djpeg');
-        plot(tippredREDvec,yvec,'b')
-        plot(tipactualvec,yvec,'k--')
+        plot(tippredREDvec,yvec,'b--','linewidth',2)
+        plot(tipactualvec,yvec,'k','linewidth',2)
         xlim([eta1*eta3 eta1*eta3+.2])
         ylim([-.1 .2])
         print('-f1','slowosc_bif_diagram_small_zoom','-djpeg');
@@ -149,18 +156,24 @@ hold on
 plot(Vmid,Tmid, 'k-.')
 plot(Vup,Tup,'r','linewidth',2)
 plot(Vnum,Tnum,'k--','linewidth',2)
-xlabel('V')
-ylabel('T')
+set(gca,'fontsize',14)
+xlabel('V','fontsize',20)
+ylabel('T','fontsize',20)
 xlim([-.75 Max])
 ylim([1.5 eta1])
 
 % Zoom
 if zoom ==1
-    if lambda>1
+    if lambda>1.5
         print('-f2','slowosc_Tplot_large','-djpeg');
         xlim([-.05 .1])
         ylim([3.8 4])    
         print('-f2','slowosc_Tplot_large_zoom','-djpeg');
+    elseif lambda >1
+        print('-f2','slowosc_Tplot_medium','-djpeg');
+        xlim([-.05 .1])
+        ylim([3.8 4])    
+        print('-f2','slowosc_Tplot_medium_zoom','-djpeg');
     else
         print('-f2','slowosc_Tplot_small','-djpeg');
         xlim([-.07 .12])
