@@ -1,17 +1,15 @@
 %Full analysis of one-dimensional slow+osc
 
 %Load function folder
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\OneD_slowosc')
-
-
+addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_slowosc')
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
 
-value = 1;
+value = 2;
 
 %Hyperparameters
-n=30;
+n=25;
 criteria=.2;
 A = 1;
 
@@ -50,7 +48,7 @@ if value == 1 || value == 3
     [~, y, mu] = RK2sys(yDE, muDE, yInit, muInit, 0, time, h);
 
     %Comparison
-    truetipvec(i) = mu(find(y < criteria, 1, 'last'));
+    truetipvec(i) = mu(find(y < criteria, 1));
     estimatedtipvec(i) = muosc + mudel * eps^((lambda-1)/3)*(pi * abs(A)/2)^(1/3);
     slowtipvec(i) = eps*log(eps)/2;
     end
@@ -65,17 +63,14 @@ if value == 1 || value == 3
     figure(1)
     plot(lambdavec, truetipvec, 'r*')
     hold on
-    plot(lambdavec, estimatedtipvec, 'k')
-    plot(lambdavec, slowtipvec, 'b--')
+    plot(lambdavec, estimatedtipvec, 'k','linewidth',2)
+    plot(lambdavec, slowtipvec, 'b--','linewidth',2)
     %plot(xvec,yvec,'r')
-    xlabel('\lambda'); ylabel('\mu');
+    set(gca,'fontsize',14)
+    xlabel('\lambda','fontsize',20);
+    ylabel('\mu','fontsize',20);
     xlim([lower upper])
 
-    fileID = fopen('slowosc_lambdacomp_information.txt','w');
-    fprintf(fileID,'epsilon=%f\n',lambda);
-    fprintf(fileID,'A=%f\n',A);
-    fprintf(fileID,'tipping criteria=%f\n',criteria);
-    fclose(fileID);
     print('-f1','slowosc_lambdacomp','-djpeg')
 end
 
@@ -87,7 +82,7 @@ if value == 2 || value == 3
     slowtipvec = zeros(1,n);
 
     %Set up for an example of each case
-    lambdavec = [.5, 1.4];
+    lambdavec = [.8, 1.3];
     delete('slowosc_epscomp_information.txt')
     for k=2:3
         lambda = lambdavec(k-1);
@@ -119,20 +114,15 @@ if value == 2 || value == 3
             slowtipvec(i) = eps * log(eps)/2;
         end
 
-        fileID = fopen('slowosc_epscomp_information.txt','a');
-        fprintf(fileID,'Case= %f\n',k);
-        fprintf(fileID,'lambda=%f\n',lambda);
-        fprintf(fileID,'A=%f\n',A);
-        fprintf(fileID,'tipping criteria=%f\n \n',criteria);
-        fclose(fileID);
-
         close(figure(k))
         figure(k)
         plot(epsvec, truetipvec, 'r*')
         hold on
-        plot(epsvec, estimatedtipvec, 'k')
-        plot(epsvec, slowtipvec, 'b--')
-        xlabel('\epsilon'); ylabel('\mu')
+        plot(epsvec, estimatedtipvec, 'k','linewidth',2)
+        plot(epsvec, slowtipvec, 'b--','linewidth',2)
+        set(gca,'fontsize',14)
+        xlabel('\epsilon','fontsize',20)
+        ylabel('\mu','fontsize',20)
     end
         print('-f2', 'slowosc_epscomp_case2', '-djpeg')
         print('-f3', 'slowosc_epscomp_case3', '-djpeg')
