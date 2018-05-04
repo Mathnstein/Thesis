@@ -6,7 +6,7 @@ cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_slowosc')
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
 
-value = 2;
+value = 1;
 
 %Hyperparameters
 n=25;
