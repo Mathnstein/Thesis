@@ -25,7 +25,7 @@ if value == 1 || value == 3
     slowtipvec = zeros(1,n);
     eps = .01;
 
-    parfor i = 1:length(lambdavec)
+    parfor i = 1:n
     %Initial values and set up
     lambda = lambdavec(i);
     Omega = eps^(-lambda);
@@ -36,7 +36,7 @@ if value == 1 || value == 3
 
     %Numerics
     h=min(.01, 2 * pi/(10 * Omega));
-    start = 1.5; stop = -.5;
+    start = .5; stop = -.5;
     time = abs(stop - start)/eps;
     muInit = start;
     yInit = 1-sqrt(1 + muInit);
@@ -48,7 +48,7 @@ if value == 1 || value == 3
     [~, y, mu] = RK2sys(yDE, muDE, yInit, muInit, 0, time, h);
 
     %Comparison
-    truetipvec(i) = mu(find(y < criteria, 1));
+    truetipvec(i) = mu(find(y > criteria, 1));
     estimatedtipvec(i) = muosc + mudel * eps^((lambda-1)/3)*(pi * abs(A)/2)^(1/3);
     slowtipvec(i) = eps*log(eps)/2;
     end
@@ -76,18 +76,17 @@ end
 
 if value == 2 || value == 3
     % This will compare epsilon over a single choice in lambda
-    epsvec = linspace(.005,.01,n);
+    epsvec = linspace(.005,.02,n);
     truetipvec = zeros(1,n);
     estimatedtipvec = zeros(1,n);
     slowtipvec = zeros(1,n);
 
     %Set up for an example of each case
-    lambdavec = [.8, 1.3];
-    delete('slowosc_epscomp_information.txt')
+    lambdavec = [.6, 2];
     for k=2:3
         lambda = lambdavec(k-1);
 
-        parfor i = 1:length(epsvec)
+        parfor i = 1:n
             %Initial values and set up
             eps = epsvec(i);
             Omega = eps^(-lambda);
@@ -97,8 +96,8 @@ if value == 2 || value == 3
             B = eps^(lambda-1) * abs(A);
 
             %Numerics
-            h = min(.01, 2 * pi/(20 * Omega));
-            start = 1.5; stop = -.5;
+            h = min(.01, 2 * pi/(10 * Omega));
+            start = .5; stop = -.5;
             time = abs(stop - start)/eps;
             muInit = start;
             yInit = 1 - sqrt(1 + muInit);
@@ -109,7 +108,7 @@ if value == 2 || value == 3
             [~, y, mu] = RK2sys(yDE, muDE, yInit, muInit, 0, time, h);
 
             %Comparison
-            truetipvec(i) = mu(find(y < criteria, 1, 'last'));
+            truetipvec(i) = mu(find(y > criteria,1));
             estimatedtipvec(i) = muosc + mudel * (pi * B/2)^(1/3);
             slowtipvec(i) = eps * log(eps)/2;
         end

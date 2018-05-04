@@ -50,9 +50,9 @@ for i=1:N
         labs{i}='\mu after bifurcation';
     end
 end
-xlabel('\bf{Time}')
-ylabel('\bf{x}')
-legend(labs,'Location','west')
+set(gca,'fontsize',14)
+xlabel('Time','fontsize',20)
+ylabel('x','fontsize',20)
 
 print('-f1','osc_timeseries','-djpeg')
 
@@ -79,8 +79,9 @@ plot(mulower,xlower,'r','linewidth',2)
 hold on
 plot(mumid,xmid,'k:')
 plot(muupper,xupper,'r','linewidth',2)
-xlabel('\bf{\mu}')
-ylabel('\bf{x}')
+set(gca,'fontsize',14)
+xlabel('\mu','fontsize',20)
+ylabel('x','fontsize',20)
 
 % x=0 axis
 plot(linspace(-1,1,100),zeros(1,100),'k')

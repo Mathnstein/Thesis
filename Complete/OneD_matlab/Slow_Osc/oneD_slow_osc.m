@@ -6,7 +6,7 @@ cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_slowosc')
 
 %Initial values and set up
 eps = .01;
-lambda = 1.6;
+lambda = .8;
 Omega = eps^(-lambda);
 A = 1;
 criteria=.2;
@@ -70,6 +70,8 @@ title('')
 
 if lambda> 1.5
     print('-f1','slowosc_bif_diagram_large','-djpeg')
+elseif lambda>1
+    print('-f1', 'slowosc_bif_diagram_medium','-djpeg')
 else
     print('-f1','slowosc_bif_diagram_small','-djpeg')
 end
@@ -82,7 +84,9 @@ plot(truetipvec, yvec, 'k','linewidth',2)
 xlim([tipping-.01 region1boundary+.05])
 ylim([-.1 .3])
 if lambda>1.5
-    print('-f1', 'slowosc_bif_diagram__large_zoom','-djpeg')
+    print('-f1', 'slowosc_bif_diagram_large_zoom','-djpeg')
+elseif lambda>1
+    print('-f1', 'slowosc_bif_diagram_medium_zoom','-djpeg')
 else
-    print('-f1', 'slowosc_bif_diagram__small_zoom','-djpeg')
+    print('-f1', 'slowosc_bif_diagram_small_zoom','-djpeg')
 end
