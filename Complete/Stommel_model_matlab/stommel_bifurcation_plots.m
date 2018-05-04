@@ -1,11 +1,11 @@
-addpath('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Functions')
-cd('C:\Users\codyg\Desktop\MSc_Thesis\Cody\trunk\Complete\Graphs\TwoD_Stommel')
+addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
+cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\TwoD_Stommel')
 
 
 %Standard orientation bif plot
 eta3=0.375;
 eta1=4;
-
+close(figure(1))
 figure(1)
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,2]);
@@ -19,8 +19,9 @@ z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,.426651,2.5]);
 set(h3,'color','r','linewidth',2)
 
-xlabel('\eta_2')
-ylabel('V')
+set(gca,'fontsize',14)
+xlabel('\eta_2','fontsize',20)
+ylabel('V','fontsize',20)
 title('')
 axis([.5 2.5 -.5 1.5])
 print('-f1','V_bif','-djpeg');
@@ -29,20 +30,22 @@ print('-f1','V_bif','-djpeg');
 
 eta1=4;
 eta3=1;
+close(figure(2))
 figure(2)
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,.5]);
 set(h1,'color','r','linewidth',2)
-xlabel('\eta_2')
-ylabel('V')
+set(gca,'fontsize',14)
+xlabel('\eta_2','fontsize',20)
+ylabel('V','fontsize',20)
 title('')
+print('-f2','V_bif_collapse','-djpeg');
 
-%Reverse orientation
 
+%Saddle orientation
 eta1=4;
 eta3=1.875;
-print('-f2','V_bif_reverse','-djpeg');
-
+close(figure(3))
 figure(3)
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-1,.5]);
@@ -56,12 +59,13 @@ z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.226269,-1]);
 set(h3,'color','r','linewidth',2)
 
-xlabel('\eta_2')
-ylabel('V')
+set(gca,'fontsize',14)
+xlabel('\eta_2','fontsize',20)
+ylabel('V','fontsize',20)
 title('')
 axis([6.5 8.5 -1 .5])
 
-print('-f3','V_bif_collapse','-djpeg');
+print('-f3','V_bif_reverse','-djpeg');
 
 %T equilibrium
 eta1 = 4; eta3 = 3/8;
@@ -94,8 +98,9 @@ plot(Vlow,Tlow,'r','linewidth',2)
 hold on
 plot(Vmid,Tmid, 'k-.')
 plot(Vup,Tup,'r','linewidth',2)
-xlabel('V')
-ylabel('T')
+set(gca,'fontsize',14)
+xlabel('V','fontsize',20)
+ylabel('T','fontsize',20)
 print('-f4','T_equil','-djpeg');
 
 function eta2 = Vcurve(V,eta1,eta3)

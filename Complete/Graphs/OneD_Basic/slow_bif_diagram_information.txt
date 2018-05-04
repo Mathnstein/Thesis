@@ -1,4 +1,4 @@
-tipping actual =-0.029400
+tipping actual =-0.024100
 tipping estimate =-0.023026
 epsilon=0.010000
-Criteria=0.500000
+Criteria=0.200000
