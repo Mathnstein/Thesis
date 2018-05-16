@@ -1,0 +1,120 @@
+\begin{thebibliography}{10}
+
+\bibitem{alley2003abrupt}
+Richard~B Alley, Jochem Marotzke, William~D Nordhaus, Jonathan~T Overpeck,
+  Dorothy~M Peteet, Roger~A Pielke, RT~Pierrehumbert, PB~Rhines, TF~Stocker,
+  LD~Talley, et~al.
+\newblock Abrupt climate change.
+\newblock {\em science}, 299(5615):2005--2010, 2003.
+
+\bibitem{angeli2004detection}
+David Angeli, James~E Ferrell, and Eduardo~D Sontag.
+\newblock Detection of multistability, bifurcations, and hysteresis in a large
+  class of biological positive-feedback systems.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  101(7):1822--1827, 2004.
+
+\bibitem{bensoussan2011asymptotic}
+Alain Bensoussan, Jacques-Louis Lions, and George Papanicolaou.
+\newblock {\em Asymptotic analysis for periodic structures}, volume 374.
+\newblock American Mathematical Soc., 2011.
+
+\bibitem{caesar2018AMOC}
+Levke Caesar, Stefan Rahmstorf, Alexander Robinson, Georg Feulner, and V~Saba.
+\newblock Observed fingerprint of a weakening atlantic ocean overturning
+  circulation.
+\newblock {\em Nature}, 556(1):191--196, 2018.
+
+\bibitem{erneux1989jump}
+T~Erneux and JP~Laplante.
+\newblock Jump transition due to a time-dependent bifurcation parameter in the
+  bistable ioadate--arsenous acid reaction.
+\newblock {\em The Journal of Chemical Physics}, 90(11):6129--6134, 1989.
+
+\bibitem{haberman1979slowly}
+Richard Haberman.
+\newblock Slowly varying jump and transition phenomena associated with
+  algebraic bifurcation problems.
+\newblock {\em SIAM Journal on Applied Mathematics}, 37(1):69--106, 1979.
+
+\bibitem{hohl1995scaling}
+Angela Hohl, HJC Van~der Linden, Rajarshi Roy, Guillermo Goldsztein, Fernando
+  Broner, and Steven~H Strogatz.
+\newblock Scaling laws for dynamical hysteresis in a multidimensional laser
+  system.
+\newblock {\em Physical review letters}, 74(12):2220, 1995.
+
+\bibitem{huybers2005obliquity}
+Peter Huybers and Carl Wunsch.
+\newblock Obliquity pacing of the late pleistocene glacial terminations.
+\newblock {\em Nature}, 434(7032):491, 2005.
+
+\bibitem{joshi2005dynamical}
+Amitabh Joshi, Wenge Yang, and Min Xiao.
+\newblock Dynamical hysteresis in a three-level atomic system.
+\newblock {\em Optics letters}, 30(8):905--907, 2005.
+
+\bibitem{jung1990scaling}
+Peter Jung, George Gray, Rajarshi Roy, and Paul Mandel.
+\newblock Scaling law for dynamical hysteresis.
+\newblock {\em Physical review letters}, 65(15):1873, 1990.
+
+\bibitem{marotzke2000abrupt}
+Jochem Marotzke.
+\newblock Abrupt climate change and thermohaline circulation: Mechanisms and
+  predictability.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  97(4):1347--1350, 2000.
+
+\bibitem{murray2012asymptotic}
+James~Dickson Murray.
+\newblock {\em Asymptotic analysis}, volume~48.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{rahmstorf2000thermohaline}
+Stefan Rahmstorf.
+\newblock The thermohaline ocean circulation: A system with dangerous
+  thresholds?
+\newblock {\em Climatic Change}, 46(3):247--256, 2000.
+
+\bibitem{rahmstorf2002ocean}
+Stefan Rahmstorf.
+\newblock Ocean circulation and climate during the past 120,000 years.
+\newblock {\em Nature}, 419(6903):207--214, 2002.
+
+\bibitem{roberts2017relaxation}
+Andrew Roberts and Raj Saha.
+\newblock Relaxation oscillations in an idealized ocean circulation model.
+\newblock {\em Climate Dynamics}, 48(7-8):2123--2134, 2017.
+
+\bibitem{sanchez1996method}
+Nestor~E Sanchez.
+\newblock The method of multiple scales: asymptotic solutions and normal forms
+  for nonlinear oscillatory problems.
+\newblock {\em Journal of Symbolic Computation}, 21(2):245--252, 1996.
+
+\bibitem{seydel2009practical}
+R{\"u}diger Seydel.
+\newblock {\em Practical bifurcation and stability analysis}, volume~5.
+\newblock Springer Science \& Business Media, 2009.
+
+\bibitem{stastna2007box}
+M~Stastna and WR~Peltier.
+\newblock On box models of the north atlantic thermohaline circulation:
+  Intrinsic and extrinsic millennial timescale variability in response to
+  deterministic and stochastic forcing.
+\newblock {\em Journal of Geophysical Research: Oceans}, 112(C10), 2007.
+
+\bibitem{stommel1961thermohaline}
+Henry Stommel.
+\newblock Thermohaline convection with two stable regimes of flow.
+\newblock {\em Tellus}, 13(2):224--230, 1961.
+
+\bibitem{zhu2015tipping}
+Jielin Zhu, Rachel Kuske, and Thomas Erneux.
+\newblock Tipping points near a delayed saddle node bifurcation with periodic
+  forcing.
+\newblock {\em SIAM journal on applied dynamical systems}, 14(4):2030--2068,
+  2015.
+
+\end{thebibliography}
