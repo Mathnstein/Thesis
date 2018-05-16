@@ -11,9 +11,9 @@ figure(1)
 plot(a,lower,'k-.')
 hold on
 plot(a,upper,'r','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('a','fontsize',20)
-ylabel('x','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('a','fontsize',32)
+ylabel('x','fontsize',32)
 xlim([-.5 1])
 
 [a,x]=meshgrid(-1:0.2:1,-1:0.2:1);

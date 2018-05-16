@@ -93,9 +93,9 @@ set(h3,'color','r','linewidth',2)
 % Remove vectorized warning, not important for speed
 [~,war]=lastwarn();
 warning('off',war);
-set(gca,'fontsize',14)
-xlabel('\eta_2','fontsize',20)
-ylabel('V','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\eta_2','fontsize',32)
+ylabel('V','fontsize',32)
 title('')
 hold on
 plot(eta2num,Vnum,'k--','linewidth',2)
@@ -137,9 +137,9 @@ hold on
 plot(Vmid,Tmid, 'k-.')
 plot(Vup,Tup,'r','linewidth',2)
 plot(Vnum,Tnum,'k--','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('V','fontsize',20)
-ylabel('T','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('V','fontsize',32)
+ylabel('T','fontsize',32)
 
 
 print('-f2','slow_bif_Tplot','-djpeg');
@@ -205,9 +205,9 @@ hold on
 plot(epsvec,tipvec2,'b', 'linewidth', 2)
 plot(epsvec,tipactualvec,'r*')
 hold off
-set(gca,'fontsize',14)
-xlabel('\epsilon','fontsize',20)
-ylabel('\eta_2-\eta_{2ns}','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\epsilon','fontsize',32)
+ylabel('\eta_2-\eta_{2ns}','fontsize',32)
 
 print('-f3','slow_epscomp','-djpeg')
 

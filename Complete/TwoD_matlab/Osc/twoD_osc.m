@@ -24,7 +24,7 @@ smootheta2 = Vcurve(Vsmooth,eta1,eta3);
 % Time series
 close(figure(1))
 close(figure(2))
-eta2vec = [caseIboundary+2/Omega (caseIboundary+muosc)/2 muosc-1/Omega];
+eta2vec = [caseIboundary+2/Omega (caseIboundary+muosc)/2 eta1*eta3+1/Omega];
 N = length(eta2vec);
 labs={};
 c={};
@@ -40,7 +40,7 @@ for i = 1:N
     hold on
     P1 = plot(t,Vosc,'linewidth',2);
     set(gca,'Xdir','reverse')
-    set(gca,'fontsize',14)
+    set(gca,'fontsize',18)
     c{i} = get(P1,'Color');
     if i == 1
         Vbefore = Vosc(500:end);
@@ -52,8 +52,8 @@ for i = 1:N
         Vafter = Vosc(500:end);
         labs{i}='\eta_2 after bifurcation';
     end
-    xlabel('Time','fontsize',20)
-    ylabel('V','fontsize',20)
+    xlabel('Time','fontsize',32)
+    ylabel('V','fontsize',32)
     ylim([-.6 1.3])
     print('-f1','osc_Vtimeseries','-djpeg')
     
@@ -61,7 +61,7 @@ for i = 1:N
     hold on
     P2 = plot(t,Tosc,'linewidth',2);
     set(gca,'Xdir','reverse')
-    set(gca,'fontsize',14')
+    set(gca,'fontsize',18)
     c{i} = get(P2,'Color');
      if i == 1
         Tbefore = Tosc(500:end);
@@ -73,8 +73,8 @@ for i = 1:N
         Tafter = Tosc(500:end);
         labs{i}='\eta_2 after bifurcation';
     end
-    xlabel('Time','fontsize',20)
-    ylabel('T','fontsize',20)
+    xlabel('Time','fontsize',32)
+    ylabel('T','fontsize',32)
     print('-f2','osc_Ttimeseries','-djpeg')
 end
 
@@ -99,9 +99,9 @@ set(h3,'color','r','linewidth',2)
 % Remove vectorized warning, not important for speed
 [~,war] = lastwarn();
 warning('off',war);
-set(gca,'fontsize',14)
-xlabel('\eta_2','fontsize',20)
-ylabel('V','fontsize',14)
+set(gca,'fontsize',18)
+xlabel('\eta_2','fontsize',32)
+ylabel('V','fontsize',32)
 title('')
 
 % x=0 axis
@@ -113,7 +113,7 @@ plot(caseIvec, yvec, 'g--','linewidth',2)
 xlim([nsbif 2.3])
 ylim([-.5 .3])
 
-print('-f3','osc_cases','-djpeg')
+%print('-f3','osc_cases','-djpeg')
 
 % Phase plane time series
 plot(eta2vec(1)*ones(1,length(Vbefore)),Vbefore,'color',c{1},'linewidth',2)
@@ -151,9 +151,9 @@ plot(Vup,Tup,'r','linewidth',2)
 plot(Vbefore,Tbefore,'color',c{1},'linewidth',2)
 plot(Vat,Tat,'color',c{2},'linewidth',2)
 plot(Vafter,Tafter,'color',c{3},'linewidth',2)
-set(gca,'fontsize',14)
-xlabel('V','fontsize',20)
-ylabel('T','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('V','fontsize',32)
+ylabel('T','fontsize',32)
 
 print('-f4','osc_bif_Tplot','-djpeg');
 
