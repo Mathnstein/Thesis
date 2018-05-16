@@ -1,7 +1,7 @@
 %Full analysis of OneD Osc.
 %(1)A dynamics plot and a (2)comparison plot against frequency will be produced
 
-criteria =.2;
+criteria =.5;
 
 % Load function folder
 addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
@@ -9,7 +9,7 @@ cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_w_Osc')
  
 
 % Comparison plot
-A=1;
+A=2;
 M=20;
 invOmegavec=linspace(.001,.2,M);
 bifvec=zeros(1,length(invOmegavec));
@@ -44,9 +44,9 @@ figure(1)
 plot(invOmegavec,bifvec,'k','linewidth',2);
 hold on
 plot(invOmegavec,bifactualvec,'r*');
-set(gca,'fontsize',14)
-xlabel('\Omega^{-1}','fontsize',20);
-ylabel('\mu','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\Omega^{-1}','fontsize',32);
+ylabel('\mu','fontsize',32)
 
 
 print('-f1','osc_Omegacomp','-djpeg')

@@ -19,9 +19,9 @@ z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,.426651,2.5]);
 set(h3,'color','r','linewidth',2)
 
-set(gca,'fontsize',14)
-xlabel('\eta_2','fontsize',20)
-ylabel('V','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\eta_2','fontsize',32)
+ylabel('V','fontsize',32)
 title('')
 axis([.5 2.5 -.5 1.5])
 print('-f1','V_bif','-djpeg');
@@ -35,9 +35,9 @@ figure(2)
 z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h1=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.5,.5]);
 set(h1,'color','r','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('\eta_2','fontsize',20)
-ylabel('V','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\eta_2','fontsize',32)
+ylabel('V','fontsize',32)
 title('')
 print('-f2','V_bif_collapse','-djpeg');
 
@@ -59,9 +59,9 @@ z=@(eta2,V)(eta1-eta2)-V*abs(V)-eta1/(1+abs(V))+eta3*(eta1/(1+abs(V))-V);
 h3=ezplot(z,[eta1*eta3-1,eta1*eta3+1,-.226269,-1]);
 set(h3,'color','r','linewidth',2)
 
-set(gca,'fontsize',14)
-xlabel('\eta_2','fontsize',20)
-ylabel('V','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\eta_2','fontsize',32)
+ylabel('V','fontsize',32)
 title('')
 axis([6.5 8.5 -1 .5])
 
@@ -98,9 +98,9 @@ plot(Vlow,Tlow,'r','linewidth',2)
 hold on
 plot(Vmid,Tmid, 'k-.')
 plot(Vup,Tup,'r','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('V','fontsize',20)
-ylabel('T','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('V','fontsize',32)
+ylabel('T','fontsize',32)
 print('-f4','T_equil','-djpeg');
 
 function eta2 = Vcurve(V,eta1,eta3)

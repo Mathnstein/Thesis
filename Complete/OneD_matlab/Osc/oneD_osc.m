@@ -1,6 +1,6 @@
 % Plots for oneD_osc
 
-criteria =.2;
+criteria =.5;
 
 % Load function folder
 addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
@@ -50,9 +50,9 @@ for i=1:N
         labs{i}='\mu after bifurcation';
     end
 end
-set(gca,'fontsize',14)
-xlabel('Time','fontsize',20)
-ylabel('x','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('Time','fontsize',32)
+ylabel('x','fontsize',32)
 
 print('-f1','osc_timeseries','-djpeg')
 
@@ -79,9 +79,9 @@ plot(mulower,xlower,'r','linewidth',2)
 hold on
 plot(mumid,xmid,'k:')
 plot(muupper,xupper,'r','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('\mu','fontsize',20)
-ylabel('x','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\mu','fontsize',32)
+ylabel('x','fontsize',32)
 
 % x=0 axis
 plot(linspace(-1,1,100),zeros(1,100),'k')
@@ -89,7 +89,12 @@ plot(linspace(-1,1,100),zeros(1,100),'k')
 % Parameter ranges
 plot(bifvec, yvec, 'b--','linewidth',2)
 plot(region1vec, yvec, 'g--','linewidth',2)
+xlim([0 .6])
+ylim([-.5 .4])
 
+print('-f2','osc_cases','-djpeg')
+
+%{
 % Phase plane time series
 plot(muper(1)*ones(1,length(xbefore)),xbefore,'color',c{1},'linewidth',2)
 plot(muper(2)*ones(1,length(xat)),xat,'color',c{2},'linewidth',2)
@@ -101,3 +106,4 @@ print('-f2','osc_bif_diagram','-djpeg')
 xlim([0 .85])
 ylim([-.5 .4])
 print('-f2','osc_bif_diagram_zoom','-djpeg')
+%}

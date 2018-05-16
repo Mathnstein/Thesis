@@ -2,10 +2,15 @@
 addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\TwoD_SlowOsc')
 
-criteria = .2;
+criteria = Vsmooth;
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
-value = 1;
+value = 2;
+
+eta1 = 4; eta3 = .375;
+nsbif = eta1*eta3;
+A=3;
+B=3;
 
 if value == 1 || value == 3
     %Here we will fix lambda and compare across epsilon
@@ -16,20 +21,17 @@ if value == 1 || value == 3
     tippredREDvecsmall = zeros(1,k);
     tipactualvec = zeros(1,k);
     
-    lambdavec = [.6, 2];
+    lambdavec = [.7, 2];
     for l=2:3
         lambda = lambdavec(l-1);
-
         parfor i =1:k
             eps = epsvec(i);
             Omega = eps^(-lambda);
-            A=2;
-            B=2;
             h = min(.01,2*pi/(10*Omega));
 
             %-------------------------------------------------
             % System 
-            start = eta1*eta3-.1; stop=eta1*eta3+.4;
+            start = nsbif-.1; stop=nsbif+.4;
             time = (stop-start)/(eps);
 
             % Non-dim Stommel Equations
@@ -44,18 +46,10 @@ if value == 1 || value == 3
             % Solve equations for numerical soln, step size h
             [~,Vnum,Tnum,eta2num] = RK2sys3(vDE,tDE,eta2DE,vInit,tInit,eta2Init,0,time,h);
 
-            % Ignore transient behavior
-            Vnum = Vnum(100:end);
-            Tnum = Tnum(100:end);
-            eta2num = eta2num(100:end);
-
-            Min = min(Vnum);
-            Max = max(Vnum);
-
             % Determine the tipping points for each case
             Mat = [eta3 1-eta3;eta1 1];
-            tippredlarge = eta1*eta3-eps*log(eps)/min(eig(Mat));
-            tippredREDlarge = eta1*eta3+eps*log(eps)/(eta1-eta3-eta1*eta3);
+            tippredlarge = -eps*log(eps)/min(eig(Mat));
+            tippredREDlarge = eps*log(eps)/(eta1-eta3-eta1*eta3);
             
             scaling = eps^(lambda-1);
             c0 = pi*abs(A)/(eta1*(1-eta3));
@@ -64,8 +58,8 @@ if value == 1 || value == 3
             smooth = scaling^(1/3)*c0^(1/3)*(-eps*2.33811);
             oscillatory = c1*(2-c2^2)/Omega;
             
-            tippredREDsmall = eta1*eta3+smooth+oscillatory
-            tipactual=eta2num(find(Vnum>criteria,1));
+            tippredREDsmall = smooth+oscillatory
+            tipactual=eta2num(find(Vnum>criteria,1))-nsbif;
 
             tippredveclarge(i) = tippredlarge;
             tippredREDveclarge(i) = tippredREDlarge;
@@ -80,9 +74,9 @@ if value == 1 || value == 3
     plot(epsvec,tippredveclarge,'b--','linewidth',2)
     %plot(epsvec,tippredREDveclarge,'k','linewidth',2)
     plot(epsvec,tippredREDvecsmall,'k','linewidth',2)
-    set(gca,'fontsize',14)
-    xlabel('\epsilon','FontSize',20)
-    ylabel('\eta_2','FontSize',20)
+    set(gca,'fontsize',18)
+    xlabel('\epsilon','FontSize',32)
+    ylabel('\eta_2-{\eta_2}_{ns}','FontSize',32)
     end
     print('-f3','slowosc_epscomp_mixed','-djpeg');
     print('-f4','slowosc_epscomp_slow','-djpeg');
@@ -101,13 +95,11 @@ if value == 2 || value == 3
     parfor i =1:k
         lambda = lambdavec(i);
         Omega = eps^(-lambda);
-        A=2;
-        B=2;
-        h = min(.001,2*pi/(10*Omega));
+        h = min(.01,2*pi/(10*Omega));
 
         %-------------------------------------------------
         % System 
-        start = eta1*eta3-.2; stop=eta1*eta3+.2;
+        start = nsbif-.1; stop=nsbif+.4;
         time =(stop-start)/(eps);
 
         % Non-dim Stommel Equations
@@ -127,10 +119,9 @@ if value == 2 || value == 3
         Max = max(Vnum);
 
         % Determine the tipping points for each case
-        % Determine the tipping points for each case
         Mat=[eta3 1-eta3;eta1 1];
-        tippredlarge = eta1*eta3-eps*log(eps)/min(eig(Mat));
-        tippredREDlarge = eta1*eta3+eps*log(eps)/(eta1-eta3-eta1*eta3);
+        tippredlarge = -eps*log(eps)/min(eig(Mat));
+        tippredREDlarge = eps*log(eps)/(eta1-eta3-eta1*eta3);
         
         scaling = eps^(lambda-1);
         c0 = pi*abs(A)/(eta1*(1-eta3));
@@ -139,8 +130,8 @@ if value == 2 || value == 3
         smooth = scaling^(1/3)*c0^(1/3)*(-eps*2.33811);
         oscillatory = c1*(2-c2^2)/Omega;
         
-        tippredREDsmall = eta1*eta3+smooth+oscillatory;
-        tipactual=eta2num(find(Vnum>criteria,1));
+        tippredREDsmall = smooth+oscillatory;
+        tipactual=eta2num(find(Vnum>criteria,1))-nsbif;
 
         tippredveclarge(i) = tippredlarge;
         tippredREDveclarge(i) = tippredREDlarge;
@@ -155,9 +146,9 @@ if value == 2 || value == 3
     plot(lambdavec,tippredveclarge,'b--','linewidth',2)
     %plot(lambdavec,tippredREDveclarge,'k','linewidth',2)
     plot(lambdavec,tippredREDvecsmall,'k','linewidth',2)
-    set(gca,'fontsize',14)
-    xlabel('\lambda','FontSize',20)
-    ylabel('\eta_2','FontSize',20)
+    set(gca,'fontsize',18)
+    xlabel('\lambda','FontSize',32)
+    ylabel('\eta_2-{\eta_2}_{ns}','FontSize',32)
     
     print('-f5','slowosc_lambdacomp','-djpeg');
 end

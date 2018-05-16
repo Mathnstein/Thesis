@@ -17,9 +17,9 @@ zoom = 0;
 % Hyperparameters
 eta1 = 4; eta3 = .375;
 eps = .01;
-Omega = 1;
-A=2;
-B=2;
+Omega = 2;
+A=1;
+B=1;
 
 %-------------------------------------------------
 % System 

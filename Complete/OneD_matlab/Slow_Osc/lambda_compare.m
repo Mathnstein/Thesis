@@ -6,12 +6,12 @@ cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\OneD_slowosc')
 
 % Set value to 1 for only lambda figure, 2 for epsilon, and 3 for both
 
-value = 1;
+value = 3;
 
 %Hyperparameters
 n=25;
-criteria=.2;
-A = 1;
+criteria=.5;
+A = 4;
 
 if value == 1 || value == 3
     lower =.5;
@@ -35,7 +35,7 @@ if value == 1 || value == 3
     B = eps^(lambda-1) * abs(A);
 
     %Numerics
-    h=min(.01, 2 * pi/(10 * Omega));
+    h=min(.01, 2 * pi/(20 * Omega));
     start = .5; stop = -.5;
     time = abs(stop - start)/eps;
     muInit = start;
@@ -66,9 +66,9 @@ if value == 1 || value == 3
     plot(lambdavec, estimatedtipvec, 'k','linewidth',2)
     plot(lambdavec, slowtipvec, 'b--','linewidth',2)
     %plot(xvec,yvec,'r')
-    set(gca,'fontsize',14)
-    xlabel('\lambda','fontsize',20);
-    ylabel('\mu','fontsize',20);
+    set(gca,'fontsize',18)
+    xlabel('\lambda','fontsize',32);
+    ylabel('\mu','fontsize',32);
     xlim([lower upper])
 
     print('-f1','slowosc_lambdacomp','-djpeg')
@@ -82,7 +82,7 @@ if value == 2 || value == 3
     slowtipvec = zeros(1,n);
 
     %Set up for an example of each case
-    lambdavec = [.6, 2];
+    lambdavec = [.8, 1.3];
     for k=2:3
         lambda = lambdavec(k-1);
 
@@ -119,9 +119,9 @@ if value == 2 || value == 3
         hold on
         plot(epsvec, estimatedtipvec, 'k','linewidth',2)
         plot(epsvec, slowtipvec, 'b--','linewidth',2)
-        set(gca,'fontsize',14)
-        xlabel('\epsilon','fontsize',20)
-        ylabel('\mu','fontsize',20)
+        set(gca,'fontsize',18)
+        xlabel('\epsilon','fontsize',32)
+        ylabel('\mu','fontsize',32)
     end
         print('-f2', 'slowosc_epscomp_case2', '-djpeg')
         print('-f3', 'slowosc_epscomp_case3', '-djpeg')

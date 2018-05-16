@@ -1,6 +1,6 @@
 %Bifurcation diagram for slow pass w/o osc
 
-criteria=.5;
+criteria=.2;
 
 % Load function folder
 addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
@@ -22,7 +22,7 @@ muDE=@(t,y,mu)(-eps);
 
 %Comparison
 
-tipdelayed=eps*log(eps);
+tipdelayed=eps*log(eps)/2;
 tipxdel=tipdelayed*ones(1,100);
 tipy=linspace(min(y),max(y),100);
 
@@ -43,9 +43,9 @@ set(h2,'color','r','linewidth', 2)
 h3=fimplicit(z,[-1,1.5,1,2.5]);
 set(h3,'color','r','linewidth', 2)
 plot(mu,y,'k--','linewidth',2)
-set(gca,'fontsize',14)
-xlabel('\mu','fontsize',20)
-ylabel('x','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\mu','fontsize',32)
+ylabel('x','fontsize',32)
 title('')
 
 % Remove vectorized warning, not important for speed
@@ -62,7 +62,7 @@ ylim([-.05 .2])
 print('-f1','slow_bif_diagram_zoom','-djpeg');
 
 %Comparison plot
-epsvec=linspace(.001,.2,20);
+epsvec=linspace(.0005,.05,20);
 tipdelayedvec=zeros(1,length(epsvec));
 tipactualvec=zeros(1,length(epsvec));
 
@@ -80,7 +80,7 @@ for i=1:length(epsvec)
     %Numerical Solution
     [~,y,mu]=RK2sys(yDE,muDE,yInit,muInit,0,time,h);
 
-    tipdelayedvec(i)=eps*log(eps);
+    tipdelayedvec(i)=eps*log(eps)/2;
     tipactualvec(i)=mu(find(y>criteria,1));
     
 end
@@ -90,9 +90,9 @@ figure(2)
 plot(epsvec,tipdelayedvec,'k','linewidth',2);
 hold on
 plot(epsvec,tipactualvec,'r*');
-set(gca,'fontsize',14)
-xlabel('\epsilon','fontsize',20)
-ylabel('\mu','fontsize',20)
+set(gca,'fontsize',18)
+xlabel('\epsilon','fontsize',32)
+ylabel('\mu','fontsize',32)
 
 
 print('-f2','slow_epscomp','-djpeg');
