@@ -25,6 +25,11 @@ Levke Caesar, Stefan Rahmstorf, Alexander Robinson, Georg Feulner, and V~Saba.
   circulation.
 \newblock {\em Nature}, 556(1):191--196, 2018.
 
+\bibitem{dijkstra2013nonlinear}
+Henk~A Dijkstra.
+\newblock {\em Nonlinear climate dynamics}.
+\newblock Cambridge University Press, 2013.
+
 \bibitem{erneux1989jump}
 T~Erneux and JP~Laplante.
 \newblock Jump transition due to a time-dependent bifurcation parameter in the
@@ -58,6 +63,12 @@ Amitabh Joshi, Wenge Yang, and Min Xiao.
 Peter Jung, George Gray, Rajarshi Roy, and Paul Mandel.
 \newblock Scaling law for dynamical hysteresis.
 \newblock {\em Physical review letters}, 65(15):1873, 1990.
+
+\bibitem{lorenzo2012role}
+MN~Lorenzo, JJ~Taboada, and I~Iglesias.
+\newblock The role of stochastic forcing in climate models: The case of
+  thermohaline circulation.
+\newblock In {\em Climate Models}. InTech, 2012.
 
 \bibitem{marotzke2000abrupt}
 Jochem Marotzke.

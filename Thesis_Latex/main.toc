@@ -36,10 +36,10 @@
 \contentsline {subsection}{\numberline {3.3.3}{Stability}}{79}{subsection.3.3.3}
 \contentsline {subsubsection}{{Case I: $\lambda \leq 1$}}{79}{section*.53}
 \contentsline {subsubsection}{{Sub-Case I: $P_0(t)\leq -|A|$}}{79}{section*.54}
-\contentsline {subsubsection}{{Sub-Case II: $|P_0(t)|<-|A|$}}{80}{section*.55}
+\contentsline {subsubsection}{{Sub-Case II: $|P_0(t)|<|A|$}}{80}{section*.55}
 \contentsline {subsubsection}{{Case II: $\lambda >1$}}{81}{section*.56}
-\contentsline {chapter}{\numberline {4}{Summary and Future Work}}{84}{chapter.4}
-\contentsline {chapter}{{Bibliography}}{86}{chapter*.58}
+\contentsline {chapter}{\numberline {4}{Summary and Future Work}}{83}{chapter.4}
+\contentsline {chapter}{{Bibliography}}{87}{chapter*.60}
 \contentsline {part}{{Appendices}}{}{}
-\contentsline {chapter}{\numberline {A}{One-Dimensional}}{88}{appendix.A}
-\contentsline {chapter}{\numberline {B}{Two-Dimensional}}{90}{appendix.B}
+\contentsline {chapter}{\numberline {A}{One-Dimensional}}{89}{appendix.A}
+\contentsline {chapter}{\numberline {B}{Two-Dimensional}}{91}{appendix.B}

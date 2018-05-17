@@ -1,4 +1,4 @@
-The main focus of studying dynamical systems is to understand the possible states an observable solution can experience and with most engineering, physics or even chemical systems, this is a cumbersome task. Often we find parameters inherent in the model for the system to play huge roles in the dynamical behavior and can be the difference between a system being capable of finding an equilibrium or not. When we find a parameter that has this effect, we call it a bifurcation parameter as there is some value that can be found that suddenly bifurcates the behavior of the system. The canonical example and one of the first to be studied was the system that contained a saddle-node bifurcation
+The main focus of studying dynamical systems is to understand the possible states an observable solution can experience and with most engineering, physics or even chemical systems, this is a cumbersome task. This approach allows for conditions to be given for when a solution can be found or when it has stable behavior. Often we find parameters inherent in the model for the system to play huge roles in the dynamical behavior and can be the difference between a system being capable of finding an equilibrium or not. When we find a parameter that has this effect, we call it a bifurcation parameter as there is some value that can be found that suddenly bifurcates the behavior of the system. The canonical example and one of the first to be studied was the system that contained a saddle-node bifurcation
 
 \begin{equation}\label{eq:intro_saddlenode}
 \dot{x}=a-x^2.
@@ -23,7 +23,7 @@ The main focus of studying dynamical systems is to understand the possible state
 
 In figure~\ref{fig:intro_saddlenode} we show the vector field of the system that contains a saddle-node bifurcation. The equilibrium of this system is $x=\pm \sqrt{a}$ for any $a>0$ where stable equilibrium points with solid lines and unstable with dash-dotted lines. Notice that at $a=0$ and when $a<0$ we are no longer unable to find a stable equilibrium. This is known to be the simplest example of different qualitative behavior arising from a change in the parameter and it happens by two equilibria annihilating. In figure~\ref{fig:intro_saddlenode_bif_diagram} we plot the same system against the parameter $a$, which we call the phase plane. Here we still see the region with two equilibrium, the bifurcation and the region of no stability. Although, there are many types of bifurcations that have arisen in different systems that each have their own key properties. Studying these properties lead to a deeper understanding of the system on both the global and local scale. Much work has been done on systems that have smooth bifurcations due to the analysis being easier to perform, but non-smooth dynamics still are present in the physical world.
 
-Non-smooth bifurcations are a topic that arise in special systems and for how frequent they appear, they have not been studied nearly as much as their smooth counter parts. This paper discusses the role of the non-smooth saddle-node bifurcation in a simplified one-dimensional system in \autoref{chap:oneD} as well as in the classic two-dimensional Stommel model for Thermohalcine current dynamics in \autoref{chap:twoD}. But many interesting ocean and weather mechanisms may be incorporated into the Stommel model to provide more realistic predictions for weather patterns. We choose to study slowly varying bifurcation parameters and their effect on the stability of a system while contrasting this with non-autonomous oscillatory forcing. The interaction of these features create complex dynamics around the standard bifurcations and can lead to early bifurcation or delayed tipping. For the one-dimensional system, a detailed analysis of these features is done on the smooth bifurcation by Zhu \& Kuske \cite{zhu2015tipping}.
+Non-smooth bifurcations are a topic that arise in special systems and for how frequent they appear, they have not been studied nearly as much as their smooth counter parts. This paper discusses the role of the non-smooth saddle-node bifurcation in a simplified one-dimensional system in \autoref{chap:oneD} as well as in the classic two-dimensional Stommel model for Thermohalcine current dynamics in \autoref{chap:twoD}. But many interesting ocean and weather mechanisms may be incorporated into the Stommel model to provide more realistic predictions for weather patterns. We choose to study slowly varying bifurcation parameters and their effect on the stability of a system while contrasting this with non-autonomous oscillatory forcing. The interaction of these features create complex dynamics around the standard bifurcations and can lead to early bifurcation or delayed tipping. For the one-dimensional system, a detailed analysis of these features is done on the smooth bifurcation in \cite{zhu2015tipping}.
 
 \section*{Stommel Model}
 
@@ -35,12 +35,9 @@ Global circulation models have primarily focused on three different categories:
 \end{itemize}
 These categories all contribute significantly to the overall prediction of weather and climate for the planet, which has importance to just about every industry and economy. Failure to adhere to and prepare for sudden changes in the climate led to drastic situations like severe droughts or ocean acidification. Atmospheric models have been vastly studied but far less work has been done on the contribution from the ocean and the dynamics that drive the tides and current.
 
-A key feature of oceanic contributions is when patterns form around regions of bi-stability of temperature and salinity. An example of this is the thermohaline circulation (THC) which experience abrupt qualitative changes at certain points, see Alley \cite{alley2003abrupt},
-Marotzke \cite{marotzke2000abrupt},
-or Rahmstorf \cite{rahmstorf2000thermohaline} and
-\cite{rahmstorf2002ocean}. Just earlier this year Rahmstorf was able to find evidence of weakening occurring around these abrupt changes in a system of ocean patterns known as the Atlantic meridional overturning circulation (AMOC) \cite{caesar2018AMOC}. This is the first evidence of ocean dynamics responding to temperature change on the surface and can help further predict the future of the system. It is imperative that appropriate action is taken to prepare for the future of these type of systems as they are outside our realm of control. 
+A key feature of oceanic contributions is when patterns form around regions of bi-stability of temperature and salinity. An example of this is the thermohaline circulation (THC) which experience abrupt qualitative changes at certain points, see \cite{alley2003abrupt,marotzke2000abrupt,rahmstorf2000thermohaline,rahmstorf2002ocean}. Just earlier this year evidence was found of weakening occurring around these abrupt changes in a system of ocean patterns known as the Atlantic meridional overturning circulation (AMOC) \cite{caesar2018AMOC}. This is the first evidence of ocean dynamics responding to temperature change on the surface and can help further predict the future of the system. It is imperative that appropriate action is taken to prepare for the future of these type of systems as they are outside our realm of control. 
 
-To study these phenomenon we create parametric models to replicate the dynamics we observe. Initially, Henry Stommel proposed the two box model in 1961 to understand the physics of the THC, shown in figure~\ref{fig:stommel_boxes}. In Stommel \cite{stommel1961thermohaline}, it is suggested that there are actually two different stability regimes which even overlap in the system that is proposed and concluded that oceanic dynamics behave very similarly about these equilibria. These type of systems have since been a heavily studied area for both climatology due to the wide ranging applications and dynamical systems for its generalization into dual stability.
+To study these phenomenon we create parametric models to replicate the dynamics we observe. Initially, Henry Stommel proposed the two box model in 1961 to understand the physics of the THC, shown in figure~\ref{fig:stommel_boxes}. In \cite{stommel1961thermohaline}, it is suggested that there are actually two different stability regimes which even overlap in the system that is proposed and concluded that oceanic dynamics behave very similarly about these equilibria. These type of systems have since been a heavily studied area for both climatology due to the wide ranging applications and dynamical systems for its generalization into dual stability.
 
 \begin{figure}[H]
 \centering
@@ -52,10 +49,10 @@ To study these phenomenon we create parametric models to replicate the dynamics 
 With emphasis on mathematics, the focus of this paper is on developing an effective approach to problems with bi-stability and additional mechanisms and thus the physical quantities are brushed aside in favor of their non-dimensional alternatives. The non-dimensionalized Stommel Model is represented with the system
 
 \begin{equation}
-  \begin{aligned}
-   \dot{T} & =  \eta_1-T(1+|T-S|), \\
-   \dot{S}     & =  \eta_2-S(\eta_3+|T-S|). 
-  \end{aligned}
+ \begin{aligned}
+  \dot{T} & = \eta_1-T(1+|T-S|), \\
+  \dot{S}   & = \eta_2-S(\eta_3+|T-S|). 
+ \end{aligned}
 \end{equation}
 
 The variables $T$ and $S$ are the temperature and salinity respectively, the parameters $\eta_1$, $\eta_2$, and $\eta_3$ are all dimensionless quantities that all have physical interpretation to the relaxation times and volumes of the box. Where $\eta_1$ is thought of as the thermal variation, $\eta_2$ as the saline variation otherwise known as the freshwater flux, and $\eta_3$ as the ratio of relaxation times of temperature and salinity. Here $\eta_1$ is a positive quantity that takes any value whereas $\eta_3$ is also positive but has the property to determine the orientation of the equilibria. A standard orientation will be when $\eta_3<1$, $\eta_3=1$ is a special case and $\eta_3>1$ will have reverse orientation, this is seen in figure~\ref{fig:Stommel_bif_plots}. This is due to the nature of the parameter, when $\eta_3=1$, the relaxation rates for both the thermal and salinity variables are the same and hence we lose the dual stability.
@@ -65,25 +62,25 @@ The parameter $\eta_2$ is the most interesting as different values cause major q
 It is convenient to view this system in terms of the variable $V=T-S$, which leads to the system
 
 \begin{equation}\label{eq:basic_stommel}
-  \begin{aligned}
-   \dot{T} & =  \eta_1-T(1+|V|), \\
-   \dot{V}     & =  (\eta_1-\eta_2)-V|V|-T+\eta_3(T-V).
-  \end{aligned}
+ \begin{aligned}
+  \dot{T} & = \eta_1-T(1+|V|), \\
+  \dot{V}   & = (\eta_1-\eta_2)-V|V|-T+\eta_3(T-V).
+ \end{aligned}
 \end{equation}
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/T_equil.jpg}
-  \caption{$V$ vs. $T$}
-  \label{fig:Tequil}
+ \centering
+ \includegraphics[width=\linewidth]{intro/T_equil.jpg}
+ \caption{$V$ vs. $T$}
+ \label{fig:Tequil}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/V_bif.jpg}
-  \caption{$\eta_2$ vs. $V$}
-  \label{fig:Vbif}
+ \centering
+ \includegraphics[width=\linewidth]{intro/V_bif.jpg}
+ \caption{$\eta_2$ vs. $V$}
+ \label{fig:Vbif}
 \end{subfigure}
 \caption{The equilibria of the non-dimensionalized system \eqref{eq:basic_stommel}. Parameters values are $\eta_1=4$ and $\eta_3=.375$. We see non-smooth behavior happening in both plots when $V=0$. The red line indicates a stable branch where the dashed dotted line is for an unstable branch.}
 \label{fig:systemequil}
@@ -94,36 +91,36 @@ As shown in figure~\ref{fig:systemequil}, the equilibrium curves reveal much abo
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/V_bif.jpg}
-  \caption{$\eta_3=.375$}
+ \centering
+ \includegraphics[width=\linewidth]{intro/V_bif.jpg}
+ \caption{$\eta_3=.375$}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/V_bif_collapse.jpg}
-  \caption{$\eta_3=1$}
+ \centering
+ \includegraphics[width=\linewidth]{intro/V_bif_collapse.jpg}
+ \caption{$\eta_3=1$}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/V_bif_reverse.jpg}
-  \caption{$\eta_3=1.875$}
+ \centering
+ \includegraphics[width=\linewidth]{intro/V_bif_reverse.jpg}
+ \caption{$\eta_3=1.875$}
 \end{subfigure}
 \caption{The choice in $\eta_3$ dictates the orientation of the problem, in each plot we have fixed $\eta_1=4$. The case for $\eta_3=1$ is special due to the two bifurcations overlapping and the unstable equilibrium vanishing.}
 \label{fig:Stommel_bif_plots}
 \end{figure}
 
-Much is known about the Stommel model in the case where $\eta_2$ is fixed to be a constant value throughout the analysis but realistically this is not the case. In Rahmstorf \cite{rahmstorf2000thermohaline}, this parameter is described as the influx of freshwater into the Atlantic and the changing nature of $\eta_2$ is justified by a positive feedback loop for salinity that drives the THC to move high-salinity water towards deep oceans. This loop causes the abrupt smooth bifurcation but then afterwards, a salinity deficit causes the parameter to decrease back towards the non-smooth bifurcation.
+Much is known about the Stommel model in the case where $\eta_2$ is fixed to be a constant value throughout the analysis but realistically this is not the case. In \cite{rahmstorf2000thermohaline}, this parameter is described as the influx of freshwater into the Atlantic and the changing nature of $\eta_2$ is justified by a positive feedback loop for salinity that drives the THC to move high-salinity water towards deep oceans. This loop causes the abrupt smooth bifurcation but then afterwards, a salinity deficit causes the parameter to decrease back towards the non-smooth bifurcation.
 
-This type of behavior is known as hysteresis, where there is some bi-stability region that the solution cycles through and hits both states of the equilibria. A similar analysis to the Stommel model's hysteresis can be found in Roberts \cite{roberts2017relaxation}. The phenomenon of hysteresis appears in many physical systems, for example Jung \cite{jung1990scaling}, Hohl \cite{hohl1995scaling} or Joshi \cite{joshi2005dynamical}. The smooth component of the hysteresis curve has been studied in a reduced one dimensional model, see Zhu \& Kuske \cite{zhu2015tipping}, we provide the other half of the analysis for the non-smooth component here.
+This type of behavior is known as hysteresis, where there is some bi-stability region that the solution cycles through and hits both states of the equilibria. A similar analysis to the Stommel model's hysteresis can be found in \cite{roberts2017relaxation}. The phenomenon of hysteresis appears in many physical systems, for example \cite{jung1990scaling}, \cite{hohl1995scaling} or \cite{joshi2005dynamical}. The smooth component of the hysteresis curve has been studied in a reduced one dimensional model, see \cite{zhu2015tipping}, we provide the other half of the analysis for the non-smooth component here.
 
 \section*{Slowly Varying Tipping}
 A system with a parameter known to cause a bifurcation will no longer admit a bifurcation in the standard sense when there is slow variation. Instead, these conditions give rise to a smooth but rapid change in the system's equilibria and where this occurs is called a tipping point.
 
-A tipping point is a point that causes an abrupt smooth transition in dynamical behavior as the system moves into a qualitatively different state. The idea being that some positive feedback pushes change towards a different state once a critical point has been passed, for example with biological systems seen in Angeli \cite{angeli2004detection}. These are known to be caused by small changes in one or more parameters in the system. An analysis that lays the theoretic backing of slow varying tipping with algebraic bifurcations is found in Haberman \cite{haberman1979slowly}.
+A tipping point is a point that causes an abrupt smooth transition in dynamical behavior as the system moves into a qualitatively different state. The idea being that some positive feedback pushes change towards a different state once a critical point has been passed, for example with biological systems seen in \cite{angeli2004detection}. These are known to be caused by small changes in one or more parameters in the system. An analysis that lays the theoretic backing of slow varying tipping with algebraic bifurcations is found in \cite{haberman1979slowly}.
 
 Tipping points have been discovered to occur in a wide variety of systems and have become a big staple in the study of areas like catastrophe theory and dynamical systems. They aid in predicting the future of a system and even could be a warning for irreversible change like in the case of the Stommel model. A tipping point thus shares similar characteristics of a bifurcation and typically occurs close to the standard bifurcation location.
 
-An important paper that we extend the results of is Zhu \& Kuske \cite{zhu2015tipping} where work was done on the system
+An important paper that we extend the results of is \cite{zhu2015tipping} where work was done on the system
 
 \begin{equation}\label{eq:intro_Zhueq}
 \begin{aligned}
@@ -132,7 +129,7 @@ An important paper that we extend the results of is Zhu \& Kuske \cite{zhu2015ti
 \end{aligned}
 \end{equation}
 
-where $\mu\ll 1$. This system is a slowly varying quadratic differential equation containing a smooth saddle-node bifurcation and appears in many physical problems like Erneux \cite{erneux1989jump}. A major result from \cite{zhu2015tipping} is that the solution and tipping point for \eqref{eq:intro_Zhueq} have the form
+where $\mu\ll 1$. This system is a slowly varying quadratic differential equation containing a smooth saddle-node bifurcation and appears in many physical problems like \cite{erneux1989jump}. A major result from \cite{zhu2015tipping} is that the solution and tipping point for \eqref{eq:intro_Zhueq} have the form
 
 \begin{equation}\label{eq:intro_Zhuairy}
 x\sim \frac{1}{|k_2|}\left(\frac{k_1}{2}+\left(\frac{D|k_2|}{\epsilon}\right)^{1/3}\right)\frac{Ai'\left([D|k_2|\epsilon]^{-2/3}\left(\frac{k_1^2}{4}+k_0|k_2|+D|k_2|a\right)\right)}{Ai\left([D|k_2|\epsilon]^{-2/3}\left(\frac{k_1^2}{4}+k_0|k_2|+D|k_2|a\right)\right)}
@@ -147,14 +144,14 @@ with $Ai(\cdot)$ being the Airy function and $a_{\text{Airy}}=\epsilon^{2/3}\cdo
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/saddlenode_tipping.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{intro/saddlenode_tipping.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{intro/saddlenode_tipping_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{intro/saddlenode_tipping_zoom.jpg}
+ \caption{}
 \end{subfigure}
 \caption{An example of tipping occurring in the saddle-node around the saddle-node bifurcation.}
 \label{fig:intro_tipping}

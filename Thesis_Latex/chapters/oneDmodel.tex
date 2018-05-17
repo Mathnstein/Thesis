@@ -1,4 +1,4 @@
-We consider a simpler system to give insight into the more complex two dimensional Stommel model with the one-dimensional model
+We consider a simpler system to give insight into the more complex two dimensional Stommel model with the following one-dimensional model
 
 \begin{equation}\label{eq:oneD_canonical}
 \begin{aligned}
@@ -11,7 +11,7 @@ We consider a simpler system to give insight into the more complex two dimension
 x(0)=x^0,\quad\mu(0)=\mu^0,
 \end{equation*}
 
-where the constants are the slow variation rate of $\epsilon \ll 1$, the amplitude of oscillation $A$ and the frequency of oscillation $\Omega$. We also assume the initial conditions to be ${x^0=1-\sqrt{1+\mu^0}}$ and $\mu^0>0$ which focuses our calculations on the lower equilibrium branch where $x<0$ and study nearby behavior.\\
+where the constants are the slow variation rate of $\epsilon \ll 1$, the amplitude of oscillation $A$ and the frequency of oscillation $\Omega$. We also assume the initial conditions to be ${x^0=1-\sqrt{1+\mu^0}}$ and $\mu^0>\mu_{ns}$ which focuses our calculations on the lower equilibrium branch where $x<0$ and study nearby behavior.\\
 The system \eqref{eq:oneD_canonical} is generalized from a basic model that contains both a smooth and non-smooth saddle-node bifurcation. This structure is similar to the Stommel model and hence a good model to test features like slow variation or oscillatory forcing. In each case, emphasis is put on the non-smooth component of the model to study the non-smooth bifurcation and the role it plays in the hysteresis curve we anticipate in the Stommel model.
 
 \section{Static Bifurcations}
@@ -32,7 +32,7 @@ x_l=1-\sqrt{1+\mu},\quad x_u=1+\sqrt{1-\mu},\quad
 x_{m}=1-\sqrt{1-\mu}.
 \end{equation*}
 
-We note that $x_l$ is valid for $\mu\ge 0$ and both $x_u$, $x_{m}$ for $\mu\le 1$. Thus this system has a stable equilibrium for each value of the parameter and has a region of bi-stability for $0\le \mu\le 1$. The boundary of this region are bifurcations at the points ${(\mu,x)=(0,0)}$ and $(\mu,x)=(1,1)$ which are the non-smooth and smooth saddle-node bifurcations respectfully. Both are of saddle-node type due to pairs of equilibria annihilating at these locations. This is shown in figure~\ref{fig:oneD_static_bifdiagram}.
+We note that $x_l$ is valid for $\mu\ge 0$ and both $x_u$ and $x_{m}$ for $\mu\le 1$. Thus this system has a stable equilibrium for each value of the parameter and has a region of bi-stability for $0\le \mu\le 1$. The boundary of this region are bifurcations at the points ${(\mu_{ns},x_{ns})=(0,0)}$ and $(\mu_{\text{smooth}},x_{\text{smooth}})=(1,1)$ which are the non-smooth and smooth saddle-node bifurcations respectfully. Both are of saddle-node type due to pairs of equilibria annihilating at these locations. This is shown in figure~\ref{fig:oneD_static_bifdiagram}.
 
 \begin{figure}[H]
 \centering
@@ -45,7 +45,7 @@ We note that $x_l$ is valid for $\mu\ge 0$ and both $x_u$, $x_{m}$ for $\mu\le 1
 \section{Slowly Varying Bifurcation Parameter}
 \label{sec:oneD_slow}
 
-To develop a method for the slowly varying Stommel model, we consider \eqref{eq:oneD_canonical} with $\epsilon\ll 1$ and $A=0$. Under these conditions, $\mu(t)$ is a function of time and thus a bifurcation no longer occurs. Instead, it is expected that a tipping point occurs nearby the static bifurcation points as long as $\epsilon$ is small. The smooth case is well understood, see Zhu \& Kuske \cite{zhu2015tipping}, so we consider the behavior of the non-smooth bifurcation with $x<0$. From Haberman \cite{haberman1979slowly} as well as the smooth problem \cite{zhu2015tipping}, it is common practice to rescale time in a model to put the dynamics on the same order and allow for algebraic solutions to be found. Here we have the parameter $\mu(t)$ is slowly varying in time so it makes sense to rescale using this as our 'slow' time, $\tau=\epsilon t$. Applying both $x<0$ and this 'slow' time approach to the system \eqref{eq:oneD_canonical} then gives
+To develop a method for the slowly varying Stommel model, we consider \eqref{eq:oneD_canonical} with $\epsilon\ll 1$ and $A=0$. Under these conditions, $\mu(t)$ is a function of time and thus a bifurcation no longer occurs. Instead, it is expected that a tipping point occurs nearby the static bifurcation points as long as $\epsilon$ is small. The smooth case is well understood, see \cite{zhu2015tipping}, so we consider the behavior of the non-smooth bifurcation with $x<0$. From \cite{haberman1979slowly} as well as the smooth problem \cite{zhu2015tipping}, it is common practice to rescale time in a model to put the dynamics on the same order and allow for algebraic solutions to be found. Here we have the parameter $\mu(t)$ is slowly varying in time so it makes sense to rescale using this as our 'slow' time, $\tau=\epsilon t$. Applying both $x<0$ and this 'slow' time approach to the system \eqref{eq:oneD_canonical} then gives
 
 \begin{equation}\label{eq:oneD_slow_scaled}
 \begin{aligned}
@@ -83,7 +83,7 @@ Each of the equations \eqref{eq:oneD_slow_outerO1}-\eqref{eq:oneD_slow_outerO3} 
 x(t)\sim 1-\sqrt{1+\mu(t)}+ \frac{\epsilon}{4(1+\mu(t))}-\frac{3\epsilon^2}{32(1+\mu(t))^{5/2}}+O(\epsilon^3).
 \end{equation}
 
-We call \eqref{eq:oneD_slow_outersoln} the outer solution as it approximates the solution well for values of $x(t)$ away from the bifurcation value. But since the dynamics of the system \eqref{eq:oneD_canonical} change at $x=0$ due to the non-smooth bifurcation of the underlying static system, this solution is valid only for $x<0$ and $\mu>0$.
+We call \eqref{eq:oneD_slow_outersoln} the outer solution as it approximates the solution well for values of $x(t)$ away from the bifurcation value $\mu_{ns}$. But since the dynamics of the system \eqref{eq:oneD_canonical} change at $x=0$ due to the non-smooth bifurcation of the underlying static system, this solution is valid only for $x<0$ and $\mu>0$.
 
 
 It is a key assumption of an asymptotic expansion that the terms are clearly separated by order of $\epsilon$. We observe a scaling of $\mu$ and $x$ for which \eqref{eq:oneD_slow_outersoln} is no longer valid under this assumption of order separation, here when $x_0\sim \epsilon x_1$, which occurs for $\mu\sim O(\epsilon)$. We conduct a simple scale analysis to determine the appropriate scaling for the local analysis about $x=0$. Hence we consider the general scales
@@ -92,7 +92,7 @@ It is a key assumption of an asymptotic expansion that the terms are clearly sep
 x=\epsilon^\alpha y,\quad \mu = \epsilon^\beta m,
 \end{equation*}
 
-with $\alpha$ and $\beta$ being some positive number to be an inner scaling. We apply this scaling in \eqref{eq:oneD_canonical} to give the system
+with $\alpha>0$ and $\beta>0$ for an inner scaling. We apply this scaling in \eqref{eq:oneD_canonical} to give the system
 
 \begin{equation}\label{eq:oneD_slow_scalesearch}
 \begin{aligned}
@@ -116,7 +116,7 @@ We have found that the scalings in \eqref{eq:oneD_slow_scales} apply to all $x$ 
 \end{aligned}
 \end{equation}
 
-We recall that we are searching for a link between $y$ and $m$, and from Haberman \cite{haberman1979slowly} we use that it is then convenient to change the differentiation on $y$ to be with respect to the parameter $m$. This incorporates the behavior of $m(t)$ directly into the equation we solve and gives us a direct method for finding the tipping point. Then the leading order equation is
+We recall that we are searching for a link between $y$ and $m$, and from \cite{haberman1979slowly} we use that it is then convenient to change the differentiation on $y$ to be with respect to the parameter $m$. This incorporates the behavior of $m(t)$ directly into the equation we solve and gives us a direct method for finding the tipping point. Then the leading order equation is
 
 \begin{equation}\label{eq:oneD_slow_innerm}
 y_m = m-2y.
@@ -147,14 +147,14 @@ In figure~\ref{fig:oneD_slow_numerics} (a,b), an example of this tipping is show
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slow_bif_diagram.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slow_bif_diagram.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slow_bif_diagram_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slow_bif_diagram_zoom.jpg}
+ \caption{}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -205,7 +205,7 @@ Now we apply the standard Taylor expansion to see the behavior of these perturba
 \end{aligned}
 \end{equation}
 
-If this were the static parameter problem, we would always have the second case in \eqref{eq:oneD_slow_perturbeq}, which is always stable due to the sign. But since we allow for a varying parameter, we learn that the solution is attracted to just below the pseudo-equilibrium $z^0(t)$. But as this system always experiences the critical point $m=0$ due to the continuous decrease in $m(t)$, the slowly varying parameter eventually acts like the static parameter in \autoref{sec:oneD_static}. Hence we have that for $x<0$, the pseudo-equilibrium is hyperbolic and asymptotically stable. But here there is a critical point at $(\mu_c,x_c)=(0,0)$ which corresponds to a non-hyperbolic equilibrium point. Generally, non-hyperbolic behavior signals equilibrium structure to be changing. Here, this signals a transition in behavior for $x>0$ and helps identify that the tipping occurs here.
+If this were the static parameter problem, we would always have the second case in \eqref{eq:oneD_slow_perturbeq}, which is always stable due to the sign. But since we allow for a varying parameter, we learn that the solution is attracted to just below the pseudo-equilibrium $z^0(t)$. But as this system always experiences the critical point $m=0$ due to the continuous decrease in $m(t)$, the slowly varying parameter eventually acts like the static parameter in \autoref{sec:oneD_static}. Hence we have that for $x<0$, the pseudo-equilibrium is hyperbolic and asymptotically stable. But here there is a critical point at $(\mu_{ns},x_{ns})=(0,0)$ which corresponds to a non-hyperbolic equilibrium point. Generally, non-hyperbolic behavior signals equilibrium structure to be changing. Here, this signals a transition in behavior for $x>0$ and helps identify that the tipping occurs here.
 
 For the second region of interest, $m(t)<0$, we found a solution that had the following inner equation which has the pseudo-equilibrium above the axis with
 
@@ -213,12 +213,12 @@ For the second region of interest, $m(t)<0$, we found a solution that had the fo
 \dot{y}=-m(t)+2y, \quad z^0(t) = \frac{m(t)}{2}.
 \end{equation}
 
-But we find a contradiction from \eqref{eq:oneD_slow_innerstability}, here $m(t)<0$ yet the solution of this region is above the axis $x=0$. Thus we may conclude that this inner equation has no equilibrium in this region and further verifies that the critical point $(\mu_c,x_c)$ was non-hyperbolic and tipping occurs for $m(t)<0$.
+But we find a contradiction from \eqref{eq:oneD_slow_innerstability}, here $m(t)<0$ yet the solution of this region is above the axis $x=0$. Thus we may conclude that this inner equation has no equilibrium in this region and further verifies that the critical point $(\mu_{ns},x_{ns})$ was non-hyperbolic and tipping occurs for $m(t)<0$.
 
 \section{High Frequency Oscillatory Forcing}
 \label{sec:oneD_highfreqosc}
 
-To understand the oscillatory forcing in the Stommel model, consider the canonical system \eqref{eq:oneD_canonical} with $A\sim O(1)$, $\Omega\gg 1$ and $\epsilon=0$, which gives purely high frequency oscillatory forcing in the system. Under these conditions, we have a static parameter and for each parameter value there is oscillatory forcing with solutions characterized by oscillations about a fixed point. Thus we should expect to find a bifurcation influenced by oscillations occurring under these conditions. Here we develop a method to find oscillatory solutions to determine what the effect of oscillatory forcing has on the bifurcation of \eqref{eq:oneD_canonical}. Where \autoref{sec:oneD_slow} focused only on the slowly varying dynamics, here we have both a 'slow' time scale $t$ and a 'fast' time scale $T=\Omega t$. This naturally suggests a multiple scales approach where we search for a solution that is dependent on both of these scales, $x(t)=x(t,T)$. This method is commonly used in problems that have behavior observable on multiple scalings, and we use it here to find a way to accurately analyze each scale and effectively combine their behavior into a single unifying solution. Further discussion on this method can be found in Sanchez \cite{sanchez1996method}.
+To understand the oscillatory forcing in the Stommel model, consider the canonical system \eqref{eq:oneD_canonical} with $A\sim O(1)$, $\Omega\gg 1$ and $\epsilon=0$, which gives purely high frequency oscillatory forcing in the system. Under these conditions, we have a static parameter and for each parameter value there is oscillatory forcing with solutions characterized by oscillations about a fixed point. Thus we should expect to find a bifurcation influenced by oscillations occurring under these conditions. Here we develop a method to find oscillatory solutions to determine what the effect of oscillatory forcing has on the bifurcation of \eqref{eq:oneD_canonical}. Where \autoref{sec:oneD_slow} focused only on the slowly varying dynamics, here we have both a 'slow' time scale $t$ and a 'fast' time scale $T=\Omega t$. This naturally suggests a multiple scales approach where we search for a solution that is dependent on both of these scales, $x(t)=x(t,T)$. This method is commonly used in problems that have behavior observable on multiple scalings, and we use it here to find a way to accurately analyze each scale and effectively combine their behavior into a single unifying solution. Further discussion on this method can be found in \cite{sanchez1996method}.
 
 Recall that our focus is on the non-smooth behavior and hence we restrict the solution to follow along the lower stable equilibrium branch where $x<0$. Using this multiple scales approach, our canonical system \eqref{eq:oneD_canonical} has the following form
 
@@ -297,7 +297,7 @@ We consider a general scaling for $x=\Omega^{-\alpha}y$ and $\mu = \Omega^{-\bet
 Since $\mu$ is fixed for this section, we are still able to use the same time scales, $t=t$ and $T=\Omega t$. We also have the same assumption that $y(t)=y(t,T)$ and hence a similar multiple scales argument in \eqref{eq:oneD_osc_generalinner} leads to
 
 \begin{equation}\label{eq:oneD_osc_innergeneralmulti}
-y_T+\Omega^{-1}y_t = - \Omega^{\alpha-\beta-1}m+\Omega^{-1}2|y|-\Omega^{\alpha-1}y|y|+\Omega^{-\alpha-1}A\sin(T).
+y_T+\Omega^{-1}y_t = - \Omega^{\alpha-\beta-1}m+\Omega^{-1}2|y|-\Omega^{-\alpha-1}y|y|+\Omega^{\alpha-1}A\sin(T).
 \end{equation}
 
 With a standard balancing argument between the leading order terms in \eqref{eq:oneD_osc_innergeneralmulti}, $y_T$ and $\Omega^{\alpha-1} A\sin(T)$, we see that $\alpha=1$. But we also want to see the terms $\Omega^{\alpha-\beta-1}m$ balance with $\Omega^{-1}2|y|$, which gives us that $\beta=1$ as well. This results in the inner equation
@@ -326,7 +326,7 @@ Here we then find the following system of equations at each order of $\Omega$
 \label{eq:oneD_osc_innerO1}
 O(1):\quad & {y_0}_T = A\sin(T),\\
 \label{eq:oneD_osc_innerO2}
-O(\Omega^{-1}):\quad & {y_1}_T+{y_0}_t =  -m+2|y_0|.
+O(\Omega^{-1}):\quad & {y_1}_T+{y_0}_t = -m+2|y_0|.
 \end{align}
 
 Solving the leading order equation \label{eq:oneD_osc_innerO1} gives that the leading order term has the form, $y_0(t,T)=v_0(t)-A\cos(T)$. But applying the Fredholm alternative \eqref{eq:Fredholm} on \eqref{eq:oneD_osc_innerO2} leads to
@@ -350,7 +350,7 @@ Here we must consider two cases of $v_0(t)$ that determine the nature of this in
 We call this the entirely below axis case as the solution stays far from the axis $x=0$ for most of the oscillation and thus the behavior is not influenced by the non-smooth dynamics. We don't expect to see the bifurcation occur under these conditions but instead we find the parameter range for the cases. Here the integral in equation \eqref{eq:oneD_osc_integral} is straightforward to evaluate as $v_0(t)$ is a constant with respect to the 'fast' time $T$, thus we find the inner equation and equilibrium
 
 \begin{equation*}
-{v_0}_t(t)=-m-2v_0(t),\quad v_0(t)=-\frac{m}{2}.
+{v_0}_t=-m-2v_0,\quad v_0=-\frac{m}{2}.
 \end{equation*}
 
 This gives the leading order equilibrium solution with oscillations to our inner equation for this case which we write in the original variables
@@ -426,7 +426,7 @@ Thus we have the leading order inner equilibrium solution \eqref{eq:oneD_osc_cas
 \begin{equation}\label{eq:oneD_osc_innersoln}
 \begin{aligned}
 y\sim& -C\sqrt{m-\frac{4|A|}{\pi}}-A\cos(T)+O(\Omega^{-1}),\\ 
-x(t)\sim& -C\sqrt{\Omega^{-1} \left(\mu-\frac{4|A|}{\pi \Omega}\right)}-\Omega^{-1} A\cos(\Omega t)+O(\Omega^{-2}).
+x(t)\sim& -C\sqrt{\Omega \left(\mu-\frac{4|A|}{\pi \Omega}\right)}-\Omega^{-1} A\cos(\Omega t)+O(\Omega^{-2}).
 \end{aligned}
 \end{equation}
 
@@ -436,24 +436,24 @@ It then is clear that the bifurcation, $\mu_{\text{osc}}$, occurs when \eqref{eq
 \mu_{\text{osc}}=\frac{4|A|}{\pi \Omega}.
 \end{equation}
 
-From the result \eqref{eq:oneD_osc_bif}, we gather that the oscillatory forcing in the system causes the bifurcation to occur sooner and that this is controlled by the size of $A$ and $\Omega$. This should be expected as the model experiences the non-smooth behavior sooner in $\mu$ with the oscillations as opposed to later in $\mu$ with the slow variation. This effect is contrary to the slow variation where the solution experienced a delayed tipping whereas with oscillatory forcing the solution experiences a bifurcation $\mu_{\text{osc}}>\mu_c$. This also indicates that the region of bi-stability is shrunk with oscillatory forcing and thus can be used to eliminate the region entirely with $A$ and $\Omega$ chosen properly, effectively destroying any hysteresis. We compare our estimate to numerical results for varying sizes of $\Omega^{-1}$.
+From the result \eqref{eq:oneD_osc_bif}, we gather that the oscillatory forcing in the system causes the bifurcation to occur sooner and that this is controlled by the size of $A$ and $\Omega$. This should be expected as the model experiences the non-smooth behavior sooner in $\mu$ with the oscillations as opposed to later in $\mu$ with the slow variation. This effect is contrary to the slow variation where the solution experienced a delayed tipping whereas with oscillatory forcing the solution experiences a bifurcation $\mu_{\text{osc}}>\mu_{ns}$. This also indicates that the region of bi-stability is shrunk with oscillatory forcing and thus can be used to eliminate the region entirely with $A$ and $\Omega$ chosen properly, effectively destroying any hysteresis. We compare our estimate to numerical results for varying sizes of $\Omega^{-1}$.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/osc_timeseries.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/osc_timeseries.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/osc_bif_diagram.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/osc_bif_diagram.jpg}
+ \caption{}
 \end{subfigure}
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/osc_bif_diagram_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/osc_bif_diagram_zoom.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
 \centering
@@ -461,7 +461,7 @@ From the result \eqref{eq:oneD_osc_bif}, we gather that the oscillatory forcing 
 \caption{}
 \label{fig:oneD_osc_comp}
 \end{subfigure}
-\caption{In (a) the numerical time series solutions to \eqref{eq:oneD_canonical} are given from bottom to top with $\mu$ in Case I, Case II and $\mu<\mu_{\text{osc}}$ respectively with $A=2$, $\Omega=10$ and $\epsilon=0$. In (b) we show the time series on the bifurcation diagram. As shown by (c), a zoom in closer to the non-smooth bifurcation, where the dotted vertical lines dictate the region between Case I and Case II (green) as well as the bifurcation estimate (blue) respectively. In (d) a range of $\Omega^{-1}$ and their corresponding numerical bifurcations (red stars) are compared to our estimate of the bifurcation (black solid line). We consider the numeric bifurcation to be when the solution has passed $x>.2$.}
+\caption{In (a) the numerical time series solutions to \eqref{eq:oneD_canonical} are given from bottom to top with $\mu=\{.8,.33,.15\}$ in Case I, Case II and $\mu<\mu_{\text{osc}}$ in \eqref{eq:oneD_osc_bif} respectively with $A=2$, $\Omega=10$ and $\epsilon=0$. In (b) we show the time series on the bifurcation diagram. As shown by (c), a zoom in closer to the non-smooth bifurcation, where the dotted vertical lines dictate the region between Case I and Case II (green) as well as the bifurcation estimate (blue) respectively. In (d) a range of $\Omega^{-1}$ and their corresponding numerical bifurcations (red stars) are compared to our estimate of the bifurcation (black solid line). We consider the numeric bifurcation to be when the solution has passed $x>.5$.}
 \label{fig:oneD_osc_numerics}
 \end{figure}
 
@@ -494,16 +494,16 @@ Similarly to \autoref{sec:oneD_slow}, we have a fixed parameter equation that we
 For this region we found a bifurcation and the Taylor approximation \eqref{eq:oneD_osc_caseIItaylor} for the inner equation and equilibrium to be
 
 \begin{equation}\label{eq:oneD_osc_stabilityII}
-{v_0}_t(t)= -m +\frac{4|A|}{\pi}+\frac{2}{\pi |A|}v_0(t)^2,\quad z^0=-C \sqrt{m-\frac{4|A|}{\pi}}.
+{v_0}_t= -m +\frac{4|A|}{\pi}+\frac{2}{\pi |A|}v_0^2,\quad z^0=-C \sqrt{m-\frac{4|A|}{\pi}}.
 \end{equation}
 
 We consider a simple linear perturbation of \eqref{eq:oneD_osc_stabilityII}, $v_0(t)=z^0+u(t)$ with $\lVert u(t) \rVert \ll 1$. Applying the standard Taylor expansion to determine the equation for the perturbations, we find
 
 \begin{equation}\label{eq:oneD_osc_innerpertubation}
 \begin{aligned}
-{v_0}_t(t) =& f(z^0)+f_{v_0}(z^0)(v_0(t)-z^0)+ O(\lVert v_0(t)-z^0\rVert^2),\\ 
-u_t(t) =& f(z^0)+f_{v_0}(z^0)u(t)+O(\lVert u(t) \rVert^2),\\
-u_t(t) =& -2\sqrt{m-\frac{4|A|}{\pi}} u(t) .
+{v_0}_t =& f(z^0)+f_{v_0}(z^0)(v_0-z^0)+ O(\lVert v_0-z^0\rVert^2),\\ 
+u_t =& f(z^0)+f_{v_0}(z^0)u+O(\lVert u \rVert^2),\\
+u_t =& -2\sqrt{m-\frac{4|A|}{\pi}} u .
 \end{aligned}
 \end{equation}
 
@@ -536,7 +536,7 @@ We consider an asymptotic expansion in terms of the small quantity $\epsilon^\la
 x(\tau,T)\sim x_0(\tau,T)+\epsilon^\lambda x_1(\tau,T)+O(\epsilon^{1+\lambda},\epsilon^{2\lambda}).
 \end{equation}
 
-Depending on the value of $\lambda$, $O(\epsilon^{\lambda+1})$ may be the next order before $O(\epsilon^{2\lambda})$, although considering either produce the same equation at their respective order and hence our choice in $\lambda$ doesn't change the calculations up to this correction term. Thus for the outer solution, we consider the system with $O(\epsilon^{2\lambda})$. Introducing the expansion \eqref{eq:oneD_slowosc_asympexpansion} into the outer multi-scaled equation \eqref{eq:oneD_slowosc_outereq} gives 
+Introducing the expansion \eqref{eq:oneD_slowosc_asympexpansion} into the outer multi-scaled equation \eqref{eq:oneD_slowosc_outereq} gives 
 
 \begin{equation}\label{eq:oneD_slowosc_outerexplicit}
 {x_0}_T+\epsilon^{\lambda+1}{x_0}_\tau+\epsilon^\lambda {x_1}_T+\ldots=\epsilon^\lambda(-\mu(\tau)-2x_0+x_0^2+A\sin(T))+\epsilon^{2\lambda}(-2x_1+x_1x_0)+\ldots
@@ -548,12 +548,12 @@ Here we separate \eqref{eq:oneD_slowosc_outerexplicit} to find the following sys
 \label{eq:oneD_slowosc_outerO1}
 O(1):\quad & {x_0}_T=0, \\
 \label{eq:oneD_slowosc_outerO2}
-O(\epsilon^\lambda):\quad&  {x_1}_T=-\mu(\tau)-2x_0+x_0^2+A\sin(T),\\
+O(\epsilon^\lambda):\quad& {x_1}_T=-\mu(\tau)-2x_0+x_0^2+A\sin(T),\\
 \label{eq:oneD_slowosc_outerO3}
 O(\epsilon^{2\lambda}):\quad& {x_2}_T+\epsilon^{1-\lambda}{x_0}_\tau= -2x_1+2x_0x_1.
 \end{align}
 
-Each equation gives the behavior of each order of the solution; \eqref{eq:oneD_slowosc_outerO1} indicates that the leading order term is purely slow dependent, $x_0=x_0(\tau)$. In \autoref{app:oneD} we apply the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:oneD_slowosc_outerO2} and \eqref{eq:oneD_slowosc_outerO3} to find the first few terms of the expansion in \eqref{eq:oneD_slowosc_asympexpansion} explicitly. The resulting solution is
+Depending on the value of $\lambda$, $O(\epsilon^{\lambda+1})$ may be the next order before $O(\epsilon^{2\lambda})$, although considering either produce the same equation at their respective order and hence our choice in $\lambda$ doesn't change the calculations up to this correction term. Thus for the outer solution, we consider the system with $O(\epsilon^{2\lambda})$. Each equation gives the behavior of each order of the solution; \eqref{eq:oneD_slowosc_outerO1} indicates that the leading order term is purely slow dependent, $x_0=x_0(\tau)$. In \autoref{app:oneD} we apply the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:oneD_slowosc_outerO2} and \eqref{eq:oneD_slowosc_outerO3} to find the first few terms of the expansion in \eqref{eq:oneD_slowosc_asympexpansion} explicitly. The resulting solution is
 
 \begin{equation}\label{eq:oneD_slowosc_outersoln}
 x\sim 1-\sqrt{1+\mu(t)}-\frac{\epsilon}{4(1+\mu(t))}-\epsilon^\lambda A \cos(\Omega t)+O(\epsilon^{1+\lambda},\epsilon^{2\lambda}).
@@ -617,7 +617,7 @@ with $q>\lambda$ to be consistent with the scale analysis above that determined 
 
 \begin{equation*}
 \begin{aligned}
-{y_0}_T+\epsilon^{\lambda}{y_0}_t+\epsilon^{q-\lambda} {y_1}_T+\epsilon^{q} {y_1}_t+\ldots={} & -\epsilon^{\beta}m(t)+\epsilon^\lambda 2|y_0 +\epsilon^{q-\lambda} y_1+\ldots|+  A\sin(T)  \\
+{y_0}_T+\epsilon^{\lambda}{y_0}_t+\epsilon^{q-\lambda} {y_1}_T+\epsilon^{q} {y_1}_t+\ldots={} & -\epsilon^{\beta}m(t)+\epsilon^\lambda 2|y_0 +\epsilon^{q-\lambda} y_1+\ldots|+ A\sin(T) \\
 & + \epsilon^{2\lambda}( y_0 +\epsilon^{q-\lambda} y_1+\ldots)|y_0 +\epsilon^{q-\lambda} y_1+\ldots |
 \end{aligned}
 \end{equation*}
@@ -629,7 +629,7 @@ O(1):\, & {y_0}_T = A\sin(T),\\ \label{eq:oneD_slowosc_caseI_O2}
 O(\epsilon^\lambda): \, & \epsilon^{q-2\lambda}{y_1}_T+{y_0}_t=-\epsilon^{\beta-\lambda}m(s)+2|y_0|.
 \end{align}
 
-In \eqref{eq:oneD_slowosc_caseI_O2} we find the appropriate next term in the expansion \eqref{eq:oneD_slowosc_caseI_expansion} that prevents terms from becoming unbalanced is with $q= 2\lambda$. This value of $q$ implies that $\lambda> \frac{1}{2}$ for an expansion to be found without including the quadratic terms as with the quadratic terms the equations become inseparable and unsolvable. We also have the choice between $\beta=\lambda$ or $\beta=1$ and each has a particular appeal. With $\beta=\lambda$, the form of \eqref{eq:oneD_slowosc_caseI_O2} is simple, but small coefficients appear further in the analysis. We choose to allow $\beta=1$ for convenience and track the small coefficient on $m(t)$ now in exchange for having a simple equation for $m(t)$. This is valid as long as we are tracking small coefficients and not large ones, as this would suggest we used an incorrect scaling, but both of these choices lead to the same conclusion. Using \eqref{eq:oneD_slowosc_caseI_O1} gives the appropriate separation in slow and fast scales, $y_0(t,T)=v_0(t)-A\cos(T)$. We then apply the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:oneD_slowosc_caseI_O2} which gives a similar equation to the integral \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc} with
+In \eqref{eq:oneD_slowosc_caseI_O2} we find the appropriate next term in the expansion \eqref{eq:oneD_slowosc_caseI_expansion} is with $q=2\lambda$. This choice in $q$ keeps the equations balanced but $q$ implies that $\lambda> \frac{1}{2}$ for an expansion to be found. Otherwise, the quadratic terms must be included and we no longer find local equations. This indicated that the range of $\lambda\le\frac{1}{2}$ behaves differently and we discuss this further in \autoref{chap:conclusion}. We also have the choice between $\beta=\lambda$ or $\beta=1$ and each has a particular appeal. With $\beta=\lambda$, the form of \eqref{eq:oneD_slowosc_caseI_O2} is simple, but the equation for the slow variation is $m_t=-\epsilon^{1-\lambda}$. The slow variation equation suggests slower time scale to approach the problem. We instead choose to allow $\beta=1$ for convenience and track the small coefficient on $m(t)$ now in exchange for staying on the same time scale with $m_t=-1$. This is valid as long as we are tracking small coefficients and not large ones, as this would suggest we used an incorrect scaling, but both of these choices lead to the same conclusion. Using \eqref{eq:oneD_slowosc_caseI_O1} gives the appropriate separation in slow and fast scales, $y_0(t,T)=v_0(t)-A\cos(T)$. We then apply the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:oneD_slowosc_caseI_O2} which gives a similar equation to the integral \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc} with
 
 \begin{equation}\label{eq:oneD_slowosc_caseIintegral}
 {v_0}_t = -\epsilon^{1-\lambda}m(t)+\frac{1}{\pi}\int_0^{2\pi} |v_0(t)-A\cos(T)|\,dT.
@@ -646,10 +646,10 @@ Once more, we call this the entirely below axis sub-case, here we don't expect t
 {v_0}_t= -\epsilon^{1-\lambda}m(t)-2v_0.
 \end{equation}
 
-Solving \eqref{eq:oneD_slowosc_innersubcaseI} can be done under our assumptions much like in \autoref{subsec:oneD_osc_CaseI} but instead we focus on the equilibrium. This choice results in finding the effective parameter range for $\mu$ which distinguishes these sub-cases, which helps to determine when the solution enters the parameter range for Sub-Case II. Since $m(t)$ is allowed to vary, this must be thought of more as a pseudo-equilibrium and we are only interested in when the pseudo-equilibrium violates the assumptions of this case. Finding the pseudo-equilibrium of \eqref{eq:oneD_slowosc_innersubcaseI} gives
+Solving \eqref{eq:oneD_slowosc_innersubcaseI} can be done under our assumptions much like in \autoref{subsec:oneD_osc_CaseI} but instead we focus on the pseudo-equilibrium. This choice results in finding the effective parameter range for $\mu$ which distinguishes these sub-cases, which helps to determine when the solution enters the parameter range for Sub-Case II. Since $m(t)$ is allowed to vary, this must be thought of more as a pseudo-equilibrium and we are only interested in when the pseudo-equilibrium violates the assumptions of this case. Finding the pseudo-equilibrium of \eqref{eq:oneD_slowosc_innersubcaseI} gives
 
 \begin{equation*}
-v_0=-\epsilon^{1-\lambda}\frac{m(t)}{2}.
+v_0(t)=-\epsilon^{1-\lambda}\frac{m(t)}{2}.
 \end{equation*}
 
 Using the condition $v_0(t)\le -|A|$ gives that $m(t)\ge \epsilon^{\lambda-1}2|A|$. Writing this result in original coordinates gives us the parameter range for Sub-Case I
@@ -680,13 +680,13 @@ m_t =& -1.
 \end{aligned}
 \end{equation}
 
-But as \eqref{eq:oneD_slowosc_subcaseIItaylor} is in terms of 'slow' time, it restricts any analytical approaches to the effects of the varying parameter. Instead we take the same approach from Haberman \cite{haberman1979slowly} and switch the differentiation onto the parameter $m$ with
+But as \eqref{eq:oneD_slowosc_subcaseIItaylor} is in terms of 'slow' time, it restricts any analytical approaches to the effects of the varying parameter. Instead we take the same approach from \cite{haberman1979slowly} and switch the differentiation onto the parameter $m$ with
 
 \begin{equation}\label{eq:oneD_slowosc_subcaseIItaylorm}
 {v_0}_m = \epsilon^{1-\lambda}m - \frac{4|A|}{\pi} - \frac{2}{\pi |A|}v_0^2.
 \end{equation}
 
-It is here we take advantage of the form of \eqref{eq:oneD_slowosc_subcaseIItaylorm} with the result from Zhu \& Kuske \eqref{eq:intro_Zhuairy} to solve which results in
+It is here we take advantage of the form of \eqref{eq:oneD_slowosc_subcaseIItaylorm} with the form from Zhu \& Kuske \eqref{eq:intro_Zhuairy} to solve which results in
 
 \begin{equation*}
 v_0(m)\sim \epsilon^{(1-\lambda)/3}\left( \frac{\pi |A|}{2} \right)^{2/3}\frac{Ai'\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\epsilon^{1-\lambda}m-\frac{4|A|}{\pi})\right)}{Ai\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\epsilon^{1-\lambda}m-\frac{4|A|}{\pi})\right)}.
@@ -696,8 +696,8 @@ With the solution to \eqref{eq:oneD_slowosc_caseI_expansion} we rewrite back int
 
 \begin{equation}\label{eq:oneD_slowosc_caseIsoln}
 \begin{aligned}
-y_0(t,T)\sim& \epsilon^{(1-\lambda)/3}\left( \frac{\pi |A|}{2} \right)^{2/3}\frac{Ai'\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\epsilon^{1-\lambda}m(t)-\frac{4|A|}{\pi})\right)}{Ai\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(m(t)-\frac{4|A|}{\pi})\right)}-\epsilon^\lambda A\cos(T)+\ldots,\\
-x(t) \sim& \epsilon^{(2\lambda-1)/3}\left(\frac{\pi |A|}{2}\right)^{2/3}\frac{Ai'\left(\left(\frac{\Omega}{\epsilon^2}\right)^{1/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\mu(t)-\frac{4|A|}{\pi \Omega})\right)}{Ai\left(\left(\frac{\Omega}{\epsilon^2}\right)^{1/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\mu(t)-\frac{4|A|}{\pi \Omega})\right)}-\epsilon^\lambda A\cos(\Omega t) +\ldots.
+y_0(t,T)\sim& C\frac{Ai'\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\epsilon^{1-\lambda}m(t)-\frac{4|A|}{\pi})\right)}{Ai\left(\epsilon^{2(\lambda-1)/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(m(t)-\frac{4|A|}{\pi})\right)}-\epsilon^\lambda A\cos(T)+\ldots,\\
+x(t) \sim& C\frac{Ai'\left(\left(\frac{\Omega}{\epsilon^2}\right)^{1/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\mu(t)-\frac{4|A|}{\pi \Omega})\right)}{Ai\left(\left(\frac{\Omega}{\epsilon^2}\right)^{1/3}\left(\frac{2}{\pi |A|}\right)^{1/3}(\mu(t)-\frac{4|A|}{\pi \Omega})\right)}-\epsilon^\lambda A\cos(\Omega t) +\ldots.
 \end{aligned}
 \end{equation}
 
@@ -713,7 +713,7 @@ This value of $\mu$ that causes this singularity in turn is our tipping point, w
 \mu_{\text{mixed}} = \left(\frac{1}{\epsilon\Omega}\right)^{1/3}\left(\frac{\pi |A|}{2}\right)^{1/3} \mu_{\text{smooth}}+\mu_{\text{osc}},
 \end{equation}
 
-with $\mu_{\text{smooth}}=\epsilon\left(-2.33811\ldots\right)$, similarly to the smooth problem from Zhu \& Kuske \cite{zhu2015tipping}, and $\mu_{\text{osc}}$ from \eqref{eq:oneD_osc_bif} respectively.
+with $\mu_{\text{smooth}}=\epsilon\left(-2.33811\ldots\right)$, similarly to the smooth problem from \cite{zhu2015tipping}, and $\mu_{\text{osc}}$ from \eqref{eq:oneD_osc_bif} respectively.
 
 The resulting tipping approximation \eqref{eq:oneD_slowosc_caseItipping} indicates that the size of the amplitude $A$ determines whether the tipping occurs early or late relative to the bifurcation, naturally we see a larger amplitude cause more contribution from the oscillations and hence an earlier tipping. On the other hand, larger values in $\epsilon$ cause this tipping to occur later. So these effects have opposite pulls on the tipping and can effectively cancel one another out under the proper conditions. It would even be possible to break the hysteresis cycle by eliminating the region of bi-stability of this problem with sufficiently large amplitude and small $\epsilon$. This tipping holds for any $\lambda\in (\frac{1}{2},1]$ and we see different behavior for larger $\lambda$.
 
@@ -788,7 +788,7 @@ But \eqref{eq:oneD_slowosc_caseII_inner} has the same form as in \autoref{sec:on
 \begin{equation}\label{eq:oneD_slowosc_caseIIsoln}
 \begin{aligned}
 y_0(t,T)\sim& C e^{-2m(t)}+\frac{m(t)}{2}-1/4 +\epsilon^\lambda A\cos(T),\\
-x(t)\sim& \epsilon C e^{-2\mu(t)/\epsilon}+\frac{\mu(t)}{2} -\epsilon^\lambda A\cos(\Omega t)+O(\epsilon^{2\lambda}).
+x(t)\sim& C e^{-2\mu(t)/\epsilon}+\frac{\mu(t)}{2} -\epsilon^\lambda A\cos(\Omega t)+O(\epsilon^{2\lambda}).
 \end{aligned}
 \end{equation}
 
@@ -800,6 +800,7 @@ This then leads to the same tipping from the slow case with
 
 Thus we find that in this case that for $\lambda$ near 1, the same $\mu_{\text{mixed}}$ tipping as in \eqref{eq:oneD_slowosc_caseItipping} occurs from \autoref{subsec:oneD_slowosc_caseI}. But for large $\lambda$, the oscillations have less of an impact and the solution tips entirely like $\mu_{\text{slow}}$ as in \eqref{eq:oneD_slow_tipping} from \autoref{sec:oneD_slow}. For convenience, this is summarized in the following table.
 
+\begin{center}
 \begin{table}[H]\label{table:oneD_tipping}
 \centering
 \begin{tabular}{|c|c|}
@@ -819,20 +820,21 @@ $\epsilon>0$, $A\not=0$ and $\lambda>1$: & $ \mu_{\text{slow}}=\epsilon\ln(\epsi
 \end{tabular} 
 \caption{The tipping of the one-dimensional model for each mechanism and case.}
 \end{table}
+\end{center}
 
 In figure~\ref{fig:oneD_slowosc_numerical_small}, we see an example of the numerical solution to the canonical system \eqref{eq:oneD_canonical} with slow variation and oscillatory forcing. This example has tipping occurring in Case I due to $\lambda\in (\frac{1}{2},1]$ allowing the slow variation and oscillatory forcing to produce a mixed effect on the tipping. Although we see noticeable contributions from the slow varying parameter the tipping still is occurring in the region near the oscillatory bifurcation. This tells us that for these choices in the values the strongest effect is the oscillatory forcing. It is possible to find values of $\epsilon$, $A$ and $\lambda$ that cause the non-smooth tipping to occur at the same place as the smooth bifurcation. This in theory, would eliminate the region of bi-stability and destroy the hysteresis curve entirely for this model.
 
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_small.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_small.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_small_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_small_zoom.jpg}
+ \caption{}
 \end{subfigure}
 \caption{Parameter values are $\epsilon=.05$, $\lambda=.8$ and $A=4$. On the left, this is the bifurcation diagram for the 1D system with the numerical solution to \eqref{eq:oneD_canonical} (black dotted line). On the right, this is a zoom in. The dotted vertical line is the tipping point $\mu_{\text{mixed}}$ \eqref{eq:oneD_slowosc_uglymu} (blue). The vertical line (black) is the numerically obtained tipping for $x>.5$.}
 \label{fig:oneD_slowosc_numerical_small}
@@ -843,14 +845,14 @@ In figure~\ref{fig:oneD_slowosc_numerical_medium}, we see an example of $\lambda
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_medium.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_medium.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_medium_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_medium_zoom.jpg}
+ \caption{}
 \end{subfigure}
 \caption{Parameter values are $\epsilon=.05$, $\lambda=1.05$ and $A=4$. On the left, this is the bifurcation diagram for the 1D system with the numerical solution to \eqref{eq:oneD_canonical} (black dotted line). On the right, this is a zoom in. The dotted vertical lines are the tipping point $\mu_{\text{mixed}}$ \eqref{eq:oneD_slowosc_uglymu} (blue) and slowly varying tipping $\mu_{\text{slow}}$ \eqref{eq:oneD_slow_tipping} (green). The vertical line (black) is the numerically obtained tipping for $x>.5$.}
 \label{fig:oneD_slowosc_numerical_medium}
@@ -861,14 +863,14 @@ In figure~\ref{fig:oneD_slowosc_numerical_large}, we see an example of $\lambda$
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_large.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_large.jpg}
+ \caption{}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_large_zoom.jpg}
-  \caption{}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_bif_diagram_large_zoom.jpg}
+ \caption{}
 \end{subfigure}
 \caption{Parameter values are $\epsilon=.05$, $\lambda=1.6$ and $A=4$. On the left, this is the bifurcation diagram for the 1D system with the numerical solution to \eqref{eq:oneD_canonical} (black dotted line). On the right, this is a zoom in. The dotted vertical lines are the tipping point $\mu_{\text{mixed}}$ \eqref{eq:oneD_slowosc_uglymu} (blue) and slowly varying tipping $\mu_{\text{slow}}$ \eqref{eq:oneD_slow_tipping} (green). The vertical line (black) is the numerically obtained tipping for $x>.5$.}
 \label{fig:oneD_slowosc_numerical_large}
@@ -889,14 +891,14 @@ The performance of our estimates are seen in figure~\ref{fig:oneD_slowosc_epscom
 \begin{figure}[H]
 \centering
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_epscomp_case2.jpg}
-  \caption{$\lambda=.8$}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_epscomp_case2.jpg}
+ \caption{$\lambda=.8$}
 \end{subfigure}%
 \begin{subfigure}{.5\textwidth}
-  \centering
-  \includegraphics[width=\linewidth]{oneD/slowosc_epscomp_case3.jpg}
-  \caption{$\lambda=1.3$}
+ \centering
+ \includegraphics[width=\linewidth]{oneD/slowosc_epscomp_case3.jpg}
+ \caption{$\lambda=1.3$}
 \end{subfigure}
 \caption{The numerical tipping (red stars) follows the appropriate case depending on $\lambda$. The Case I tipping estimate (black solid line) and the Case II tipping estimate (blue dotted line) are shown.}
 \label{fig:oneD_slowosc_epscomp}
@@ -929,14 +931,14 @@ As we saw in \autoref{sec:oneD_slow}, special treatment of the pseudo-equilibriu
 \begin{equation*}
 \begin{aligned}
 {v_0}_t =& f(t,z^0)+f_{v_0}(t,v_0)(v_0(t)-z^0(t))+O(\lVert v_0(t)-z^0(t) \rVert^2),\\
-u_t+z^0_t=&-2u(t)+O(\lVert u(t)\rVert^2),\\
-u_t =&-\frac{\epsilon^{1-\lambda}}{2}-2u(t).
+u_t+z^0_t=&-2u+O(\lVert u(t)\rVert^2),\\
+u_t =&-\frac{\epsilon^{1-\lambda}}{2}-2u.
 \end{aligned}
 \end{equation*}
 
 This leads to the conclusion that equation \eqref{eq:oneD_slowosc_stabilitysubcaseI} causes perturbations to decay exponentially to a nearby equilibrium. Hence we find the pseudo-equilibrium to be hyperbolic and asymptotically stable.
 
-\subsubsection*{Sub-Case II: $v_0(t)\le  |A|$}
+\subsubsection*{Sub-Case II: $v_0(t)\le |A|$}
 
 With the Taylor approximation from the analysis \eqref{eq:oneD_slowosc_subcaseIItaylor}, we have the following inner equation and pseudo-equilibrium
 
@@ -1007,7 +1009,7 @@ u_t =&\begin{cases}
 
 But the conclusions from Case I still apply to \eqref{eq:oneD_slowosc_stabilitycaseIIeq} and thus we still have stability up until $\mu(t)=\frac{4|A|}{\pi\Omega}$ and expect to see tipping occurring after the oscillatory bifurcation which is consistent with our tipping approximation for this case.
 
-On the other hand, for large $\lambda$, the  integral \eqref{eq:oneD_slowosc_caseII_integral} approaches
+On the other hand, for large $\lambda$, the integral \eqref{eq:oneD_slowosc_caseII_integral} approaches
 
 \begin{equation}\label{eq:oneD_slowosc_stabilitycaseII}
 {y_0}_t=-m(t)+2|y_0|.

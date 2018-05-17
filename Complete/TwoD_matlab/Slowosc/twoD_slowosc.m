@@ -3,7 +3,7 @@ addpath('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Functions')
 cd('C:\Users\codyg\Desktop\Thesis-Master\trunk\Complete\Graphs\TwoD_SlowOsc')
 
 % Determine whether or not to zoom 1 Yes, 0 No
-zoom = 1;
+zoom = 0;
 
 % Start parallel pooling
 
