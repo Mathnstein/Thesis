@@ -46,3 +46,45 @@ print('-f1','saddlenode_tipping','-djpeg')
 xlim([-.1 .2])
 ylim([-.2 .5])
 print('-f1','saddlenode_tipping_zoom','-djpeg')
+
+constvec = [1 0 -1];
+for i = 1:3
+    const= constvec(i);
+    alimit = sqrt(abs(const));
+    xlimit = abs(const);
+    [a,x]=meshgrid(-alim-1:0.2:alim+1,-xlimit-1:0.2:xlimit+1);
+    a=const*ones(size(a));
+    dx=a-x.^2;
+    da=zeros(size(dx));
+
+    subplot(3,1,i)
+    quiver(x,a,dx,da);
+    axis([-xlimit-1 xlimit+1 alimit-.4 alimit+.1])
+    axis off
+
+    if const >0
+        hold on
+        plot(sqrt(const),const,'o',...
+        'LineWidth',2,...
+        'MarkerEdgeColor','k',...
+        'MarkerFaceColor',[1 0 0],...
+        'MarkerSize',10)
+        plot(-sqrt(const),const,'ko','linewidth',2,'MarkerSize',10)
+        title('a>0','fontsize',20)
+        txt1 = '\surd{a}';
+        text(sqrt(const)-.1,const-.2,txt1,'fontsize',18)
+        txt2 = '-\surd{a}';
+        text(-sqrt(const)-.1,const-.2,txt2,'fontsize',18)
+    elseif const == 0
+        hold on
+        plot(0,0,'ko','linewidth',2,'MarkerSize',10)
+        title('a=a_{bif}','fontsize',20)
+        txt1 = '0';
+        text(-.03,-.2,txt1,'fontsize',18)
+    else
+        title('a<0','fontsize',20)
+        axis([-xlimit-1 xlimit+1 -alimit-.4 -alimit+.1])
+    end
+end
+print('-f1','saddlenode','-djpeg')
+
