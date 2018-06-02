@@ -264,7 +264,7 @@
 % \degreetitle{Jack of All Trades}
 
 % These commands are required.
-\title{Non-Smooth Dynamics in the Stommel Model}
+\title{Non-Smooth Dynamics in the Stommel Model of the Thermohaline Circulation}
 \author{Cody Griffith}
 \copyrightyear{2018}
 \submitdate{\monthname\ \number\year} % The "\ " is required after
@@ -323,9 +323,9 @@
 
 %% Committee Page
 The following individuals certify that they have read, and recommend to the Faculty of Graduate and Postdoctoral Studies for acceptance, a thesis entitled:
-$$\textbf{Non-Smooth Dynamics in the Stommel Model}$$
+$$\textbf{Non-Smooth Dynamics in the Stommel Model of the Thermohaline Circulation}$$
 
-submitted by \textbf{Cody Griffith} in partial fulfillment of the requirements of the degree of \textbf{Master's of Science} in \textbf{Applied Mathematics}.\\
+submitted by \textbf{Cody Griffith} in partial fulfillment of the requirements of the degree of \textbf{Master of Science} in \textbf{Applied Mathematics}.\\
 \\
 
 \textbf{Examining Committee:}\\
@@ -337,13 +337,13 @@ Supervisor\\
 Supervisory Committee Member
 
 \begin{abstract}                %% Mandatory -  maximum 350 words
-We analyzed the non-smooth dynamics inside the two-dimensional Stommel model with additional mechanisms like slowly varying bifurcation parameters and high frequency oscillatory forcing. Our goal was to find an analytic approximation to the tipping or bifurcation induced by the new features in the model. We first analyze a simpler one-dimensional model that has similar structure to the Stommel model and gradually build in more complexity into the one-dimensional problem and study the effects on the tipping point. With the one-dimensional model understood, we then apply similar methods to the Stommel model and study the effects on the non-smooth tipping and bifurcations. With these results we have the ability to fully describe the hysteresis found in the Stommel model for the Thermohalcine current.
+We analyzed the non-smooth dynamics for the Stommel model for thermohaline circulation with additional mechanisms like slowly varying bifurcation parameters and high frequency oscillatory forcing. Our goal was to find an analytic approximation to the tipping or bifurcation induced by the new features in the model. We first analyze a simpler one-dimensional model that has similar structure to the Stommel model and gradually build in more complexity into the one-dimensional problem and study the effects on the tipping point. With the one-dimensional model understood, we then apply similar methods to the Stommel model and study the effects on the non-smooth tipping and bifurcations. With these results we have the ability to fully describe the hysteresis found in the Stommel model.
 \end{abstract}
 
-\chapter*{Lay Summary}
-We study the behavior in the Stommel model for the Thermohalcine current responsible for driving the water flow from around the globe and work has previously been done on different components of this model. The analysis we provide is done around the second half of this model, the understudied non-smooth components. We ultimately provide a solution to the non-smooth behavior with additional mechanisms on the original model. This allows for a better understanding of the Thermohalcine current and could help predict and prepare for sudden abrupt changes to the ocean currents that drive our climate.
+\chapter{Lay Summary}
+We study the behavior of the thermohaline circulation. This circulation is responsible for moving water from around the globe and thus a model was created to understand how it functions. Work has previously been done on certain components of this model, but the analysis we provide is done around the less studied pieces known as the non-smooth dynamics. We ultimately provide a solution to the non-smooth dynamics and even incorporate more mechanisms in the original model to account for a larger class of observable behavior. This allows for a better understanding of the thermohaline circulation and could help predict and prepare for sudden abrupt changes to the ocean currents that drive our climate.
 
-\chapter*{Preface} % Manditory if any of the conditions are met
+\chapter{Preface} % Manditory if any of the conditions are met
 
 This thesis is original, unpublished, independent work by the author, C. Griffith.
 
@@ -354,17 +354,26 @@ This thesis is original, unpublished, independent work by the author, C. Griffit
 
 \newpage
 
+\chapter*{Acknowledgments}
+
+I would like to thank my supervisor Rachel Kuske for the project idea and guidance as well as my committee member Brian Wetton for helping me put together a coherent thesis.
+\newline
+
+Special thanks given to my peers Tim Jaschek and Matthias Kl{\"o}ckner for their aide in writing and support throughout the entire degree. Couldn't have done it without you both!
+
+\newpage
+
 %%%%% My Work
 \mainmatter
 \chapter{Introduction}
 \label{chap:introduction}
 \input{chapters/introduction.tex}
 
-\chapter{One Dimensional Model}
+\chapter{One-Dimensional Model}
 \label{chap:oneD}
 \input{chapters/oneDmodel.tex}
 
-\chapter{Two Dimensional Model}
+\chapter{Two-Dimensional Model}
 \label{chap:twoD}
 \input{chapters/twoDmodel.tex}
 
@@ -386,6 +395,10 @@ This thesis is original, unpublished, independent work by the author, C. Griffit
 %%% If you only have one appendix, please uncomment the following line.
 % \renewcommand{\appendicesname}{Appendix}
 \appendix
+\chapter{The Stommel Model}
+\label{app:stommel}
+\input{chapters/stommelappendix.tex}
+
 \chapter{One-Dimensional}
 \label{app:oneD}
 \input{chapters/oneDappendix.tex}
@@ -393,47 +406,8 @@ This thesis is original, unpublished, independent work by the author, C. Griffit
 \chapter{Two-Dimensional}
 \label{app:twoD}
 \input{chapters/twoDappendix.tex}
-%% This changes the headings and chapter titles (no numbers for
-%% example).
+
 \backmatter
-
-%% Indices come here if you have them.
-
-\chapter*{Additional Information}
-This chapter shows you how to include additional information in your
-thesis, the removal of which will not affect the submission.  Such
-material should be removed before the thesis is actually submitted.
-
-First, the chapter is unnumbered and not included in the Table of
-Contents.  Second, it is the last section of the thesis, so its
-removal will not alter any of the page numbering etc. for the previous
-sections.  Do not include any floats, however, as these will appear in
-the initial lists.
-
-The \texttt{ubcthesis} \LaTeX{} class has been designed to aid you in
-producing a thesis that conforms to the requirements of The
-University of British Columbia Faculty of Graduate Studies (FoGS).
-
-Proper use of this class and sample is highly recommended---and should
-produce a well formatted document that meets the FoGS requirement.
-Notwithstanding, complex theses may require additional formatting that
-may conflict with some of the requirements.  We therefore \emph{highly
-  recommend} that you consult one of the FoGS staff for assistance and
-an assessment of potential problems \emph{before} starting final
-draft.
-
-While we have attemped to address most of the thesis formatting
-requirements in these files, they do not constitute an official set of
-thesis requirements.  The official requirements are available at the
-following section of the FoGS web site:
-\begin{center}
-  \begin{tabular}{|l|}
-    \hline
-    \url{http://www.grad.ubc.ca/current-students/dissertation-thesis-preparation}\\
-    \hline
-  \end{tabular}
-\end{center}
-We recommend that you review these instructions carefully.
 
 \end{document}
 \endinput
