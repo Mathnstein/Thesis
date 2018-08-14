@@ -48,7 +48,7 @@
 % optional arguments (in []) specify options that affect how the
 % thesis is displayed.  Please see the ubcthesis documentation for
 % details about the options.
-\documentclass[msc,oneside]{ubcthesis}
+\documentclass[msc,twoside,final]{ubcthesis}
 %
 % To compile this sample thesis, issue the following commands:
 % latex ubcsample
@@ -244,7 +244,11 @@
 %\singlespacing
 %\onehalfspacing
 %\doublespacing
-\setlength\parindent{0pt}
+% Here is a way to turn off global indenting, but be able to indent still
+\newlength\tindent
+\setlength{\tindent}{\parindent}
+\setlength{\parindent}{0pt}
+\renewcommand{\indent}{\hspace*{\tindent}}
 
 % These commands are optional.  The defaults are shown.  You only
 % need to include them if you need a different value
@@ -301,6 +305,9 @@
 \floatstyle{ruled}
 \newfloat{Program}{htbp}{lop}[chapter]
 
+\usepackage[margin=1.25in]{geometry}
+
+\raggedbottom
 
 
 % Here is the start of the document.
@@ -337,14 +344,13 @@ Supervisor\\
 Supervisory Committee Member
 
 \begin{abstract}                %% Mandatory -  maximum 350 words
-We analyzed the non-smooth dynamics for the Stommel model for thermohaline circulation with additional mechanisms like slowly varying bifurcation parameters and high frequency oscillatory forcing. Our goal was to find an analytic approximation to the tipping or bifurcation induced by the new features in the model. We first analyze a simpler one-dimensional model that has similar structure to the Stommel model and gradually build in more complexity into the one-dimensional problem and study the effects on the tipping point. With the one-dimensional model understood, we then apply similar methods to the Stommel model and study the effects on the non-smooth tipping and bifurcations. With these results we have the ability to fully describe the hysteresis found in the Stommel model.
+We analyzed the non-smooth dynamics for the Stommel model for thermohaline circulation with additional mechanisms like slowly varying bifurcation parameters and high frequency oscillatory forcing. Our goal was to find an analytic approximation to the tipping point and forced bifurcation induced by the new features in the model. We first analyze a simpler one component model that has similar structure to the Stommel model and gradually build in more complexity into the one component problem and study the effects on the tipping point. In this context, we compare the relative strengths of the non-smooth effects on the tipping point to the smooth effects which has been previously studied. With the one component model understood, we then apply similar methods to the Stommel model and study the effects on the non-smooth tipping points and forced bifurcations. With these results we have the ability to fully describe the hysteresis found in the Stommel model.
 \end{abstract}
 
 \chapter{Lay Summary}
 We study the behavior of the thermohaline circulation. This circulation is responsible for moving water from around the globe and thus a model was created to understand how it functions. Work has previously been done on certain components of this model, but the analysis we provide is done around the less studied pieces known as the non-smooth dynamics. We ultimately provide a solution to the non-smooth dynamics and even incorporate more mechanisms in the original model to account for a larger class of observable behavior. This allows for a better understanding of the thermohaline circulation and could help predict and prepare for sudden abrupt changes to the ocean currents that drive our climate.
 
 \chapter{Preface} % Manditory if any of the conditions are met
-
 This thesis is original, unpublished, independent work by the author, C. Griffith.
 
 % Table of contents
@@ -354,12 +360,11 @@ This thesis is original, unpublished, independent work by the author, C. Griffit
 
 \newpage
 
-\chapter*{Acknowledgments}
-
-I would like to thank my supervisor Rachel Kuske for the project idea and guidance as well as my committee member Brian Wetton for helping me put together a coherent thesis.
+\chapter{Acknowledgments}
+I would like to thank my supervisor Rachel Kuske for the project idea and guidance as well as my committee member Brian Wetton for helping me professionally through graduate school.
 \newline
 
-Special thanks given to my peers Tim Jaschek and Matthias Kl{\"o}ckner for their aide in writing and support throughout the entire degree. Couldn't have done it without you both!
+Special thanks are given to my peers Tim Jaschek and Matthias Kl{\"o}ckner for their aide in writing and support throughout the entire degree. Couldn't have done it without you both!
 
 \newpage
 
@@ -369,11 +374,11 @@ Special thanks given to my peers Tim Jaschek and Matthias Kl{\"o}ckner for their
 \label{chap:introduction}
 \input{chapters/introduction.tex}
 
-\chapter{One-Dimensional Model}
+\chapter{One Component Model}
 \label{chap:oneD}
 \input{chapters/oneDmodel.tex}
 
-\chapter{Two-Dimensional Model}
+\chapter{Two Component Model}
 \label{chap:twoD}
 \input{chapters/twoDmodel.tex}
 
@@ -399,11 +404,11 @@ Special thanks given to my peers Tim Jaschek and Matthias Kl{\"o}ckner for their
 \label{app:stommel}
 \input{chapters/stommelappendix.tex}
 
-\chapter{One-Dimensional}
+\chapter{One Component}
 \label{app:oneD}
 \input{chapters/oneDappendix.tex}
 
-\chapter{Two-Dimensional}
+\chapter{Two Component}
 \label{app:twoD}
 \input{chapters/twoDappendix.tex}
 

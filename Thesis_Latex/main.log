@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.12)  2 JUN 2018 02:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.9.12)  13 AUG 2018 16:22
 entering extended mode
 **./main.tex
 (main.tex
@@ -224,6 +224,7 @@ File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
+Package hyperref Info: Option `final' set `true' on input line 4374.
 Package hyperref Info: Option `unicode' set `true' on input line 4374.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\puenc.def"
@@ -1916,44 +1917,61 @@ Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 \c@subfigure=\count318
 \c@subtable=\count319
 )
+\tindent=\skip112
 \@float@every@Program=\toks41
 \c@Program=\count320
- (main.aux
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2010/09/12 v5.6 Page Geometry
+\Gm@cnth=\count321
+\Gm@cntv=\count322
+\c@Gm@tempcnt=\count323
+\Gm@bindingoffset=\dimen286
+\Gm@wd@mp=\dimen287
+\Gm@odd@mp=\dimen288
+\Gm@even@mp=\dimen289
+\Gm@layoutwidth=\dimen290
+\Gm@layoutheight=\dimen291
+\Gm@layouthoffset=\dimen292
+\Gm@layoutvoffset=\dimen293
+\Gm@dimlist=\toks42
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")) (main.aux
 
 LaTeX Warning: Label `eq:oneD_slowosc_stabilitycaseII' multiply defined.
 
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 307.
-LaTeX Font Info:    ... okay on input line 307.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 314.
+LaTeX Font Info:    ... okay on input line 314.
  ("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen286
+\scratchcounter=\count324
+\scratchdimen=\dimen294
 \scratchbox=\box69
-\nofMPsegments=\count322
-\nofMParguments=\count323
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen287
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks43
+\nofMPsegments=\count325
+\nofMParguments=\count326
+\everyMPshowfont=\toks43
+\MPscratchCnt=\count327
+\MPscratchDim=\dimen295
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
+\everyMPtoPDFconversion=\toks44
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1968,7 +1986,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box70
-Package hyperref Info: Link coloring OFF on input line 307.
+Package hyperref Info: Link coloring OFF on input line 314.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1976,11 +1994,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count327
+\c@section@level=\count330
 )
-LaTeX Info: Redefining \ref on input line 307.
-LaTeX Info: Redefining \pageref on input line 307.
-LaTeX Info: Redefining \nameref on input line 307.
+LaTeX Info: Redefining \ref on input line 314.
+LaTeX Info: Redefining \pageref on input line 314.
+LaTeX Info: Redefining \nameref on input line 314.
 
 (main.out) (main.out)
 \@outlinefile=\write5
@@ -1989,46 +2007,80 @@ LaTeX Info: Redefining \nameref on input line 307.
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\@orgargctr=\count328
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 323.
 
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(90.3375pt, 433.62001pt, 90.3375pt)
+* v-part:(T,H,B)=(90.3375pt, 614.295pt, 90.3375pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=433.62001pt
+* \textheight=614.295pt
+* \oddsidemargin=18.0675pt
+* \evensidemargin=18.0675pt
+* \topmargin=-13.80629pt
+* \headheight=12.0pt
+* \headsep=19.8738pt
+* \topskip=11.0pt
+* \footskip=27.46295pt
+* \marginparwidth=116.0pt
+* \marginparsep=7.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\@orgargctr=\count331
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 330.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 323.
-\@orgargctr=\count329
-\@orgargctr=\count330
-\@orgargctr=\count331
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 330.
 \@orgargctr=\count332
 \@orgargctr=\count333
+\@orgargctr=\count334
+\@orgargctr=\count335
+\@orgargctr=\count336
  [1
 Non-PDF special ignored!
 
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (78.759pt too wide) detected at line 326
+Overfull \hbox (5.13899pt too wide) detected at line 333
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 328--330
+Underfull \hbox (badness 10000) in paragraph at lines 335--337
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--338
+Underfull \hbox (badness 10000) in paragraph at lines 338--345
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 331--338
+Underfull \hbox (badness 10000) in paragraph at lines 338--345
 
  []
 
@@ -2039,442 +2091,367 @@ Underfull \hbox (badness 10000) in paragraph at lines 331--338
 ] [4
 
 
-] [5
+] [5] [6
 
-] (main.toc [6
+] [7] [8
 
-])
+] (main.toc [9])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [7] (main.lof [8
+ [10] (main.lof [11
 
-] [9] [10] [11])
+] [12] [13])
 \tf@lof=\write7
 \openout7 = `main.lof'.
 
- [12]
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
 
  []
 
-[13
+[15
+
+] [16
 
 ]
 Chapter 1.
 (chapters/introduction.tex
-<intro/saddlenode.jpg, id=344, 878.28125pt x 658.46pt>
+<intro/saddlenode.jpg, id=366, 878.28125pt x 658.46pt>
 File: intro/saddlenode.jpg Graphic file (type jpg)
 
 <use intro/saddlenode.jpg>
-Package pdftex.def Info: intro/saddlenode.jpg used on input line 9.
-(pdftex.def)             Requested size: 263.4864pt x 197.53952pt.
+Package pdftex.def Info: intro/saddlenode.jpg used on input line 13.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
  [1
 
 
 ]
-<intro/saddlenode_bif_diagram.jpg, id=350, 878.28125pt x 658.46pt>
+<intro/saddlenode_bif_diagram.jpg, id=373, 878.28125pt x 658.46pt>
 File: intro/saddlenode_bif_diagram.jpg Graphic file (type jpg)
 
 <use intro/saddlenode_bif_diagram.jpg>
-Package pdftex.def Info: intro/saddlenode_bif_diagram.jpg used on input line 16
+Package pdftex.def Info: intro/saddlenode_bif_diagram.jpg used on input line 20
 .
-(pdftex.def)             Requested size: 251.9989pt x 188.929pt.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
  [2 <./intro/saddlenode.jpg> <./intro/saddlenode_bif_diagram.jpg>] [3]
-<intro/saddlenode_tipping.jpg, id=377, 878.28125pt x 658.46pt>
+<intro/saddlenode_tipping.jpg, id=403, 878.28125pt x 658.46pt>
 File: intro/saddlenode_tipping.jpg Graphic file (type jpg)
 
 <use intro/saddlenode_tipping.jpg>
-Package pdftex.def Info: intro/saddlenode_tipping.jpg used on input line 59.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: intro/saddlenode_tipping.jpg used on input line 63.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<intro/saddlenode_tipping_zoom.jpg, id=378, 878.28125pt x 658.46pt>
+<intro/saddlenode_tipping_zoom.jpg, id=404, 878.28125pt x 658.46pt>
 File: intro/saddlenode_tipping_zoom.jpg Graphic file (type jpg)
 
 <use intro/saddlenode_tipping_zoom.jpg>
 Package pdftex.def Info: intro/saddlenode_tipping_zoom.jpg used on input line 6
-4.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [4]
-Overfull \hbox (7.76834pt too wide) in paragraph at lines 86--87
-\OT1/cmr/m/n/10.95 These cat-e-gories all con-tribute sig-nif-i-cantly to the o
-ver-all pre-dic-tion of weather
- []
-
-[5 <./intro/saddlenode_tipping.jpg> <./intro/saddlenode_tipping_zoom.jpg>]
-<intro/Box.jpg, id=405, 435.12563pt x 390.70969pt>
+8.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [4 <./intro/saddlenode_tipping.jpg> <./intro/saddlenode_tipping_zoom.jpg>]
+<intro/Box.jpg, id=424, 435.12563pt x 390.70969pt>
 File: intro/Box.jpg Graphic file (type jpg)
  <use intro/Box.jpg>
-Package pdftex.def Info: intro/Box.jpg used on input line 94.
-(pdftex.def)             Requested size: 251.9989pt x 226.27791pt.
- [6]
-[7 <./intro/Box.jpg>] <intro/T_equil.jpg, id=424, 878.28125pt x 658.46pt>
+Package pdftex.def Info: intro/Box.jpg used on input line 100.
+(pdftex.def)             Requested size: 303.53267pt x 272.56488pt.
+ [5]
+Overfull \hbox (7.72258pt too wide) in paragraph at lines 114--115
+[]\OT1/cmr/m/n/10.95 The vari-ables $\OML/cmm/m/it/10.95 T$ \OT1/cmr/m/n/10.95 
+and $\OML/cmm/m/it/10.95 S$ \OT1/cmr/m/n/10.95 are the tem-per-a-ture and salin
+-ity re-spec-tively where the non-smoothness
+ []
+
+[6 <./intro/Box.jpg>] <intro/T_equil.jpg, id=444, 878.28125pt x 658.46pt>
 File: intro/T_equil.jpg Graphic file (type jpg)
 
 <use intro/T_equil.jpg>
-Package pdftex.def Info: intro/T_equil.jpg used on input line 125.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- <intro/V_bif.jpg, id=425, 878.28125pt x 658.46pt>
+Package pdftex.def Info: intro/T_equil.jpg used on input line 129.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ <intro/V_bif.jpg, id=445, 878.28125pt x 658.46pt>
 File: intro/V_bif.jpg Graphic file (type jpg)
 
 <use intro/V_bif.jpg>
-Package pdftex.def Info: intro/V_bif.jpg used on input line 131.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [8 <./intro/T_equil.jpg> <./intro/V_bif.jpg>]
+Package pdftex.def Info: intro/V_bif.jpg used on input line 135.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 File: intro/V_bif.jpg Graphic file (type jpg)
+ <use intro/V_bif.jpg>
+Package pdftex.def Info: intro/V_bif.jpg used on input line 149.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<use intro/V_bif.jpg>
-Package pdftex.def Info: intro/V_bif.jpg used on input line 145.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
-
-<intro/V_bif_collapse.jpg, id=435, 878.28125pt x 658.46pt>
+<intro/V_bif_collapse.jpg, id=450, 878.28125pt x 658.46pt>
 File: intro/V_bif_collapse.jpg Graphic file (type jpg)
 
 <use intro/V_bif_collapse.jpg>
-Package pdftex.def Info: intro/V_bif_collapse.jpg used on input line 150.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: intro/V_bif_collapse.jpg used on input line 154.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<intro/V_bif_reverse.jpg, id=436, 878.28125pt x 658.46pt>
+<intro/V_bif_reverse.jpg, id=451, 878.28125pt x 658.46pt>
 File: intro/V_bif_reverse.jpg Graphic file (type jpg)
 
 <use intro/V_bif_reverse.jpg>
-Package pdftex.def Info: intro/V_bif_reverse.jpg used on input line 155.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [9 <./intro/V_bif_collapse.jpg> <./intro/V_bif_reverse.jpg>]) [10]
-Chapter 2.
-(chapters/oneDmodel.tex [11
+Package pdftex.def Info: intro/V_bif_reverse.jpg used on input line 159.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [7 <./intro/T_equil.jpg> <./intro/V_bif.jpg>])
+[8 <./intro/V_bif_collapse.jpg> <./intro/V_bif_reverse.jpg>] [9] [10
 
 ]
-<oneD/bif_diagram.jpg, id=466, 843.15pt x 632.3625pt>
+Chapter 2.
+(chapters/oneDmodel.tex [11]
+<oneD/bif_diagram.jpg, id=493, 843.15pt x 632.3625pt>
 File: oneD/bif_diagram.jpg Graphic file (type jpg)
 
 <use oneD/bif_diagram.jpg>
 Package pdftex.def Info: oneD/bif_diagram.jpg used on input line 40.
-(pdftex.def)             Requested size: 288.0011pt x 216.0039pt.
- [12] [13 <./oneD/bif_diagram.jpg>]
-Overfull \hbox (15.17778pt too wide) detected at line 68
-\OML/cmm/m/it/10.95 [][] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 [][][] \OT1
-/cmr/m/n/10.95 + [] = \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 \OT1/cmr/m/n/10
-.95 (\OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95   \OT1/cmr/m
-/n/10.95 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 x[] 
-\OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.
-95  \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m/n/10.95 + 2\OML/cmm/
-m/it/10.95 x[]x[]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/10.95 []\OT1/cmr/m/n/10.
-95 (\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m
-/n/10.95 + 2\OML/cmm/m/it/10.95 x[]x[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95
- x[]\OT1/cmr/m/n/10.95 ) + []
- []
-
-
-Overfull \hbox (15.61584pt too wide) in paragraph at lines 81--82
-[]\OT1/cmr/m/n/10.95 Each of the equa-tions []-[] gives the re-spec-tive or-der
-'s pseudo-equilibrium.
- []
-
-[14] [15] <oneD/slow_bif_diagram.jpg, id=521, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 303.53267pt x 227.65033pt.
+ [12 <./oneD/bif_diagram.jpg>] [13] [14]
+<oneD/slow_bif_diagram.jpg, id=541, 878.28125pt x 658.46pt>
 File: oneD/slow_bif_diagram.jpg Graphic file (type jpg)
 
 <use oneD/slow_bif_diagram.jpg>
 Package pdftex.def Info: oneD/slow_bif_diagram.jpg used on input line 152.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slow_bif_diagram_zoom.jpg, id=522, 878.28125pt x 658.46pt>
+<oneD/slow_bif_diagram_zoom.jpg, id=542, 878.28125pt x 658.46pt>
 File: oneD/slow_bif_diagram_zoom.jpg Graphic file (type jpg)
 
 <use oneD/slow_bif_diagram_zoom.jpg>
 Package pdftex.def Info: oneD/slow_bif_diagram_zoom.jpg used on input line 157.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slow_epscomp.jpg, id=523, 878.28125pt x 658.46pt>
+<oneD/slow_epscomp.jpg, id=543, 878.28125pt x 658.46pt>
 File: oneD/slow_epscomp.jpg Graphic file (type jpg)
 
 <use oneD/slow_epscomp.jpg>
 Package pdftex.def Info: oneD/slow_epscomp.jpg used on input line 162.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [16] [17 <./oneD/slow_bif_diagram.jpg> <./oneD/slow_bif_diagram_zoom.jpg> <./o
-neD/slow_epscomp.jpg>] [18] [19]
-Overfull \hbox (35.78058pt too wide) detected at line 240
-[][] \OT1/cmr/m/n/10.95 + 
-[][][] + 
-[][][] + [] = 
-[](\OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95  \OMS/cmsy/m/n/10.95   \OT1/cmr/m/
-n/10.95 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 x[] \
-OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 A [][][]\OT1/cmr/m/n/10.95 ) + 
-[](\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m/
-n/10.95 + 2\OML/cmm/m/it/10.95 x[]x[]\OT1/cmr/m/n/10.95 ) + []
- []
-
-[20]
-Overfull \hbox (5.0923pt too wide) detected at line 322
-[][] \OT1/cmr/m/n/10.95 + 
-[][][] + 
-[][][] + [] = [][]
- []
-
-[21] <oneD/osc_cases.jpg, id=606, 843.15pt x 632.3625pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [15 <./oneD/slow_bif_diagram.jpg> <./oneD/slow_bif_diagram_zoom.jpg> <./oneD/s
+low_epscomp.jpg>] [16] [17] [18]
+<oneD/osc_cases.jpg, id=616, 843.15pt x 632.3625pt>
 File: oneD/osc_cases.jpg Graphic file (type jpg)
+ <use oneD/osc_cases.jpg>
+Package pdftex.def Info: oneD/osc_cases.jpg used on input line 339.
+(pdftex.def)             Requested size: 303.53267pt x 227.65033pt.
 
-<use oneD/osc_cases.jpg>
-Package pdftex.def Info: oneD/osc_cases.jpg used on input line 343.
-(pdftex.def)             Requested size: 251.9989pt x 188.99619pt.
+[19]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 344.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 348.
+(hyperref)                removing `\leq' on input line 344.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leq' on input line 348.
+(hyperref)                removing `math shift' on input line 344.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 348.
-
-[22 <./oneD/osc_cases.jpg>]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 374.
+(hyperref)                removing `math shift' on input line 370.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 374.
+(hyperref)                removing `math shift' on input line 370.
 
-<oneD/t1t2_graphic.jpg, id=620, 843.15pt x 632.3625pt>
+[20 <./oneD/osc_cases.jpg>]
+<oneD/t1t2_graphic.jpg, id=640, 843.15pt x 632.3625pt>
 File: oneD/t1t2_graphic.jpg Graphic file (type jpg)
 
 <use oneD/t1t2_graphic.jpg>
-Package pdftex.def Info: oneD/t1t2_graphic.jpg used on input line 381.
-(pdftex.def)             Requested size: 251.9989pt x 188.99619pt.
- [23] [24 <./oneD/t1t2_graphic.jpg>]
-<oneD/osc_timeseries.jpg, id=641, 878.28125pt x 658.46pt>
+Package pdftex.def Info: oneD/t1t2_graphic.jpg used on input line 377.
+(pdftex.def)             Requested size: 303.53267pt x 227.65033pt.
+ [21 <./oneD/t1t2_graphic.jpg>] [22]
+<oneD/osc_timeseries.jpg, id=664, 878.28125pt x 658.46pt>
 File: oneD/osc_timeseries.jpg Graphic file (type jpg)
 
 <use oneD/osc_timeseries.jpg>
-Package pdftex.def Info: oneD/osc_timeseries.jpg used on input line 446.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: oneD/osc_timeseries.jpg used on input line 442.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/osc_bif_diagram.jpg, id=642, 878.28125pt x 658.46pt>
+<oneD/osc_bif_diagram.jpg, id=665, 878.28125pt x 658.46pt>
 File: oneD/osc_bif_diagram.jpg Graphic file (type jpg)
 
 <use oneD/osc_bif_diagram.jpg>
-Package pdftex.def Info: oneD/osc_bif_diagram.jpg used on input line 451.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: oneD/osc_bif_diagram.jpg used on input line 447.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/osc_bif_diagram_zoom.jpg, id=643, 878.28125pt x 658.46pt>
+<oneD/osc_bif_diagram_zoom.jpg, id=666, 878.28125pt x 658.46pt>
 File: oneD/osc_bif_diagram_zoom.jpg Graphic file (type jpg)
 
 <use oneD/osc_bif_diagram_zoom.jpg>
-Package pdftex.def Info: oneD/osc_bif_diagram_zoom.jpg used on input line 456.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: oneD/osc_bif_diagram_zoom.jpg used on input line 452.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/osc_Omegacomp.jpg, id=644, 878.28125pt x 658.46pt>
+<oneD/osc_Omegacomp.jpg, id=667, 878.28125pt x 658.46pt>
 File: oneD/osc_Omegacomp.jpg Graphic file (type jpg)
 
 <use oneD/osc_Omegacomp.jpg>
-Package pdftex.def Info: oneD/osc_Omegacomp.jpg used on input line 461.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [25] [26 <./oneD/osc_timeseries.jpg> <./oneD/osc_bif_diagram.jpg> <./oneD/osc_
-bif_diagram_zoom.jpg> <./oneD/osc_Omegacomp.jpg>]
-[27]
-Overfull \hbox (24.12007pt too wide) detected at line 543
-[][] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 [][][] \OT1/cmr/m/n/10.95 + \OML
-/cmm/m/it/10.95 [][][] \OT1/cmr/m/n/10.95 + [] = \OML/cmm/m/it/10.95 []\OT1/c
-mr/m/n/10.95 (\OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 (\OM
-L/cmm/m/it/10.95 \OT1/cmr/m/n/10.95 ) \OMS/cmsy/m/n/10.95   \OT1/cmr/m/n/10.95
- 2\OML/cmm/m/it/10.95 x[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 x[] \OT1/cmr
-/m/n/10.95 + \OML/cmm/m/it/10.95 A [][][]\OT1/cmr/m/n/10.95 ) + \OML/cmm/m/it/1
-0.95 []\OT1/cmr/m/n/10.95 (\OMS/cmsy/m/n/10.95  \OT1/cmr/m/n/10.95 2\OML/cmm/m
-/it/10.95 x[] \OT1/cmr/m/n/10.95 + \OML/cmm/m/it/10.95 x[]x[]\OT1/cmr/m/n/10.95
- ) + []
- []
-
-[28] [29]
+Package pdftex.def Info: oneD/osc_Omegacomp.jpg used on input line 457.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [23 <./oneD/osc_timeseries.jpg> <./oneD/osc_bif_diagram.jpg> <./oneD/osc_bif_d
+iagram_zoom.jpg> <./oneD/osc_Omegacomp.jpg>]
+[24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 607.
+(hyperref)                removing `math shift' on input line 603.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lambda' on input line 607.
+(hyperref)                removing `\lambda' on input line 603.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leq' on input line 607.
+(hyperref)                removing `\leq' on input line 603.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 607.
+(hyperref)                removing `math shift' on input line 603.
 
-
-Overfull \hbox (32.379pt too wide) detected at line 623
-[][]
- []
-
-[30] [31] [32] [33]
+[26] [27] [28]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 720.
+(hyperref)                removing `math shift' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lambda' on input line 720.
+(hyperref)                removing `\lambda' on input line 716.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 720.
+(hyperref)                removing `math shift' on input line 716.
 
-
-Overfull \hbox (37.59552pt too wide) detected at line 738
-[][]
- []
-
-[34] [35]
-Overfull \hbox (28.57274pt too wide) in paragraph at lines 806--821
- [] 
- []
-
-<oneD/slowosc_bif_diagram_small.jpg, id=824, 878.28125pt x 658.46pt>
+[29] [30] [31]
+<oneD/slowosc_bif_diagram_small.jpg, id=837, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_small.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_small.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_small.jpg used on input line 
-831.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+827.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slowosc_bif_diagram_small_zoom.jpg, id=825, 878.28125pt x 658.46pt>
+<oneD/slowosc_bif_diagram_small_zoom.jpg, id=838, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_small_zoom.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_small_zoom.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_small_zoom.jpg used on input 
-line 836.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [36]
-<oneD/slowosc_bif_diagram_medium.jpg, id=840, 878.28125pt x 658.46pt>
+line 832.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+
+<oneD/slowosc_bif_diagram_medium.jpg, id=846, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_medium.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_medium.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_medium.jpg used on input line
- 849.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+ 845.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slowosc_bif_diagram_medium_zoom.jpg, id=841, 878.28125pt x 658.46pt>
+<oneD/slowosc_bif_diagram_medium_zoom.jpg, id=847, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_medium_zoom.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_medium_zoom.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_medium_zoom.jpg used on input
- line 854.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [37 <./oneD/slowosc_bif_diagram_small.jpg> <./oneD/slowosc_bif_diagram_small_z
+ line 850.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [32 <./oneD/slowosc_bif_diagram_small.jpg> <./oneD/slowosc_bif_diagram_small_z
 oom.jpg>]
-<oneD/slowosc_bif_diagram_large.jpg, id=855, 878.28125pt x 658.46pt>
+<oneD/slowosc_bif_diagram_large.jpg, id=861, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_large.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_large.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_large.jpg used on input line 
-867.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+863.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slowosc_bif_diagram_large_zoom.jpg, id=856, 878.28125pt x 658.46pt>
+<oneD/slowosc_bif_diagram_large_zoom.jpg, id=862, 878.28125pt x 658.46pt>
 File: oneD/slowosc_bif_diagram_large_zoom.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_bif_diagram_large_zoom.jpg>
 Package pdftex.def Info: oneD/slowosc_bif_diagram_large_zoom.jpg used on input 
-line 872.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [38 <./oneD/slowosc_bif_diagram_medium.jpg> <./oneD/slowosc_bif_diagram_medium
+line 868.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [33 <./oneD/slowosc_bif_diagram_medium.jpg> <./oneD/slowosc_bif_diagram_medium
 _zoom.jpg>]
-<oneD/slowosc_lambdacomp.jpg, id=871, 878.28125pt x 658.46pt>
+<oneD/slowosc_lambdacomp.jpg, id=878, 878.28125pt x 658.46pt>
 File: oneD/slowosc_lambdacomp.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_lambdacomp.jpg>
-Package pdftex.def Info: oneD/slowosc_lambdacomp.jpg used on input line 883.
-(pdftex.def)             Requested size: 251.9989pt x 188.929pt.
- [39 <./oneD/slowosc_bif_diagram_large.jpg> <./oneD/slowosc_bif_diagram_large_z
+Package pdftex.def Info: oneD/slowosc_lambdacomp.jpg used on input line 879.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
+ [34 <./oneD/slowosc_bif_diagram_large.jpg> <./oneD/slowosc_bif_diagram_large_z
 oom.jpg>]
-<oneD/slowosc_epscomp_case2.jpg, id=883, 878.28125pt x 658.46pt>
+<oneD/slowosc_epscomp_case2.jpg, id=890, 878.28125pt x 658.46pt>
 File: oneD/slowosc_epscomp_case2.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_epscomp_case2.jpg>
-Package pdftex.def Info: oneD/slowosc_epscomp_case2.jpg used on input line 895.
+Package pdftex.def Info: oneD/slowosc_epscomp_case2.jpg used on input line 891.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<oneD/slowosc_epscomp_case3.jpg, id=884, 878.28125pt x 658.46pt>
+<oneD/slowosc_epscomp_case3.jpg, id=891, 878.28125pt x 658.46pt>
 File: oneD/slowosc_epscomp_case3.jpg Graphic file (type jpg)
 
 <use oneD/slowosc_epscomp_case3.jpg>
-Package pdftex.def Info: oneD/slowosc_epscomp_case3.jpg used on input line 900.
+Package pdftex.def Info: oneD/slowosc_epscomp_case3.jpg used on input line 896.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [40 <./oneD/slowosc_lambdacomp.jpg> <./oneD/slowosc_epscomp_case2.jpg> <./oneD
-/slowosc_epscomp_case3.jpg>]
-Overfull \hbox (0.80458pt too wide) detected at line 946
-[][] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95  \OML/cmm/m/it/10.95 []m\OT1/cmr
-/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) + [] + []\OML/cmm/m/it/10
-.95 v[] \OT1/cmr/m/n/10.95 = \OML/cmm/m/it/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/
-m/it/10.95 t; v[]\OT1/cmr/m/n/10.95 )\OML/cmm/m/it/10.95 ;  z[]\OT1/cmr/m/n/10.
-95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = \OMS/cmsy/m/n/10.95  \OML/cmm/m
-/it/10.95 C[]
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [35 <./oneD/slowosc_lambdacomp.jpg> <./oneD/slowosc_epscomp_case2.jpg> <./oneD
+/slowosc_epscomp_case3.jpg>] [36] [37])
+[38]
+Chapter 3.
+(chapters/twoDmodel.tex [39
+
+] [40]
+Overfull \hbox (24.24135pt too wide) in paragraph at lines 95--96
+[]| \OT1/cmr/m/n/10.95 Anal-o-gously to []sec-tion 2.2[][], this cor-re-sponds 
+to the non-smooth bi-fur-ca-tion at $([][]\OML/cmm/m/it/10.95 ; V[]; T[]\OT1/cm
+r/m/n/10.95 ) =
  []
 
-[41] [42]) [43]
-Chapter 3.
-(chapters/twoDmodel.tex [44
-
-] [45] [46] [47]
-<twoD/slow_bif_diagram.jpg, id=1002, 878.28125pt x 658.46pt>
+[41] <twoD/slow_bif_diagram.jpg, id=1004, 878.28125pt x 658.46pt>
 File: twoD/slow_bif_diagram.jpg Graphic file (type jpg)
 
 <use twoD/slow_bif_diagram.jpg>
 Package pdftex.def Info: twoD/slow_bif_diagram.jpg used on input line 224.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slow_bif_diagram_zoom.jpg, id=1003, 878.28125pt x 658.46pt>
+<twoD/slow_bif_diagram_zoom.jpg, id=1005, 878.28125pt x 658.46pt>
 File: twoD/slow_bif_diagram_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slow_bif_diagram_zoom.jpg>
 Package pdftex.def Info: twoD/slow_bif_diagram_zoom.jpg used on input line 229.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [48]
-<twoD/slow_bif_Tplot.jpg, id=1018, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [42]
+<twoD/slow_bif_Tplot.jpg, id=1022, 878.28125pt x 658.46pt>
 File: twoD/slow_bif_Tplot.jpg Graphic file (type jpg)
 
 <use twoD/slow_bif_Tplot.jpg>
 Package pdftex.def Info: twoD/slow_bif_Tplot.jpg used on input line 242.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slow_bif_Tplot_zoom.jpg, id=1019, 878.28125pt x 658.46pt>
+<twoD/slow_bif_Tplot_zoom.jpg, id=1023, 878.28125pt x 658.46pt>
 File: twoD/slow_bif_Tplot_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slow_bif_Tplot_zoom.jpg>
 Package pdftex.def Info: twoD/slow_bif_Tplot_zoom.jpg used on input line 247.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [49 <./twoD/slow_bif_diagram.jpg> <./twoD/slow_bif_diagram_zoom.jpg>]
-<twoD/slow_epscomp.jpg, id=1029, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [43 <./twoD/slow_bif_diagram.jpg> <./twoD/slow_bif_diagram_zoom.jpg>]
+<twoD/slow_epscomp.jpg, id=1033, 878.28125pt x 658.46pt>
 File: twoD/slow_epscomp.jpg Graphic file (type jpg)
 
 <use twoD/slow_epscomp.jpg>
 Package pdftex.def Info: twoD/slow_epscomp.jpg used on input line 258.
-(pdftex.def)             Requested size: 360.0pt x 269.90002pt.
- [50 <./twoD/slow_bif_Tplot.jpg> <./twoD/slow_bif_Tplot_zoom.jpg>] [51 <./twoD/
-slow_epscomp.jpg>]
-Overfull \hbox (28.50899pt too wide) detected at line 306
-[][]
- []
-
-[52] [53]
-Overfull \hbox (73.38239pt too wide) detected at line 395
-[][]
- []
-
-[54] <twoD/osc_cases.jpg, id=1104, 843.15pt x 632.3625pt>
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
+ [44 <./twoD/slow_bif_Tplot.jpg> <./twoD/slow_bif_Tplot_zoom.jpg>] [45 <./twoD/
+slow_epscomp.jpg>] [46] [47]
+<twoD/osc_cases.jpg, id=1104, 843.15pt x 632.3625pt>
 File: twoD/osc_cases.jpg Graphic file (type jpg)
-
-<use twoD/osc_cases.jpg>
+ <use twoD/osc_cases.jpg>
 Package pdftex.def Info: twoD/osc_cases.jpg used on input line 431.
-(pdftex.def)             Requested size: 210.78697pt x 158.09024pt.
+(pdftex.def)             Requested size: 303.53267pt x 227.65033pt.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -2488,7 +2465,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 436.
 
-[55 <./twoD/osc_cases.jpg>]
+[48 <./twoD/osc_cases.jpg>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 465.
@@ -2497,68 +2474,58 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 465.
 
-[56] [57] <twoD/osc_Vtimeseries.jpg, id=1152, 878.28125pt x 658.46pt>
+[49] <twoD/osc_Vtimeseries.jpg, id=1146, 878.28125pt x 658.46pt>
 File: twoD/osc_Vtimeseries.jpg Graphic file (type jpg)
 
 <use twoD/osc_Vtimeseries.jpg>
 Package pdftex.def Info: twoD/osc_Vtimeseries.jpg used on input line 541.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/osc_bif_diagram.jpg, id=1153, 878.28125pt x 658.46pt>
+<twoD/osc_bif_diagram.jpg, id=1147, 878.28125pt x 658.46pt>
 File: twoD/osc_bif_diagram.jpg Graphic file (type jpg)
 
 <use twoD/osc_bif_diagram.jpg>
 Package pdftex.def Info: twoD/osc_bif_diagram.jpg used on input line 546.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/osc_bif_diagram_zoom.jpg, id=1154, 878.28125pt x 658.46pt>
+<twoD/osc_bif_diagram_zoom.jpg, id=1148, 878.28125pt x 658.46pt>
 File: twoD/osc_bif_diagram_zoom.jpg Graphic file (type jpg)
 
 <use twoD/osc_bif_diagram_zoom.jpg>
 Package pdftex.def Info: twoD/osc_bif_diagram_zoom.jpg used on input line 551.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [58]
-<twoD/osc_Ttimeseries.jpg, id=1163, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [50]
+<twoD/osc_Ttimeseries.jpg, id=1160, 878.28125pt x 658.46pt>
 File: twoD/osc_Ttimeseries.jpg Graphic file (type jpg)
 
 <use twoD/osc_Ttimeseries.jpg>
 Package pdftex.def Info: twoD/osc_Ttimeseries.jpg used on input line 562.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/osc_bif_Tplot.jpg, id=1164, 878.28125pt x 658.46pt>
+<twoD/osc_bif_Tplot.jpg, id=1161, 878.28125pt x 658.46pt>
 File: twoD/osc_bif_Tplot.jpg Graphic file (type jpg)
 
 <use twoD/osc_bif_Tplot.jpg>
 Package pdftex.def Info: twoD/osc_bif_Tplot.jpg used on input line 567.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/osc_bif_Tplot_zoom.jpg, id=1165, 878.28125pt x 658.46pt>
+<twoD/osc_bif_Tplot_zoom.jpg, id=1162, 878.28125pt x 658.46pt>
 File: twoD/osc_bif_Tplot_zoom.jpg Graphic file (type jpg)
 
 <use twoD/osc_bif_Tplot_zoom.jpg>
 Package pdftex.def Info: twoD/osc_bif_Tplot_zoom.jpg used on input line 572.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [59 <./twoD/osc_Vtimeseries.jpg> <./twoD/osc_bif_diagram.jpg> <./twoD/osc_bif_
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [51 <./twoD/osc_Vtimeseries.jpg> <./twoD/osc_bif_diagram.jpg> <./twoD/osc_bif_
 diagram_zoom.jpg>]
-<twoD/osc_Omegacomp.jpg, id=1173, 878.28125pt x 658.46pt>
+<twoD/osc_Omegacomp.jpg, id=1171, 878.28125pt x 658.46pt>
 File: twoD/osc_Omegacomp.jpg Graphic file (type jpg)
 
 <use twoD/osc_Omegacomp.jpg>
 Package pdftex.def Info: twoD/osc_Omegacomp.jpg used on input line 583.
-(pdftex.def)             Requested size: 219.56978pt x 164.6146pt.
- [60 <./twoD/osc_Ttimeseries.jpg> <./twoD/osc_bif_Tplot.jpg> <./twoD/osc_bif_Tp
-lot_zoom.jpg>] [61 <./twoD/osc_Omegacomp.jpg>]
-[62] [63]
-Overfull \hbox (13.01357pt too wide) detected at line 725
-[][]
- []
-
-[64] [65]
-Overfull \hbox (0.61017pt too wide) detected at line 794
-[][]
- []
-
-[66]
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
+ [52 <./twoD/osc_Ttimeseries.jpg> <./twoD/osc_bif_Tplot.jpg> <./twoD/osc_bif_Tp
+lot_zoom.jpg>] [53 <./twoD/osc_Omegacomp.jpg>]
+[54] [55] [56]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 798.
@@ -2575,21 +2542,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 798.
 
-
-Overfull \hbox (4.92781pt too wide) detected at line 817
-[][]
- []
-
-
-Overfull \hbox (14.32475pt too wide) detected at line 825
-[][]
- []
-
-[67] [68] [69]
-Overfull \hbox (67.44687pt too wide) detected at line 921
-[][]
- []
-
+[57] [58] [59]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 925.
@@ -2602,267 +2555,275 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 925.
 
-[70]
-Overfull \hbox (27.71002pt too wide) detected at line 944
+[60]
+Overfull \hbox (3.60785pt too wide) detected at line 952
 [][]
  []
 
-
-Overfull \hbox (77.22786pt too wide) detected at line 952
+[61]
+Overfull \hbox (5.8687pt too wide) detected at line 1009
 [][]
  []
 
-[71]
-Overfull \hbox (1.41125pt too wide) in paragraph at lines 988--989
-[]\OT1/cmr/m/n/10.95 We find the re-sult-ing re-duced one-dimensional equa-tion
- by in-tro-duc-ing []
- []
-
-
-Overfull \hbox (79.48871pt too wide) detected at line 1009
-[][]
- []
-
-[72]
-Overfull \hbox (53.05711pt too wide) in paragraph at lines 1027--1043
- [] 
- []
-
-[73] <twoD/slowosc_bif_diagram_small.jpg, id=1388, 878.28125pt x 658.46pt>
+[62] <twoD/slowosc_bif_diagram_small.jpg, id=1373, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_small.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_small.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_small.jpg used on input line 
 1053.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_bif_diagram_small_zoom.jpg, id=1389, 878.28125pt x 658.46pt>
+<twoD/slowosc_bif_diagram_small_zoom.jpg, id=1374, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_small_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_small_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_small_zoom.jpg used on input 
 line 1058.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [74]
-<twoD/slowosc_Tplot_small.jpg, id=1399, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [63]
+<twoD/slowosc_Tplot_small.jpg, id=1385, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_small.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_small.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_small.jpg used on input line 1069.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_Tplot_small_zoom.jpg, id=1400, 878.28125pt x 658.46pt>
+<twoD/slowosc_Tplot_small_zoom.jpg, id=1386, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_small_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_small_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_small_zoom.jpg used on input line 1
 074.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [75 <./twoD/slowosc_bif_diagram_small.jpg> <./twoD/slowosc_bif_diagram_small_z
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [64 <./twoD/slowosc_bif_diagram_small.jpg> <./twoD/slowosc_bif_diagram_small_z
 oom.jpg> <./twoD/slowosc_Tplot_small.jpg> <./twoD/slowosc_Tplot_small_zoom.jpg>
 ]
-<twoD/slowosc_bif_diagram_medium.jpg, id=1409, 878.28125pt x 658.46pt>
+<twoD/slowosc_bif_diagram_medium.jpg, id=1395, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_medium.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_medium.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_medium.jpg used on input line
  1087.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_bif_diagram_medium_zoom.jpg, id=1410, 878.28125pt x 658.46pt>
+<twoD/slowosc_bif_diagram_medium_zoom.jpg, id=1396, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_medium_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_medium_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_medium_zoom.jpg used on input
  line 1092.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_Tplot_medium.jpg, id=1417, 878.28125pt x 658.46pt>
+<twoD/slowosc_Tplot_medium.jpg, id=1403, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_medium.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_medium.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_medium.jpg used on input line 1103.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_Tplot_medium_zoom.jpg, id=1418, 878.28125pt x 658.46pt>
+<twoD/slowosc_Tplot_medium_zoom.jpg, id=1404, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_medium_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_medium_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_medium_zoom.jpg used on input line 
 1108.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [76 <./twoD/slowosc_bif_diagram_medium.jpg> <./twoD/slowosc_bif_diagram_medium
-_zoom.jpg>]
-<twoD/slowosc_bif_diagram_large.jpg, id=1429, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [65 <./twoD/slowosc_bif_diagram_medium.jpg> <./twoD/slowosc_bif_diagram_medium
+_zoom.jpg> <./twoD/slowosc_Tplot_medium.jpg> <./twoD/slowosc_Tplot_medium_zoom.
+jpg>]
+<twoD/slowosc_bif_diagram_large.jpg, id=1415, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_large.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_large.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_large.jpg used on input line 
 1121.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_bif_diagram_large_zoom.jpg, id=1430, 878.28125pt x 658.46pt>
+<twoD/slowosc_bif_diagram_large_zoom.jpg, id=1416, 878.28125pt x 658.46pt>
 File: twoD/slowosc_bif_diagram_large_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_bif_diagram_large_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_bif_diagram_large_zoom.jpg used on input 
 line 1126.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [77 <./twoD/slowosc_Tplot_medium.jpg> <./twoD/slowosc_Tplot_medium_zoom.jpg>]
-<twoD/slowosc_Tplot_large.jpg, id=1441, 878.28125pt x 658.46pt>
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+
+<twoD/slowosc_Tplot_large.jpg, id=1423, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_large.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_large.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_large.jpg used on input line 1137.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_Tplot_large_zoom.jpg, id=1442, 878.28125pt x 658.46pt>
+<twoD/slowosc_Tplot_large_zoom.jpg, id=1424, 878.28125pt x 658.46pt>
 File: twoD/slowosc_Tplot_large_zoom.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_Tplot_large_zoom.jpg>
 Package pdftex.def Info: twoD/slowosc_Tplot_large_zoom.jpg used on input line 1
 142.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [78 <./twoD/slowosc_bif_diagram_large.jpg> <./twoD/slowosc_bif_diagram_large_z
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [66 <./twoD/slowosc_bif_diagram_large.jpg> <./twoD/slowosc_bif_diagram_large_z
 oom.jpg> <./twoD/slowosc_Tplot_large.jpg> <./twoD/slowosc_Tplot_large_zoom.jpg>
 ]
-<twoD/slowosc_lambdacomp.jpg, id=1449, 878.28125pt x 658.46pt>
+<twoD/slowosc_lambdacomp.jpg, id=1430, 878.28125pt x 658.46pt>
 File: twoD/slowosc_lambdacomp.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_lambdacomp.jpg>
 Package pdftex.def Info: twoD/slowosc_lambdacomp.jpg used on input line 1153.
-(pdftex.def)             Requested size: 251.9989pt x 188.929pt.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
 
-<twoD/slowosc_epscomp_mixed.jpg, id=1454, 878.28125pt x 658.46pt>
+<twoD/slowosc_epscomp_mixed.jpg, id=1435, 878.28125pt x 658.46pt>
 File: twoD/slowosc_epscomp_mixed.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_epscomp_mixed.jpg>
 Package pdftex.def Info: twoD/slowosc_epscomp_mixed.jpg used on input line 1165
 .
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<twoD/slowosc_epscomp_slow.jpg, id=1455, 878.28125pt x 658.46pt>
+<twoD/slowosc_epscomp_slow.jpg, id=1436, 878.28125pt x 658.46pt>
 File: twoD/slowosc_epscomp_slow.jpg Graphic file (type jpg)
 
 <use twoD/slowosc_epscomp_slow.jpg>
 Package pdftex.def Info: twoD/slowosc_epscomp_slow.jpg used on input line 1170.
 
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
- [79 <./twoD/slowosc_lambdacomp.jpg>]
-[80 <./twoD/slowosc_epscomp_mixed.jpg> <./twoD/slowosc_epscomp_slow.jpg>]
-Overfull \hbox (12.66551pt too wide) in paragraph at lines 1213--1214
-[]\OT1/cmr/m/n/10.95 We adopt a sim-i-lar strat-egy for an-a-lyz-ing the sta-bi
-l-ity from the one-dimensional
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [67 <./twoD/slowosc_lambdacomp.jpg>]
+[68 <./twoD/slowosc_epscomp_mixed.jpg> <./twoD/slowosc_epscomp_slow.jpg>]
+[69]
+Overfull \hbox (8.51724pt too wide) in paragraph at lines 1269--1270
+[]\OT1/cmr/m/n/10.95 From [] we find ex-po-nen-tially de-cay-ing per-tur-ba-tio
+ns to just un-der the pseudo-equilibrium
  []
 
-[81] [82]
-Overfull \hbox (31.81094pt too wide) detected at line 1322
-[][]
- []
-
-[83]) [84]
-Chapter 4.
-(chapters/conclusion.tex [85
+[70]) [71] [72
 
 ]
-<conclusion/low_freq_V.jpg, id=1521, 843.15pt x 632.3625pt>
+Chapter 4.
+(chapters/conclusion.tex
+<conclusion/slowcomp.jpg, id=1495, 878.28125pt x 658.46pt>
+File: conclusion/slowcomp.jpg Graphic file (type jpg)
+
+<use conclusion/slowcomp.jpg>
+Package pdftex.def Info: conclusion/slowcomp.jpg used on input line 9.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
+ [73]
+<conclusion/osccomp.jpg, id=1501, 878.28125pt x 658.46pt>
+File: conclusion/osccomp.jpg Graphic file (type jpg)
+
+<use conclusion/osccomp.jpg>
+Package pdftex.def Info: conclusion/osccomp.jpg used on input line 18.
+(pdftex.def)             Requested size: 303.53267pt x 227.56079pt.
+ [74 <./conclusion/slowcomp.jpg>]
+<conclusion/mixedcomp_eps.jpg, id=1507, 878.28125pt x 658.46pt>
+File: conclusion/mixedcomp_eps.jpg Graphic file (type jpg)
+
+<use conclusion/mixedcomp_eps.jpg>
+Package pdftex.def Info: conclusion/mixedcomp_eps.jpg used on input line 29.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+
+<conclusion/mixedcomp_omega.jpg, id=1508, 878.28125pt x 658.46pt>
+File: conclusion/mixedcomp_omega.jpg Graphic file (type jpg)
+
+<use conclusion/mixedcomp_omega.jpg>
+Package pdftex.def Info: conclusion/mixedcomp_omega.jpg used on input line 34.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+ [75 <./conclusion/osccomp.jpg>]
+<conclusion/low_freq_V.jpg, id=1519, 843.15pt x 632.3625pt>
 File: conclusion/low_freq_V.jpg Graphic file (type jpg)
 
 <use conclusion/low_freq_V.jpg>
-Package pdftex.def Info: conclusion/low_freq_V.jpg used on input line 13.
-(pdftex.def)             Requested size: 180.0pt x 135.00003pt.
+Package pdftex.def Info: conclusion/low_freq_V.jpg used on input line 49.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
 
-<conclusion/low_freq_T.jpg, id=1522, 843.15pt x 632.3625pt>
+<conclusion/low_freq_T.jpg, id=1520, 843.15pt x 632.3625pt>
 File: conclusion/low_freq_T.jpg Graphic file (type jpg)
 
 <use conclusion/low_freq_T.jpg>
-Package pdftex.def Info: conclusion/low_freq_T.jpg used on input line 18.
-(pdftex.def)             Requested size: 180.0pt x 135.00003pt.
-
-<conclusion/large_amp_V.jpg, id=1523, 843.15pt x 632.3625pt>
+Package pdftex.def Info: conclusion/low_freq_T.jpg used on input line 54.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+ [76 <./conclusion/mixedcomp_eps.jpg> <./conclusion/mixedcomp_omega.jpg>]
+<conclusion/large_amp_V.jpg, id=1525, 843.15pt x 632.3625pt>
 File: conclusion/large_amp_V.jpg Graphic file (type jpg)
 
 <use conclusion/large_amp_V.jpg>
-Package pdftex.def Info: conclusion/large_amp_V.jpg used on input line 29.
-(pdftex.def)             Requested size: 180.0pt x 135.00003pt.
+Package pdftex.def Info: conclusion/large_amp_V.jpg used on input line 65.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
 
-<conclusion/large_amp_T.jpg, id=1524, 843.15pt x 632.3625pt>
+<conclusion/large_amp_T.jpg, id=1526, 843.15pt x 632.3625pt>
 File: conclusion/large_amp_T.jpg Graphic file (type jpg)
 
 <use conclusion/large_amp_T.jpg>
-Package pdftex.def Info: conclusion/large_amp_T.jpg used on input line 34.
-(pdftex.def)             Requested size: 180.0pt x 135.00003pt.
- [86 <./conclusion/low_freq_V.jpg> <./conclusion/low_freq_T.jpg> <./conclusion/
+Package pdftex.def Info: conclusion/large_amp_T.jpg used on input line 70.
+(pdftex.def)             Requested size: 216.81pt x 162.60599pt.
+ [77 <./conclusion/low_freq_V.jpg> <./conclusion/low_freq_T.jpg> <./conclusion/
 large_amp_V.jpg> <./conclusion/large_amp_T.jpg>] <conclusion/stochastic_V.jpg, 
-id=1532, 878.28125pt x 658.46pt>
+id=1535, 878.28125pt x 658.46pt>
 File: conclusion/stochastic_V.jpg Graphic file (type jpg)
 
 <use conclusion/stochastic_V.jpg>
-Package pdftex.def Info: conclusion/stochastic_V.jpg used on input line 58.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: conclusion/stochastic_V.jpg used on input line 94.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<conclusion/stochastic_V_zoom.jpg, id=1533, 878.28125pt x 658.46pt>
+<conclusion/stochastic_V_zoom.jpg, id=1536, 878.28125pt x 658.46pt>
 File: conclusion/stochastic_V_zoom.jpg Graphic file (type jpg)
 
 <use conclusion/stochastic_V_zoom.jpg>
-Package pdftex.def Info: conclusion/stochastic_V_zoom.jpg used on input line 63
+Package pdftex.def Info: conclusion/stochastic_V_zoom.jpg used on input line 99
 .
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<conclusion/stochastic_T.jpg, id=1534, 878.28125pt x 658.46pt>
+<conclusion/stochastic_T.jpg, id=1537, 878.28125pt x 658.46pt>
 File: conclusion/stochastic_T.jpg Graphic file (type jpg)
 
 <use conclusion/stochastic_T.jpg>
-Package pdftex.def Info: conclusion/stochastic_T.jpg used on input line 68.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
+Package pdftex.def Info: conclusion/stochastic_T.jpg used on input line 104.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
 
-<conclusion/stochastic_T_zoom.jpg, id=1535, 878.28125pt x 658.46pt>
+<conclusion/stochastic_T_zoom.jpg, id=1538, 878.28125pt x 658.46pt>
 File: conclusion/stochastic_T_zoom.jpg Graphic file (type jpg)
 
 <use conclusion/stochastic_T_zoom.jpg>
-Package pdftex.def Info: conclusion/stochastic_T_zoom.jpg used on input line 73
-.
-(pdftex.def)             Requested size: 180.0pt x 134.94498pt.
-) [87] (main.bbl [88 <./conclusion/stochastic_V.jpg> <./conclusion/stochastic_V
-_zoom.jpg> <./conclusion/stochastic_T.jpg> <./conclusion/stochastic_T_zoom.jpg>
-] [89
+Package pdftex.def Info: conclusion/stochastic_T_zoom.jpg used on input line 10
+9.
+(pdftex.def)             Requested size: 216.81pt x 162.54486pt.
+) (main.bbl [78 <./conclusion/stochastic_V.jpg> <./conclusion/stochastic_V_zoom
+.jpg> <./conclusion/stochastic_T.jpg> <./conclusion/stochastic_T_zoom.jpg>] [79
 
-] [90]) [91]
+]) [80]
 Appendix A.
-(chapters/stommelappendix.tex [92
+(chapters/stommelappendix.tex [81
 
 
-] [93]) [94]
+]) [82]
 Appendix B.
-(chapters/oneDappendix.tex [95
+(chapters/oneDappendix.tex [83
 
-]) [96]
+]) [84]
 Appendix C.
-(chapters/twoDappendix.tex [97
+(chapters/twoDappendix.tex [85
 
-] [98]) [99]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
+] [86]) [87]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 417.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 417.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 417.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 417.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F9F597C210FAABCDC11D765682EC691B;4949.
+(rerunfilecheck)             Checksum: 8442864137A36F72CD4E666B2525C32B;5042.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 417.
  ) 
 Here is how much of TeX's memory you used:
- 31742 strings out of 493323
- 582610 string characters out of 3139066
- 624364 words of memory out of 3000000
- 34420 multiletter control sequences out of 15000+200000
+ 32202 strings out of 493323
+ 589708 string characters out of 3139066
+ 639696 words of memory out of 3000000
+ 34875 multiletter control sequences out of 15000+200000
  538407 words of font info for 50 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,18n,92p,10378b,538s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,18n,92p,10378b,536s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
@@ -2880,9 +2841,9 @@ pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
 i10.pfb>
-Output written on main.pdf (112 pages, 3012222 bytes).
+Output written on main.pdf (103 pages, 3161372 bytes).
 PDF statistics:
- 1786 PDF objects out of 2073 (max. 8388607)
- 425 named destinations out of 1000 (max. 500000)
- 597 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1775 PDF objects out of 2073 (max. 8388607)
+ 421 named destinations out of 1000 (max. 500000)
+ 625 words of extra memory for PDF output out of 10000 (max. 10000000)
 

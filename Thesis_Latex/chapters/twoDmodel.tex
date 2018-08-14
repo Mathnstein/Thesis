@@ -1,22 +1,22 @@
-With the methods and approaches developed in \autoref{chap:oneD} for the one-dimensional model, we have an expectation of the behavior of the two-dimensional Stommel model around the non-smooth bifurcation under similar conditions. With the bifurcation structure we explored in \autoref{chap:introduction}, we consider a generalization of the Stommel model
+With the methods and approaches developed in \autoref{chap:oneD} for the one component model, we have an expectation of the behavior of the two component Stommel model around the non-smooth bifurcation under similar conditions. Recall that we study the non-dimensionalized model \eqref{eq:basic_stommel} and $\eta_2$ is the control parameter linked to the flow rate. With the bifurcation structure we explored in \autoref{chap:introduction}, we consider a generalization of the Stommel model
 
 \begin{equation}\label{eq:twoD_canonical}
   \begin{aligned}
    \dot{V} & =  \eta_1-\eta_2+\eta_3(T-V)-T-V|V|+A\sin(\Omega t), \\
    \dot{T}     & =  \eta_1-T(1+|V|)+B\sin(\Omega t),  \\
   \dot{\eta_2}  & =  -\epsilon\\
-  V(0)=&V^0,\quad T(0)=T^0, \quad \eta_2(0)={\eta_2}^0,
+  V(0)&=V^0,\quad T(0)=T^0, \quad \eta_2(0)={\eta_2}^0,
   \end{aligned}
 \end{equation}
 
-with slow variation $\epsilon\ll 1$, high frequency $\Omega\gg 1$, amplitudes of oscillation $A$ and $B$, and model parameters $\eta_1$ and $\eta_3$ as positive constants. We assume the initial conditions $V^0$, $T^0$ and $\eta_2^0>{\eta_2}_{ns}$ are along the lower equilibrium branch which puts emphasis on the non-smooth behavior of the Stommel model with two additional features. First, we allow for slow variation in the bifurcation parameter which has been shown to be realistic since $\eta_2$ is related to the freshwater flux and therefore not a fixed parameter; the same assumption is made in \cite{roberts2017relaxation}. Second, we consider periodic forcing in the additive parameter $\eta_1$ to account for oscillations in the observed behavior in \cite{huybers2005obliquity}. These oscillations have been found experimentally to occur due to the Earth's axial tilt changing every 41,000 years. This is known as the obliquity period and has an influence on the ocean circulation. To fully understand the effects of each component on the model, we consider them individually before putting them together.
+with slow variation $\epsilon\ll 1$, high frequency $\Omega\gg 1$, amplitudes of oscillation $A$ and $B$, and model parameters $\eta_1$ and $\eta_3$ as positive constants. We assume the initial conditions $V^0$, $T^0$ and $\eta_2^0>{\eta_2}_{\text{ns}}$ are along the lower equilibrium branch which puts emphasis on the non-smooth behavior of the Stommel model with two additional features. First, we allow for slow variation in the bifurcation parameter which has been shown to be realistic since $\eta_2$ is related to the freshwater flux and therefore not a fixed parameter; the same assumption is made in \cite{roberts2017relaxation}. Second, we consider periodic forcing in the additive parameter $\eta_1$ to account for oscillations in seasonal effects, annual effects as well as tidal currents. This same approach is taken in \cite{park2012AMOCperiodic} to look into idealized forcing in the Atlantic Meridonal Overturning Circulation (AMOC). It should be noted that although oscillatory forcing is present, there is strong evidence to believe that stochastic forcing is also present in the AMOC \cite{caesar2018AMOC} and \cite{park2012AMOCperiodic} which is suggestive of the same being true for the THC. Thus we consider periodic forcing in the Stommel model, but we discuss stochastic forcing in the future work section. To fully understand the effects of each component on the model, we consider them individually before putting them together.
 
-For the remainder of this paper, we make two assumptions: first that $\eta_3<1$ gives the smooth bifurcation $V_{\text{smooth}}$ of \eqref{eq:twoD_canonical} in the region $V>0$. The value of $\eta_3$ describes the relative strength of the temperature relaxation to that of salinity, and it is frequently assumed that salinity has a slower relaxation, giving $\eta_3<1$. Thus we restrict our attention to $\eta_3<1$ and the case of $\eta_3>1$ follows similarly. The second assumption we make is that even though we have a model in terms of $V$ and $T$, the variable $V$ is driving the dynamics of the system as confirmed in the analysis below. This assumption means that we want to understand the non-smooth behavior in $V$ where $T$ follows in response to the effects of $V$. The evidence below shows changes in temperature respond to changes in salinity. This assumption allows for a reduced model, expressing the behavior of $T$ in terms of $V$ to find equations in only one variable.
+\indent For the remainder of this thesis, we make two assumptions: first that $\eta_3<1$ which gives the smooth bifurcation $V_{\text{smooth}}$ of \eqref{eq:twoD_canonical} in the region $V>0$. The value of $\eta_3$ describes the relative strength of the temperature relaxation to that of salinity, and it is frequently assumed that salinity has a slower relaxation, giving $\eta_3<1$. Thus we restrict our attention to $\eta_3<1$ and the case of $\eta_3>1$ follows similarly. The second assumption we make is that even though we have a model in terms of $V$ and $T$, the variable $V$ is driving the dynamics of the system as confirmed in the analysis below. This assumption means that we want to understand the non-smooth behavior in $V$ where $T$ follows in response to the effects of $V$. The evidence below shows that change in temperature respond to change in salinity. This assumption reduces the model, expressing the behavior of $T$ in terms of $V$ to find equations in only one variable.
 
 \section{Slowly Varying Bifurcation Parameter}
 \label{sec:twoD_slow}
 
-We consider the slow variation mechanism to understand the effects on the Stommel model \eqref{eq:twoD_canonical} with $\epsilon\ll 1$ and $A=B=0$, where the bifurcation parameter $\eta_2$ slowly varies without oscillatory forcing. Then we expect to find a tipping point in the neighborhood of the aforementioned non-smooth bifurcation at ${\eta_2}_{ns}=\eta_1\eta_3$. With the choice of $\eta_3<1$, the lower branch with $V<0$ is the branch we focus on in order to approach the non-smooth behavior, thus \eqref{eq:twoD_canonical} is
+We consider the slow variation mechanism to understand the effects on the Stommel model \eqref{eq:twoD_canonical} with $\epsilon\ll 1$ and $A=B=0$, where the bifurcation parameter $\eta_2$ slowly varies without oscillatory forcing. We expect to find a tipping point in the neighborhood of the aforementioned non-smooth bifurcation at ${\eta_2}_{\text{ns}}=\eta_1\eta_3$. With the choice of $\eta_3<1$, the lower branch with $V<0$ is the branch we focus on in order to approach the non-smooth behavior, thus \eqref{eq:twoD_canonical} is
 
 \begin{equation}\label{eq:twoD_slow_negative}
  \begin{aligned}
@@ -26,7 +26,7 @@ We consider the slow variation mechanism to understand the effects on the Stomme
  \end{aligned}
 \end{equation}
 
-From \autoref{sec:oneD_slow}, we learned that the one-dimensional model had a solution that displayed one type of behavior away from the non-smooth $x=0$ and another type close to $x=0$ and a local analysis gave insight into the tipping. Here we search for an outer solution to \eqref{eq:twoD_slow_negative} that helps us understand the behavior of system away from the non-smooth $V=0$. Since we have slow variation in $\eta_2$, we choose to scale the system \eqref{eq:twoD_slow_negative} with the slow time $\tau=\epsilon t$
+\indent From \autoref{sec:oneD_slow}, we learned that the one component model had a solution that displayed one type of behavior away from the non-smooth axis $x=0$ and another type close to $x=0$ thus a local analysis gave insight into the tipping. Here we search for an outer solution to \eqref{eq:twoD_slow_negative} that helps us understand the behavior of the system away from the non-smooth $V=0$. Since we have slow variation in $\eta_2$, we choose to scale the system \eqref{eq:twoD_slow_negative} with the slow time $\tau=\epsilon t$
 
 \begin{equation}\label{eq:twoD_slow_slowsystem}
 \begin{aligned}
@@ -40,8 +40,8 @@ We use asymptotic expansions in terms of the small quantity $\epsilon$ to look f
 
 \begin{equation}\label{eq:twoD_slow_outerexpansion}
 \begin{aligned}
-V(\tau)\sim &V_0(\tau)+\epsilon V_1(\tau)+\epsilon^2 V_2(\tau)+\ldots\\
-T(\tau)\sim & T_0(\tau)+\epsilon T_1(\tau)+\epsilon^2 T_2(\tau)+\ldots
+V(\tau)\sim &V_0(\tau)+\epsilon V_1(\tau)+\epsilon^2 V_2(\tau)+\ldots,\\
+T(\tau)\sim & T_0(\tau)+\epsilon T_1(\tau)+\epsilon^2 T_2(\tau)+\ldots,
 \end{aligned}
 \end{equation}
 
@@ -53,7 +53,7 @@ and substitute \eqref{eq:twoD_slow_outerexpansion} into \eqref{eq:twoD_slow_slow
 \eta_1-&\eta_2(\tau)+\eta_3(T_0-V_0)-T_0+V_0^2\\
 &+\epsilon(\eta_3(T_1-V_1)-T_1-2V_1V_0)+\ldots
 \end{aligned}\\
-\epsilon{T_0}_\tau+\epsilon^2{T_1}_\tau+\ldots=&\eta_1-T_0(1-V_0)+\epsilon(-T_1(1-V_0)+V_1T_0)+\ldots
+\epsilon{T_0}_\tau+\epsilon^2{T_1}_\tau+\ldots=&\eta_1-T_0(1-V_0)+\epsilon(-T_1(1-V_0)+V_1T_0)+\ldots.
 \end{aligned}
 \end{equation*}
 
@@ -68,7 +68,7 @@ O(1):\quad & \begin{cases}
 \label{eq:twoD_slow_outerO2}
 O(\epsilon):\quad & \begin{cases}
 	{V_0}_\tau = & \eta_3(T_1-V_1)-T_1+2V_1V_0,\\
-	{T_0}_\tau =& -T_1(1-V_0)+V_1T_0,
+	{T_0}_\tau =& -T_1(1-V_0)+V_1T_0.
 \end{cases}
 \end{align}
 
@@ -90,13 +90,13 @@ V_1 =& \frac{-(1-V_0){V_0}_\tau+(1-\eta_3){T_0}_\tau({V_0}_\tau)}{(1-\eta_3)T_0(
 \end{aligned}
 \end{equation}
 
-This gives the first few terms of the asymptotic expansion \eqref{eq:twoD_slow_outerexpansion} with \eqref{eq:twoD_slow_equilibria} and \eqref{eq:twoD_slow_equilcorrec}. Given these expressions, it is not immediately obvious in the two-dimensional problem when the outer solution breaks down. However, noting that for $V_0\to 0$ the asymptotic expansion for $V$ is no longer valid, we rescale the system to find an inner equation in this region. 
+This gives the first few terms of the asymptotic expansion \eqref{eq:twoD_slow_outerexpansion} with \eqref{eq:twoD_slow_equilibria} and \eqref{eq:twoD_slow_equilcorrec}. Given these expressions, in the two component problem it is not immediately obvious when the outer solution breaks down. However, noting that for $V_0\to 0$ the asymptotic expansion for $V$ is no longer valid, we rescale the system to find an inner equation in this region. 
 
-Analogous to \autoref{sec:oneD_slow}, this corresponds to the non-smooth bifurcation at $({\eta_2}_{ns},V_{ns},T_{ns})=(\eta_1\eta_3,0,\eta_1))$, so we rescale \eqref{eq:twoD_canonical} around these values. This results in the local variables
+\indent Analogously to \autoref{sec:oneD_slow}, this corresponds to the non-smooth bifurcation at $({\eta_2}_{\text{ns}},V_{\text{ns}},T_{\text{ns}})=(\eta_1\eta_3,0,\eta_1)$, so we rescale \eqref{eq:twoD_canonical} around these values. This results in the local variables
 
 \begin{equation}\label{eq:twoD_slow_rescale}
 \begin{aligned}
-\eta_2=&{\eta_2}_{ns}+\epsilon n,\\
+\eta_2=&{\eta_2}_{\text{ns}}+\epsilon n,\\
 V=&\epsilon X,\\
 T=&\eta_1+\epsilon Y.
 \end{aligned}
@@ -112,7 +112,7 @@ Then we introduce these local variables \eqref{eq:twoD_slow_rescale} into the St
  \end{aligned}
 \end{equation}
 
-Here we outline the influence of the parameters $\eta_1$ and $\eta_3$ on the behavior of a solution. We already determined from the introduction that $\eta_3$ determines the orientation of the problem, but here we find an interaction between the parameters $\eta_1$ and $\eta_3$ in the eigenvalues of \eqref{eq:twoD_slow_inner} as a $2\times 2$ system of spatial variables. Linearizing then gives
+Here we outline the influence of the parameters $\eta_1$ and $\eta_3$ on the behavior of a solution. We already determined in the introduction that $\eta_3$ determines the orientation of the problem. By viewing \eqref{eq:twoD_slow_inner} as a $2\times 2$ system of spatial variables, we find an interaction between the parameters $\eta_1$ and $\eta_3$ in the eigenvalues of this system. Linearizing then gives
 
 \begin{equation}\label{eq:twoD_slow_innermatrix}
 \begin{pmatrix}
@@ -133,7 +133,7 @@ n(t)\\
 \end{pmatrix}.
 \end{equation}
 
-Here a linearized stability analysis about the pseudo-equilibria similar to \cite{seydel2009practical} is needed to determine the stability of the lower pseudo-equilibria. This is performed in \cite{dijkstra2013nonlinear} and hence we note that both stability of the lower branch and non-hyperbolic behavior at $({\eta_2}_{ns},V_{ns},T_{ns})$ is observed. Thus we expect our tipping point to occur just after the static non-smooth bifurcation ${\eta_2}_{ns}$. With this in mind, we consider $V>0$ and with \eqref{eq:twoD_slow_innermatrix} we find the inner system
+\indent A linearized stability analysis about the pseudo-equilibria similar to \cite{seydel2009practical} is needed to determine the stability of the lower pseudo-equilibria. This is performed in \cite{dijkstra2013nonlinear} and hence we note that both stability of the lower branch and non-hyperbolic behavior at $({\eta_2}_{\text{ns}},V_{\text{ns}},T_{\text{ns}})$ is observed. Thus we expect our tipping point to occur just after the static non-smooth bifurcation ${\eta_2}_{\text{ns}}$. With this in mind, we consider $V>0$ and with \eqref{eq:twoD_slow_innermatrix} we find the inner system
 
 \begin{equation}\label{eq:twoD_slow_positiveinner}
  \begin{aligned}
@@ -185,13 +185,13 @@ n\\
 \end{pmatrix}.
 \end{equation}
 
-For the system \eqref{eq:twoD_slow_uppermatrix}, we find the following eigenvalues
+For the system \eqref{eq:twoD_slow_uppermatrix}, we find the eigenvalues
 
 \begin{equation}\label{eq:twoD_slow_uppereigen}
 \lambda_{1,2}=\frac{\eta_3+1}{2}\pm\frac{1}{2}\sqrt{(1+\eta_3)^2+4(\eta_1(1-\eta_3)-\eta_3)}.
 \end{equation}
 
-These eigenvalues in \eqref{eq:twoD_slow_uppereigen} must be real as $\eta_3<1$ guarantees the discriminant is always positive. But the stability also follows as one of the eigenvalues is positive and the other is negative. This causes the solution to be unstable, which confirms tipping to occur in the region $V>0$. With real eigenvalues, the solution in the $V>0$ region takes the following exponential form with constants $K_{i,j}$ being component $j$ of the corresponding $i$ eigenvector 
+\indent The eigenvalues in \eqref{eq:twoD_slow_uppereigen} must be real as $\eta_3<1$ guarantees the discriminant is always positive. The type of stability also follows as one of the eigenvalues is positive and the other is negative. This causes the solution to be unstable, which confirms tipping to occur in the region $V>0$. With real eigenvalues, the solution in the $V>0$ region takes the following exponential form with constants $K_{i,j}$ being component $j$ of the corresponding $i$-th eigenvector 
 
 \begin{equation}\label{eq:twoD_slow_innersoln}
 \begin{aligned}
@@ -209,13 +209,13 @@ T(t)\sim& \eta_1+ \epsilon K_{1,2}e^{\lambda_1 (\eta_2(t)-\eta_1\eta_3)/\epsilon
 \end{aligned}
 \end{equation}
 
-With \eqref{eq:twoD_slow_inneroriginal} admitting the solution in the region $V>0$, we determine the system to tip once one of these exponentials becomes large (i.e $O(1/\epsilon)$), which causes the system to abruptly transition away from our lower branch towards the upper stable branch. Thus the tipping point ${\eta_2}_{\text{slow}}$ is
+\indent With \eqref{eq:twoD_slow_inneroriginal} admitting the solution in the region $V>0$, we determine the system to tip once one of these exponentials becomes large (i.e $O(1/\epsilon)$). This causes the system to abruptly transition away from our lower branch towards the upper stable branch. The tipping point ${\eta_2}_{\text{slow}}$ is then
 
 \begin{equation}\label{eq:twoD_slow_tipping}
-{\eta_2}_{\text{slow}}= \min\limits_i\{{\eta_2}_{ns}-\epsilon\ln\epsilon/\lambda_i\},\quad i=1,2.
+{\eta_2}_{\text{slow}}= \min\limits_i\{{\eta_2}_{\text{ns}}-\epsilon\ln(\epsilon)/\lambda_i\},\quad i=1,2.
 \end{equation}
 
-Thus we have the tipping for this problem with \eqref{eq:twoD_slow_tipping} and this has a similar form to the tipping point from \autoref{sec:oneD_slow}. As we found from \eqref{eq:twoD_slow_uppereigen}, one of the eigenvalues is always positive and thus ${\eta_2}_{\text{slow}}<{\eta_2}_{ns}$. This means the slow variation causes a delay in the rapid transition from the lower branch to the upper branch and the solution spends more time around the lower branch. These effects shrink as $\epsilon\to 0$ until we return to the static problem with $\epsilon=0$,
+Thus we have the tipping for this problem with \eqref{eq:twoD_slow_tipping} and this has a similar form to the tipping point from \autoref{sec:oneD_slow}. As we found in \eqref{eq:twoD_slow_uppereigen}, one of the eigenvalues is always positive and thus ${\eta_2}_{\text{slow}}<{\eta_2}_{\text{ns}}$. This means the slow variation causes a delay in the rapid transition from the lower branch to the upper branch and the solution spends more time around the lower branch. These effects shrink as $\epsilon\to 0$ until we return to the static problem with $\epsilon=0$.
 
 \begin{figure}[H]
 \centering
@@ -229,11 +229,11 @@ Thus we have the tipping for this problem with \eqref{eq:twoD_slow_tipping} and 
  \includegraphics[width=\linewidth]{twoD/slow_bif_diagram_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$, $\eta_3=.375$, and $\epsilon=.01$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the prediction \eqref{eq:twoD_slow_tipping} against the black solid vertical line which is the numerical tipping point which we use the criteria $V>V_{\text{smooth}}$.}
+\caption{In (a) the numerical solutions (black dotted and dash-dotted lines) to \eqref{eq:twoD_canonical} are given with $\eta_1=4$, $\eta_3=.375$, and $\epsilon=\{.01,.04\}$ respectively. In (b) a zoom is given closer to the non-smooth bifurcation region. The blue vertical lines are the predictions \eqref{eq:twoD_slow_tipping} against the black solid vertical lines which are the tipping points with the tipping criterion $V>V_{\text{smooth}}$ on the numerical solution.}
 \label{fig:twoD_slow_Vnumerics}
 \end{figure}
 
-In figure~\ref{fig:twoD_slow_Vnumerics} an example of a slowly varying $\eta_2$ is given for a choice of $\epsilon$ in (a) and we zoom in around the non-smooth bifurcation in (b). Here we use the tipping criteria to be whenever $V>0.5$, this is large enough that the solution is strongly moving towards the upper branch and is around the point of the smooth bifurcation. The delay in moving towards the upper branch in the $V$ solution causes a similar delay in $T$ seen in figure~\ref{fig:twoD_slow_Tnumerics}. This is best seen with the outer solution \eqref{eq:twoD_slow_outerexpansion} as the correction terms are negative. Thus when the tipping point in $V$ is reached, the solution for $T$ has yet to reach the maximum value. Here notice that after the tipping occurs, the numerical solution passes entirely over the unstable branch and even some of the upper stable branch before following the upper branch closely.
+\indent In figure~\ref{fig:twoD_slow_Vnumerics} the numerical solution with a slowly varying $\eta_2$ is given for two choices of $\epsilon$ in (a) and we zoom in around the non-smooth bifurcation in (b). Here we use the tipping criterion to be whenever $V>V_{\text{smooth}}$ which is large enough that the numerical solution is strongly moving towards the upper branch. The delay in moving towards the upper branch in the $V$ solution causes a similar delay in $T$, as seen in figure~\ref{fig:twoD_slow_Tnumerics}. This is best seen with the outer solution \eqref{eq:twoD_slow_outerexpansion} as the correction terms are negative. Thus, when the tipping point in $V$ is reached, the solution for $T$ has yet to reach the maximum value. Notice that after the tipping occurs, the numerical solution passes entirely over the unstable branch and even some of the upper stable branch before following the upper branch closely.
 
 \begin{figure}[H]
 \centering
@@ -247,25 +247,25 @@ In figure~\ref{fig:twoD_slow_Vnumerics} an example of a slowly varying $\eta_2$ 
  \includegraphics[width=\linewidth]{twoD/slow_bif_Tplot_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{In (a) we have the numerical solution (black dotted) over the standard equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area.}
+\caption{In (a) we have the numerical solutions (black dotted and dash-dotted) over the standard equilibrium plot for $V$ vs. $T$. In (b) a zoom in closer to the bifurcation area.}
 \label{fig:twoD_slow_Tnumerics}
 \end{figure}
 
-In figure~\ref{fig:twoD_slow_epscomp} we compare the numerical tipping to the predicted tipping in \eqref{eq:twoD_slow_tipping} over a range of $\epsilon$. Here we see performance even better than in section \autoref{sec:oneD_slow} as even for relatively large $\epsilon$ the prediction has small error. This is an artifact of having a higher dimensional problem, where now two exponentials in \eqref{eq:twoD_slow_inneroriginal} are dominating the behavior of the solution in the $V>0$ region. As in \autoref{sec:oneD_slow}, the concavity of the predicted tipping against the numerical tipping match very well and we can expect the prediction to hold for reasonably small values of $\epsilon$.
+\indent In figure~\ref{fig:twoD_slow_epscomp} we compare the numerical tipping to the predicted tipping in \eqref{eq:twoD_slow_tipping} over a range of $\epsilon$. Here we see performance even better than in section \autoref{sec:oneD_slow} as even for relatively large $\epsilon$ the prediction has a small error. This is an artifact of having a higher dimensional problem, where now two exponentials in \eqref{eq:twoD_slow_inneroriginal} are dominating the behavior of the solution in the $V>0$ region. As in \autoref{sec:oneD_slow}, the concavity of the predicted tipping against the numerical tipping matches very well and we can expect the prediction to hold for reasonably small values of $\epsilon$.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=\linewidth]{twoD/slow_epscomp.jpg}
-\caption{The numerical tipping (red stars) vs the estimate ${\eta_2}_{\text{slow}}$ (black line) with $\eta_1=4$ and $\eta_3=.375$. The top blue line is the tipping of the second eigenvalue. The tipping criteria is $V>V_{smooth}$.}
+\includegraphics[width=.7\linewidth]{twoD/slow_epscomp.jpg}
+\caption{The numerical tipping (red stars) vs. the estimate ${\eta_2}_{\text{slow}}$ (black line) with $\eta_1=4$ and $\eta_3=.375$. The top blue line is the tipping of the second eigenvalue. The tipping criterion on the numerical solution is $V>V_{\text{smooth}}$.}
 \label{fig:twoD_slow_epscomp}
 \end{figure}
 
 \section{High Frequency Oscillatory Forcing}
 \label{sec:twoD_highfreqosc}
 
-We consider oscillations occurring in the dynamics of the THC that is not originally encompassed by the Stommel model \cite{alley2003abrupt,huybers2005obliquity,marotzke2000abrupt,rahmstorf2000thermohaline,rahmstorf2002ocean,stastna2007box}. We choose to allow $\eta_1$ to exhibit oscillatory behavior to account for this. As $\eta_1$ appears in both equations for $V$ and $T$, here we consider the canonical system \eqref{eq:twoD_canonical} with $A,B\sim O(1)$, $\Omega\gg 1$ and $\epsilon=0$ which is the purely oscillatory forcing problem. Under these conditions, like in the one-dimensional model in \autoref{sec:oneD_highfreqosc}, we expect to find oscillations that are attracting; this stable behavior should act like oscillations about the equilibria of a reduced inner problem. Thus our analysis must locate these equilibria as a function of $\eta_2$ in order to find the bifurcation.
+We consider oscillations occurring in the dynamics of the THC that are not originally encompassed by the Stommel model \cite{alley2003abrupt,huybers2005obliquity,marotzke2000abrupt,rahmstorf2000thermohaline,rahmstorf2002ocean,stastna2007box}. We allow $\eta_1$ to exhibit oscillatory behavior to account for this. As $\eta_1$ appears in both equations for $V$ and $T$, we consider oscillatory forcing on both, but permit their amplitudes to be different. In other words, the canonical system \eqref{eq:twoD_canonical} with $A,B\sim O(1)$, $\Omega\gg 1$ and $\epsilon=0$ which is the purely oscillatory forcing problem. Under these conditions, like with the one component model in \autoref{sec:oneD_highfreqosc}, we expect to find oscillations that are attracting. Here stable behavior should act like oscillations about the equilibria of a reduced inner problem. Thus our analysis must locate these equilibria as a function of $\eta_2$ in order to find the bifurcation.
 
-To begin our analysis, we note that the dynamics occur on multiple time scales, a slow $t$ and fast $R = \Omega t$. Following a multiple scales approach, we consider $V(t)=V(t,R)$ and $T(t)=T(t,R)$ and substituting this into \eqref{eq:twoD_canonical}, we get the system
+\indent To begin our analysis, we note that the dynamics occur on multiple time scales, a slow $t$ and fast $R = \Omega t$. Following a multiple scales approach, we consider $V(t)=V(t,R)$ and $T(t)=T(t,R)$ and substituting this into \eqref{eq:twoD_canonical}, we get the system
 
 \begin{equation}\label{eq:twoD_osc_multiscaleouter}
 \begin{aligned}
@@ -283,7 +283,7 @@ T_R+\Omega^{-1}T_t = & \Omega^{-1}\left(\eta_1-T(1-V)+B\sin(R)\right).
 \end{aligned}
 \end{equation}
 
-From \eqref{eq:twoD_osc_multiscaleouterlower}, it makes sense to consider an asymptotic expansion for both $V$ and $T$ in terms of the small quantity that appears, $\Omega^{-1}$, with
+From \eqref{eq:twoD_osc_multiscaleouterlower}, it makes sense to consider an asymptotic expansion for both $V$ and $T$ in terms of the small quantity, $\Omega^{-1}$, with
 
 \begin{equation}\label{eq:twoD_osc_outerexpansion}
 \begin{aligned}
@@ -297,10 +297,10 @@ Substituting \eqref{eq:twoD_osc_outerexpansion} into the system \eqref{eq:twoD_o
 \begin{equation*}
 \begin{aligned}
 {V_0}_R+\Omega^{-1}{V_0}_t+\Omega^{-1}{V_1}_R+\ldots=&\begin{aligned}[t]\Omega^{-1}&(\eta_1-\eta_2+\eta_3(T_0-V_0)-T_0+V_0^2+A\sin(R))\\
-+&\Omega^{-2}(\eta_3(T_1-V_1)-T_1+2V_1V_0)+\ldots
++&\Omega^{-2}(\eta_3(T_1-V_1)-T_1+2V_1V_0)+\ldots,
 \end{aligned}\\
 {T_0}_R+\Omega^{-1}{T_0}_t+\Omega^{-1}{T_1}_R+\ldots=&\begin{aligned}[t] \Omega^{-1}&(\eta_1-T_0(1-V_0)+B\sin(R))\\
-+&\Omega^{-2}(-T_1(1-V_0)+T_0V_1)+\ldots
++&\Omega^{-2}(-T_1(1-V_0)+T_0V_1)+\ldots.
 \end{aligned}
 \end{aligned}
 \end{equation*}
@@ -325,13 +325,13 @@ O(\Omega^{-2}):\quad & \begin{cases}
 \end{cases}
 \end{align}
 
-We learn from \eqref{eq:twoD_osc_outerO1} that both our leading order terms are only dependent on the slow time, $V_0=V_0(t)$, $T_0=T_0(t)$. But much like \autoref{sec:oneD_highfreqosc}, we must introduce a solvability condition on the resonant terms to be able to solve for the correction terms, ensuring for the sub-linear growth resulting in a stable solution. Here, we use the Fredholm alternative \eqref{eq:Fredholm} on \eqref{eq:twoD_osc_outerO2}-\eqref{eq:twoD_osc_outerO3} and search for the equilibrium solutions, this is shown in \autoref{app:twoD}. This leads to the outer solution in original variables
+We learn from \eqref{eq:twoD_osc_outerO1} that both our leading order terms are only dependent on the slow time, $V_0=V_0(t)$, $T_0=T_0(t)$. Much like \autoref{sec:oneD_highfreqosc}, we must introduce a solvability condition on the resonant terms to be able to solve for the correction terms, ensuring for the sub-linear growth resulting in a stable solution. Here, we use the Fredholm alternative \eqref{eq:Fredholm} on \eqref{eq:twoD_osc_outerO2}-\eqref{eq:twoD_osc_outerO3} and search for the equilibrium solutions. This is shown in \autoref{app:twoD}. Collecting these solutions leads to the outer solution in original variables
 
 \begin{equation}\label{eq:twoD_osc_outersoln}
 \begin{aligned}
-V\sim& V_0-\Omega^{-1} A\cos(\Omega t)+\dots\\
+V\sim& V_0-\Omega^{-1} A\cos(\Omega t)+\dots,\\
 %\Omega^{-2}\left(V_2(t)+\left(A(\eta_3-2V_0)+B(1-\eta_3)\right)\sin(\Omega t)\right),\\
-T\sim& T_0-\Omega^{-1} B\cos(\Omega t)+\ldots%\Omega^{-2}\left(T_2(t)+(1-V_0)B-T_0A)\sin(\Omega t)\right).
+T\sim& T_0-\Omega^{-1} B\cos(\Omega t)+\ldots.%\Omega^{-2}\left(T_2(t)+(1-V_0)B-T_0A)\sin(\Omega t)\right).
 \end{aligned}
 \end{equation}
 
@@ -344,17 +344,17 @@ T_0(V_0)=&\frac{\eta_1}{1-V_0},\\
 \end{aligned}
 \end{equation*}
 
-For the one-dimensional model in \autoref{sec:oneD_highfreqosc}, we had to use a local expansion so we needed to scale both the variable $x$ as well as the parameter $\mu$ and analyze the local behavior around the axis $x=0$. Since we again have non-smooth dynamics at the axis $V=0$, we expect to use a local expansion for the two-dimensional model as well. While the precise scaling of the breakdown of the outer solution \eqref{eq:twoD_osc_outersoln} is too complex for us to search for, we instead observe that once $V_0\to0$ the oscillations begin to dominate the solution and this is not consistent with our assumptions of the expansion. So we introduce a rescaling analogous to \autoref{sec:oneD_highfreqosc}
+\indent For the one component model in \autoref{sec:oneD_highfreqosc}, we had to use a local expansion so we needed to scale both the variable $x$ as well as the parameter $\mu$ and analyze the local behavior around the axis $x=0$. Since we again have non-smooth dynamics at the axis $V=0$, we expect to use a local expansion for the two component model as well. While the precise scaling of the breakdown of the outer solution \eqref{eq:twoD_osc_outersoln} is too complex for us to search for, we instead observe that once $V_0\to0$ the oscillations begin to dominate the solution and this is not consistent with our assumptions of the expansion. So we introduce the local variables analogously to \autoref{sec:oneD_highfreqosc}
 
 \begin{equation}\label{eq:twoD_osc_scales}
 \begin{aligned}
 V=&\Omega^{-1}X,\\
 T=& \eta_1 +\Omega^{-1}Y,\\
-\eta_2=&{\eta_2}_{ns}+\Omega^{-1} n.
+\eta_2=&{\eta_2}_{\text{ns}}+\Omega^{-1} n.
 \end{aligned}
 \end{equation}
 
-Substituting \eqref{eq:twoD_osc_scales} into \eqref{eq:twoD_canonical} leads to the following inner system
+Substituting \eqref{eq:twoD_osc_scales} into \eqref{eq:twoD_canonical} leads to the inner system
 
 \begin{equation}\label{eq:twoD_osc_innersystem}
 \begin{aligned}
@@ -381,7 +381,7 @@ Y(t,R)\sim& Y_0(t,R)+\Omega^{-1}Y_1(t,R)+O(\Omega^{-2}),
 \end{aligned}
 \end{equation}
 
-where we then substitute \eqref{eq:twoD_osc_innerexpan} into \eqref{eq:twoD_osc_innermulti} to give
+where we then substitute \eqref{eq:twoD_osc_innerexpan} into \eqref{eq:twoD_osc_innermulti} to get
 
 \begin{equation*}
 \begin{aligned}
@@ -389,33 +389,33 @@ where we then substitute \eqref{eq:twoD_osc_innerexpan} into \eqref{eq:twoD_osc_
 +&\Omega^{-2}(X_0|X_0+\Omega^{-1}X_1+\ldots|+\eta_3(Y_1-X_1)-Y_1)+\ldots
 \end{aligned}\\
 {Y_0}_R+\Omega^{-1}{Y_0}_t+\Omega^{-1}{Y_1}_R+\ldots=&\begin{aligned}[t]\Omega^{-1}&(-\eta_1|X_0+\Omega^{-1}X_1+\ldots|-Y_0)+B\sin(R)\\
-+&\Omega^{-2}(-|X_0+\Omega^{-1}X_1+\ldots|Y_0-Y_1)+\ldots
++&\Omega^{-2}(-|X_0+\Omega^{-1}X_1+\ldots|-Y_0-Y_1)+\ldots
 \end{aligned}
 \end{aligned}
 \end{equation*}
 
-We then separate the terms by their orders of $\Omega^{-1}$ to find the following equations
+We then separate the terms by their orders of $\Omega^{-1}$ to find the equations
 
 \begin{align}
 \label{eq:twoD_osc_innerO1}
 O(1):\quad & \begin{cases}
-	{X_0}_R =& A\sin(R), \\
-	{Y_0}_R =& B\sin(R),\\
+	{X_0}_R &= A\sin(R), \\
+	{Y_0}_R &= B\sin(R),\\
 \end{cases}\\
 \label{eq:twoD_osc_innerO2}
 O(\Omega^{-1}):\quad & \begin{cases}
-	{X_1}_R+{X_0}_t =& -n-\eta_3X_0-(1-\eta_3)Y_0, \\
-	{Y_1}_R+{Y_0}_t =& -\eta_1|X_0|-Y_0.\\
+	{X_1}_R+{X_0}_t &= -n-\eta_3X_0-(1-\eta_3)Y_0, \\
+	{Y_1}_R+{Y_0}_t &= -\eta_1|X_0|-Y_0.\\
 \end{cases}
 \end{align}
 
 From \eqref{eq:twoD_osc_innerO1} we find that the leading order terms of \eqref{eq:twoD_osc_innerexpan} have the form 
 
 \begin{equation}\label{eq:twoD_osc_innerO1soln}
-X_0=P_0(t)-A\cos(R),\quad Y_0=Q_0(t)-B\cos(R).
+X_0=P_0(t)-A\cos(R),\quad Y_0=Q_0(t)-B\cos(R),
 \end{equation}
  
-Substituting \eqref{eq:twoD_osc_innerO1soln} into \eqref{eq:twoD_osc_innerO2}, we apply the Fredholm alternative \eqref{eq:Fredholm} to derive equations for the slow functions $P_0(t)$ and $Q_0(t)$. This gives
+where $Q$ and $P$ track the slow time components for their respective variables. Substituting \eqref{eq:twoD_osc_innerO1soln} into \eqref{eq:twoD_osc_innerO2}, we apply the Fredholm alternative \eqref{eq:Fredholm} to derive equations for the slow functions $P_0(t)$ and $Q_0(t)$. This gives
 
 \begin{equation}\label{eq:twoD_osc_innerintegral}
 \begin{aligned}
@@ -424,19 +424,19 @@ Substituting \eqref{eq:twoD_osc_innerO1soln} into \eqref{eq:twoD_osc_innerO2}, w
 \end{aligned}
 \end{equation}
 
-As we are concerned with finding the bifurcation, we search for the equilibrium solutions to \eqref{eq:twoD_osc_innerintegral}. We notice that in the equation for $Q_0$ we find a similar integral equation to the inner equation \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc}. This leads us again to two cases, Case I: $|P_0(t)|\le -|A|$ where the sign of the integrand does not change, and Case II: $|P_0(t)|<|A|$ where the integrand changes and the integral has a non-trivial solution. These cases can be seen in figure~\ref{fig:twoD_osc_cases}.
+\indent As we are concerned with finding the bifurcation, we search for the equilibrium solutions to \eqref{eq:twoD_osc_innerintegral}. We notice that in the equation for $Q_0$ we find a similar integral equation to the inner equation \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc}. This leads us again to two cases, Case I: $|P_0(t)|\le -|A|$ where the sign of the integrand does not change, and Case II: $|P_0(t)|<|A|$ where the integrand changes and the integral has a non-trivial solution. These cases can be seen in figure~\ref{fig:twoD_osc_cases}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.25]{twoD/osc_cases.jpg}
-\caption{Here we have the parameter ranges for Case I and Case II shown as the right most green vertical line and the bifurcation at the left blue vertical line respectfully.}
+\includegraphics[width = .7\linewidth]{twoD/osc_cases.jpg}
+\caption{Here we have the parameter ranges for case I and case II shown as the right most green vertical line and the bifurcation value as the left blue vertical line respectively.}
 \label{fig:twoD_osc_cases}
 \end{figure}
 
 \subsection{Case I: $P_0(t)\le -|A|$}
 \label{subsec:twoD_highfreqosc_caseI}
 
-We call this the entirely below axis case, with the solution $X_0$ below the axis $V=0$ so we do not expect a bifurcation here. Instead this case helps to simplify the integration in \eqref{eq:twoD_osc_innerintegral} but also helps us to determine when the solution acts differently under Case II. Here we use the equilibria of $X$ and $Y$ to define a parameter range in $\eta_2$ between Case I and Case II. Under the conditions of this case, the system \eqref{eq:twoD_osc_innerintegral} simplifies to
+We call this the 'below axis' case, with the solution $X_0$ below the axis $V=0$ so we do not expect a bifurcation here. Instead this case helps to simplify the integration in \eqref{eq:twoD_osc_innerintegral} but also helps us to determine when the solution acts differently under case II. We use the equilibria of $X$ and $Y$ to define a parameter range in $\eta_2$ between case I and case II. Under the conditions of this case, the system \eqref{eq:twoD_osc_innerintegral} simplifies to
 
 \begin{equation}\label{eq:twoD_osc_caseIsystem}
 \begin{aligned}
@@ -451,27 +451,27 @@ Solving for the equilibria in \eqref{eq:twoD_osc_caseIsystem} results in
 Q_0(P_0)=\eta_1P_0,\quad P_0=-\frac{n}{\eta_1(1-\eta_3)+\eta_3}. 
 \end{equation*}
 
-Together with these equilibria and with the condition $P_0(t)\le -|A|$, we find the parameter range that distinguishes between Case I and Case II in terms of our inner parameter, which we then rewrite in original variables with
+\indent Together with these equilibria and with the condition $P_0(t)\le -|A|$, we find the parameter range that distinguishes between case I and case II in terms of our inner parameter, which we then rewrite in original variables with
 
 \begin{equation}\label{eq:twoD_osc_boundary}
 \begin{aligned}
 n\ge& (\eta_1(1-\eta_3)+\eta_3)|A|,\\
-\eta_2\ge&{\eta_2}_{ns}+ \frac{(\eta_1(1-\eta_3)+\eta_3)|A|}{\Omega}.
+\eta_2\ge&{\eta_2}_{\text{ns}}+ \frac{(\eta_1(1-\eta_3)+\eta_3)|A|}{\Omega}.
 \end{aligned}
 \end{equation}
 
-For values of $\eta_2$ below the values given in \eqref{eq:twoD_osc_boundary}, we see the oscillations crossing above the axis $V=0$ and hence more contribution from the integral in \eqref{eq:twoD_osc_innerintegral}. Thus we use a separate case to deal with this behavior.
+For values of $\eta_2$ below the values given in \eqref{eq:twoD_osc_boundary}, we see the oscillations crossing above the axis $V=0$ and hence more contribution from the integral in \eqref{eq:twoD_osc_innerintegral}. We use a separate case to deal with this behavior.
 
 \subsection{Case II: $|P_0(t)|<|A|$}
 \label{subsec:twoD_highfreqosc_caseII}
 
-We call this the crossing case; here the solution oscillates about the axis $V=0$ while the center of the oscillations approach the axis. With this behavior, we expect a bifurcation to occur in this region and thus we use the equilibria for \eqref{eq:twoD_osc_innerintegral} to determine the location. While this problem is two-dimensional in nature, the integral in \eqref{eq:twoD_osc_innerintegral} is nearly identical to the integral \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc}. So we may use the ideas of that section here to get an approximate solution. Thus, under the assumptions of this case, we fix a value of $P_0$ and integrate \eqref{eq:twoD_osc_innerintegral} over the regions defined by
+We call this the 'crossing' case; here the solution oscillates about the axis $V=0$ while the center of the solution approaches this axis. With this behavior, we expect a bifurcation to occur in this region and use the equilibria for \eqref{eq:twoD_osc_innerintegral} to determine the location. While this problem is two-dimensional in nature, the integral in \eqref{eq:twoD_osc_innerintegral} is nearly identical to the integral \eqref{eq:oneD_osc_integral} in \autoref{sec:oneD_highfreqosc}. So we may use the ideas of that section here to get an approximate solution. Thus, under the assumptions of this case, we fix a value of $P_0$ and integrate \eqref{eq:twoD_osc_innerintegral} over the regions defined by
 
 \begin{equation*}
 R_1=\arccos(P_0/A),\quad R_2=2\pi-\arccos(P_0/A).
 \end{equation*}
 
-As in \autoref{sec:oneD_highfreqosc}, the solution to \eqref{eq:twoD_osc_innerintegral} is negative for $P_0(t)$ the region $R\in[0,R_1]$ and alternates sign for the regions $R\in (R_1,R_2]$ and $R\in (R_2,2\pi]$. We follow the same procedure of integrating over each region to get the exact form for \eqref{eq:twoD_osc_innerintegral} with
+\indent As in \autoref{sec:oneD_highfreqosc}, the solution to \eqref{eq:twoD_osc_innerintegral} is negative for $P_0(t)$ the region $R\in[0,R_1]$ and alternates sign for the regions $R\in (R_1,R_2]$ and $R\in (R_2,2\pi]$. We follow the same procedure of integrating over each region to get the exact form for \eqref{eq:twoD_osc_innerintegral} with
 
 \begin{equation}\label{eq:twoD_osc_caseIIexact}
 \begin{aligned}
@@ -480,7 +480,7 @@ As in \autoref{sec:oneD_highfreqosc}, the solution to \eqref{eq:twoD_osc_innerin
 \end{aligned}
 \end{equation}
 
-Although this is the explicit inner equation from \eqref{eq:twoD_osc_caseIIexact}, this is analytically too complex to find an explicit form for a bifurcation and thus we use a second order Taylor approximation to give an approximate system
+Although this is the explicit inner equation from \eqref{eq:twoD_osc_caseIIexact}, it is analytically too complex to find an explicit form for a bifurcation and thus we use a second order Taylor approximation to give an approximate system
 
 \begin{equation}\label{eq:twoD_osc_taylor}
 \begin{aligned}
@@ -504,7 +504,7 @@ Here the equation for $P_0$ in \eqref{eq:twoD_osc_equilibria} is a quadratic tha
 P_0=\frac{\eta_3}{2a(1-\eta_3)}- \frac{1}{2a(1-\eta_3)}\sqrt{\eta_3^2+4a(1-\eta_3)(n-c(1-\eta_3))}.
 \end{equation}
 
-The equilibrium for $P_0$ in \eqref{eq:twoD_osc_innersolution} are real only for positive discriminant. Then the local bifurcation, $n_{\text{osc}}$, is given for vanishing discriminant 
+The equilibrium for $P_0$ in \eqref{eq:twoD_osc_innersolution} is real only for positive discriminant. Then the local bifurcation, $n_{\text{osc}}$, is given for vanishing discriminant 
 
 \begin{equation}\label{eq:twoD_osc_innerbif}
 n_{osc} = \frac{\eta_1(1-\eta_3)|A|}{\pi}\left[2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right].
@@ -520,19 +520,19 @@ T(t)\sim& \eta_1-\Omega^{-1}\left(\frac{\eta_1}{\pi|A|}P_0^2+\frac{2\eta_1|A|}{\
 \end{equation}
 
 \begin{equation}\label{eq:twoD_osc_bifurcation}
-{\eta_2}_{osc} = {\eta_2}_{ns}+\frac{\eta_1(1-\eta_3)|A|}{\pi\Omega}\left[2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right].
+\, \,{\eta_2}_{osc} = {\eta_2}_{\text{ns}}+\frac{\eta_1(1-\eta_3)|A|}{\pi\Omega}\left[2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right].
 \end{equation}
 
-With \eqref{eq:twoD_osc_bifurcation} we have found the bifurcation induced by the addition of oscillatory forcing in the Stommel model. As we learned from the one-dimensional model in \autoref{sec:oneD_highfreqosc}, the effect of oscillatory forcing is early bifurcations where ${\eta_2}_{\text{osc}}>{\eta_2}_{\text{ns}}$. Our result in \eqref{eq:twoD_osc_bifurcation} holds under the caveat that we restrict the parameters with 
+\indent With \eqref{eq:twoD_osc_bifurcation} we have found the bifurcation induced by the addition of oscillatory forcing in the Stommel model. As we learned from the one component model in \autoref{sec:oneD_highfreqosc}, the effect of oscillatory forcing is early bifurcations where ${\eta_2}_{\text{osc}}>{\eta_2}_{\text{\text{ns}}}$. Our result in \eqref{eq:twoD_osc_bifurcation} holds under the caveat that we restrict the parameters with 
 
 \begin{equation*}
 \eta_3 <\frac{2\sqrt{2}\eta_1}{\pi+2\sqrt{2}\eta_1},
 \end{equation*}
 
-which is the condition to guarantee the second term in \eqref{eq:twoD_osc_bifurcation} is positive. This restriction is reasonable as generally the parameters have the behaviors of $\eta_3<1$ and $\eta_3\ll \eta_1$ where the thermal variation is much larger in real ocean dynamics than the ratio of relaxation times.
+which is the condition to guarantee the second term in \eqref{eq:twoD_osc_bifurcation} is positive. This restriction is reasonable as generally the parameters have the behavior of $\eta_3<1$ and $\eta_3\ll \eta_1$ as the thermal variation is much larger in real ocean dynamics than the ratio of relaxation times.
 
-In figure~\ref{fig:twoD_osc_Vnumerics} the numerical solution to \eqref{eq:twoD_canonical} for $V$ and a zoom of the solution around the numerical bifurcation is shown. The static bifurcation diagram is underlayed as well for comparison. We contrast the result in \eqref{eq:twoD_osc_bifurcation} to these numerics and find the bifurcation prediction from our analysis agrees. Notice that there is a bifurcation for $\eta_2>{\eta_2}_{\text{ns}}$ with the oscillations present. This causes a region of the static lower branch in $V$ to never be followed.
-In figure~\ref{fig:twoD_osc_Tnumerics} the numerical solution to \eqref{eq:twoD_canonical} for $T$ and a zoom in around the bifurcation is shown with the static bifurcation diagram underlayed. Due to the bifurcation ${\eta_2}_{\text{osc}}>{\eta_2}_{ns}$ in $V$, the maximum value of $T$ is never reached in (b).
+\indent In figure~\ref{fig:twoD_osc_Vnumerics} the numerical solution to \eqref{eq:twoD_canonical} for $V$ and a zoom of the solution around the numerical bifurcation is shown. The static bifurcation diagram is underlayed as well for comparison. We contrast the result in \eqref{eq:twoD_osc_bifurcation} to these numerics and find that the bifurcation prediction from our analysis agrees. Notice that there is a bifurcation for $\eta_2>{\eta_2}_{\text{\text{ns}}}$ with the oscillations present, this causes a region of the static lower branch in $V$ to never be followed.
+In figure~\ref{fig:twoD_osc_Tnumerics} the numerical solution to \eqref{eq:twoD_canonical} for $T$ and a zoom in around the bifurcation is shown with the static bifurcation diagram underlayed. Due to the bifurcation ${\eta_2}_{\text{osc}}>{\eta_2}_{\text{ns}}$ in $V$, the maximum value of $T$ is never reached in (b).
 
 \begin{figure}[H]
 \centering
@@ -551,7 +551,7 @@ In figure~\ref{fig:twoD_osc_Tnumerics} the numerical solution to \eqref{eq:twoD_
  \includegraphics[width=\linewidth]{twoD/osc_bif_diagram_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{In (a) the numerical time series solutions to \eqref{eq:twoD_canonical} is given with parameters in each qualitatively different case of $\eta_2=\{2.3,1.8,1.51\}$ with $\eta_1=4$, $\eta_3=.375$, $A=B=2$ and $\Omega = 10$. In (b) these same solutions are shown on the bifurcation diagram. In (c) a zoom in closer to the non-smooth bifurcation region where the blue vertical line is the prediction \eqref{eq:twoD_osc_bifurcation} against the black dotted vertical line which is the numerical bifurcation.}
+\caption{In (a) the numerical time series solutions to \eqref{eq:twoD_canonical} is given with parameters in each qualitatively different case of $\eta_2=\{2.3,1.8,1.51\}$ with $\eta_1=4$, $\eta_3=.375$, $A=B=2$ and $\Omega = 10$. In (b) these same solutions are shown on the bifurcation diagram. In (c) a zoom in closer to the non-smooth bifurcation region where the blue vertical line is the estimated bifurcation \eqref{eq:twoD_osc_bifurcation}.}
 \label{fig:twoD_osc_Vnumerics}
 \end{figure}
 
@@ -572,16 +572,16 @@ In figure~\ref{fig:twoD_osc_Tnumerics} the numerical solution to \eqref{eq:twoD_
  \includegraphics[width=\linewidth]{twoD/osc_bif_Tplot_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{In (a) we have the same numerical time series solutions for the qualitatively different cases $\eta_2=\{2.3,1.8,1.51\}$. In (b) we plot these solutions over the standard equilibrium plot for $V$ vs. $T$. In (c) a zoom of the bifurcation area.}
+\caption{In (a) we have the same numerical time series solutions for the qualitatively different cases $\eta_2=\{2.3,1.8,1.51\}$. In (b) we plot these solutions over the standard equilibrium plot for $V$ vs. $T$. In (c) a zoom closer to the bifurcation area is provided.}
 \label{fig:twoD_osc_Tnumerics}
 \end{figure}
 
-To evaluate the performance of this prediction, we compare \eqref{eq:twoD_osc_bifurcation} to the numerical bifurcation over a range of $\Omega^{-1}$. In figure~\ref{fig:twoD_osc_epscomp} we allow for this range to be $\Omega^{-1}\in (0,.2)$. For small values, the two agree very well and as we expect, they begin to diverge once the values of $\Omega^{-1}$ become too large from the assumption that $\Omega\gg 1$ and the asymptotics cannot capture the behavior for low frequency oscillations. This outperforms the approximation from the one-dimensional model in \autoref{sec:oneD_highfreqosc}.
+\indent To evaluate the performance of this prediction, we compare \eqref{eq:twoD_osc_bifurcation} to the numerical bifurcation over a range of $\Omega^{-1}$. In figure~\ref{fig:twoD_osc_epscomp} we allow for this range to be $\Omega^{-1}\in (0,.2)$. For small values, the two agree very well and as we expect, they begin to diverge once the values of $\Omega^{-1}$ become too large from the assumption that $\Omega\gg 1$ and the asymptotics cannot capture the behavior for low frequency oscillations. This outperforms the approximation from the one component model in \autoref{sec:oneD_highfreqosc}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[scale=.25]{twoD/osc_Omegacomp.jpg}
-\caption{The numerical tipping (red stars) vs the estimate (black line). The model parameters are $\eta_1=4$,$\eta_3=.375$ and $A=B=2$. The numerical criteria is when $V>V_{\text{smooth}}$.}
+\includegraphics[width = .7\linewidth]{twoD/osc_Omegacomp.jpg}
+\caption{The numerical tipping (red stars) vs. the estimate (black line). The model parameters are $\eta_1=4$,$\eta_3=.375$ and $A=B=2$. The bifurcation criterion for the numerical solution is $V>V_{\text{smooth}}$.}
 \label{fig:twoD_osc_epscomp}
 \end{figure}
 
@@ -600,7 +600,7 @@ We must consider the stability of solutions over the relative sizes of $P_0(t)$ 
 
 \subsubsection{Case I: $v_0(t)\le -|A|$}
 
-For entirely below-axis case we have the solution spends most of its time away from the axis $V=0$. We expect to find attraction around the lower branch and thus we expect stability here. Under these conditions, the inner equation \eqref{eq:twoD_osc_stabilityequation} simplifies to the equations
+For the 'below-axis' case the solution spends most of its time away from the axis $V=0$. We expect to find attraction around the lower branch and thus we expect stability there. Under these conditions, the inner equation \eqref{eq:twoD_osc_stabilityequation} simplifies to the equations
 
 \begin{equation}\label{eq:twoD_osc_stability_caseI_fullinner}
 \begin{aligned}
@@ -609,7 +609,7 @@ For entirely below-axis case we have the solution spends most of its time away f
 \end{aligned}
 \end{equation}
 
-The equilibria of \eqref{eq:twoD_osc_stability_caseI_fullinner} is found with $Q_0(P_0)=\eta_1 P_0$, and thus we find the following one-dimensional equation and equilibrium $Z^0$ with
+The equilibria of \eqref{eq:twoD_osc_stability_caseI_fullinner} is found with $Q_0(P_0)=\eta_1 P_0$. Thus we find the following reduced one component equation and equilibrium $Z^0$ with
 
 \begin{equation}\label{eq:twoD_osc_stability_caseI_red}
 {P_0}_t = -n -(\eta_3 +(1-\eta_3))Q_0=f(P_0),\quad Z^0 = -\frac{n}{\eta_3+\eta_1(1-\eta_3)}.
@@ -624,16 +624,16 @@ U_t =& -(\eta_3+\eta_1(1-\eta_3))U
 \end{aligned}
 \end{equation}
 
-From \eqref{eq:twoD_osc_stability_caseI_perteq} we now conclude the equilibrium $Z^0$ is hyperbolic and attracting due to the exponential decay in perturbations. Thus we find that no bifurcation occurs for this case which agrees with our findings in the analysis. This holds for $\eta_2$ in \eqref{eq:twoD_osc_boundary}
+From \eqref{eq:twoD_osc_stability_caseI_perteq} we now conclude the equilibrium $Z^0$ is hyperbolic and attracting due to the exponential decay in perturbations. Thus we find that no bifurcation occurs for this case which agrees with our findings from the analysis above. This holds for $\eta_2$ in \eqref{eq:twoD_osc_boundary}
 
 \begin{equation*}
-\eta_2 \ge {\eta_2}_{ns} +\frac{(\eta_3+\eta_1(1-\eta_3))|A|}{\Omega}.
+\eta_2 \ge {\eta_2}_{\text{ns}} +\frac{(\eta_3+\eta_1(1-\eta_3))|A|}{\Omega}.
 \end{equation*}
 
 
 \subsubsection{Case II: $|P_0(t)|<|A|$}
 
-We called this case the crossing case and here the solution experiences the non-smooth behavior when it crosses $V=0$. We expect the stability to fail under these conditions and we found in the analysis that the crossing $V=0$ gives \eqref{eq:twoD_osc_stabilityequation} in the form
+We called this case the 'crossing' case and here the solution experiences the non-smooth behavior when it crosses $V=0$. We expect the stability to fail under these conditions and we found in the analysis that the crossing $V=0$ gives \eqref{eq:twoD_osc_stabilityequation} in the form
 
 \begin{equation}\label{eq:twoD_osc_stability_caseII_full}
 \begin{aligned}
@@ -645,14 +645,14 @@ We called this case the crossing case and here the solution experiences the non-
 As we search for the equilibria of \eqref{eq:twoD_osc_stability_caseII_full}, we find the equilibrium for $Q_0$ in terms of $P_0$ 
 
 \begin{equation*}
-Q_0(P_0)=-\frac{2\eta_1|A|}{\pi}-\frac{\eta_1}{\pi |A|}P_0^2
+Q_0(P_0)=-\frac{2\eta_1|A|}{\pi}-\frac{\eta_1}{\pi |A|}P_0^2,
 \end{equation*}
 
 which then gives the following inner equation with the equilibrium $Z^0$ for $P_0<0$
 
 \begin{equation}\label{eq:twoD_osc_stability_caseII_inner}
 \begin{aligned}
-{P_0}_t=&-n+\frac{2\eta_1(|A|}{\pi}-\eta_3 P_0+\frac{\eta_1}{\pi |A|}P_0^2=f(P_0),\\
+{P_0}_t=&-n+\frac{2\eta_1|A|}{\pi}-\eta_3 P_0+\frac{\eta_1}{\pi |A|}P_0^2=f(P_0),\\
 Z^0=&\frac{\pi |A|}{2\eta_1(1-\eta_3)}\left(\eta_3-\sqrt{\frac{4\eta_1(1-\eta_3)}{\pi|A|}(n-n_{\text{osc}})}\right).
 \end{aligned}
 \end{equation}
@@ -666,21 +666,21 @@ U_t=&- 2\sqrt{\frac{\eta_1(1-\eta_3)}{\pi|A|}(n-n_{\text{osc}})}U.
 \end{aligned}
 \end{equation}
 
-Thus with \eqref{eqLtwoD_osc_stability_caseII_perturb} we learn that the perturbations $U(t)$ decay exponentially as long as the square-root is non-zero and we restrict our attention to real solutions so that our perturbations are real. Thus we have that $Z^0$ is a hyperbolic and asymptotically stable equilibrium for $P_0$ and thus we find stability in $Q_0$ as well. This gives an attracting solution for this region but we lose this stability once the square-root becomes zero, here when
+\indent Thus with \eqref{eqLtwoD_osc_stability_caseII_perturb} we learn that the perturbations $U(t)$ decay exponentially as long as the square-root is non-zero. We restrict our attention to real solutions so that our perturbations are real. Thus we have that $Z^0$ is a hyperbolic and asymptotically stable equilibrium for $P_0$ and find stability in $Q_0$ as well. This gives an attracting solution for this region but we lose this stability once the square-root becomes zero, here when
 
 \begin{equation*}
 n_{osc} = \frac{\eta_1(1-\eta_3)|A|}{\pi}\left[2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right].
 \end{equation*}
 
-This says the equilibrium $Z^0$ at this point is non-hyperbolic which is indicative of a bifurcation. This is in agreement with our analysis and thus we can say that the value found in \eqref{eq:twoD_osc_bifurcation} is the bifurcation under the oscillatory forcing.
+This indicates the equilibrium $Z^0$ at this point is non-hyperbolic which is indicative of a bifurcation. The results here are in agreement with our analysis and thus we can say that the value found in \eqref{eq:twoD_osc_bifurcation} is the bifurcation under the oscillatory forcing.
 
 
 \section{Slow Variation with Oscillatory Forcing}
 \label{sec:twoD_slowosc}
 
-With the one-dimensional model solved and both the slowly varying and high oscillatory two-dimensional components analyzed, we have all of the tools needed to analyze the full system \eqref{eq:twoD_canonical} with both $\epsilon \ll 1$ and $A,B\sim O(1)$ simultaneously. This is the most general setting we discuss in this thesis by accounting for both slowly varying $\eta_2$ that leads to abrupt changes seen in \cite{alley2003abrupt,marotzke2000abrupt,rahmstorf2000thermohaline} as well as the oscillatory forcing seen in \cite{roberts2017relaxation,huybers2005obliquity}. Our goal is to study the interaction of these mechanisms in the physical Stommel model and give an approximation on the catastrophic behavior in the model. Under the framework of slowly varying parameters we expect to find a tipping point instead of a bifurcation and hence our method for finding the tipping point follows a mixture of both \autoref{sec:twoD_slow} and \autoref{sec:twoD_highfreqosc}. This procedure dictates that we search for inner behavior about the non-smooth bifurcation and to do so we need to solve the inner equation and estimate when this solution abruptly transitions towards the upper branch. Ultimately, we provide a solution that captures the abrupt change from the lower stable branch to the upper branch in the full Stommel model.
+With the one component model solved and both the slowly varying and high oscillatory two component models analyzed, we have all of the tools needed to analyze the full system \eqref{eq:twoD_canonical} with both $\epsilon \ll 1$ and $A,B\sim O(1)$ simultaneously. This is the most general setting we discuss in this thesis by accounting for both, slowly varying $\eta_2$ that leads to abrupt changes seen in \cite{alley2003abrupt,marotzke2000abrupt,rahmstorf2000thermohaline} as well as the oscillatory forcing seen in \cite{roberts2017relaxation,huybers2005obliquity}. Our goal is to study the interaction of these mechanisms in the physical Stommel model and give an approximation on catastrophic behavior in the model. Under the framework of slowly varying parameters we expect to find a tipping point instead of a bifurcation. Hence our method for finding the tipping point follows a mixture of both \autoref{sec:twoD_slow} and \autoref{sec:twoD_highfreqosc}. This procedure dictates that we search for inner behavior about the non-smooth bifurcation and to do so we need to solve the inner equation and estimate when this solution abruptly transitions towards the upper branch. Ultimately, we provide a solution that captures the abrupt change from the lower stable branch to the upper branch in the full Stommel model.
 
-To begin, we take our standard approach of following the lower branch towards the non-smooth behavior with $V<0$ in \eqref{eq:twoD_canonical} which gives the following system 
+\indent To begin, we take our standard approach of following the lower branch towards the non-smooth behavior with $V<0$ in \eqref{eq:twoD_canonical} which gives the following system 
 
 \begin{equation}\label{eq:twoD_slowosc_outereqs}
  \begin{aligned}
@@ -700,7 +700,7 @@ T_R+\epsilon^{\lambda+1}T_\tau & = \epsilon^{\lambda}\left( \eta_1-T(1-		 V)+B\s
 \end{aligned}
 \end{equation}
  
-To approach the solution to the outer equations in \eqref{eq:twoD_slowosc_multiouter}, we use an asymptotic expansion using both $\epsilon^\lambda$ and integer powers as we have not specified the range of $\lambda$ and both could be significant. Thus our expansion is
+To approach the solution to the outer equations in \eqref{eq:twoD_slowosc_multiouter}, we use an asymptotic expansion with both $\epsilon^\lambda$ and integer powers as we have not specified the range of $\lambda$ and both could be significant. Thus our expansion is
 
 \begin{equation}\label{eq:twoD_slowosc_outerexpansion}
 	\begin{aligned}
@@ -715,11 +715,11 @@ Here we substitute \eqref{eq:twoD_slowosc_outerexpansion} into \eqref{eq:twoD_sl
 \begin{aligned}
 {V_0}_R+\epsilon^{\lambda+1}{V_0}_\tau+\epsilon^\lambda {V_1}_R+\ldots=&\begin{aligned}[t]&
 \epsilon^\lambda \left(\eta_1-\eta_2-T+\eta_3(T_0-V_0)+V_0^2+A\sin(R)\right)\\
-&+\epsilon^{2\lambda}\left(-\eta_3 V_1-(1-\eta_3)T_1+2V_0V_1\right)+\ldots
+&+\epsilon^{2\lambda}\left(-\eta_3 V_1-(1-\eta_3)T_1+2V_0V_1\right)+\ldots,
 \end{aligned}\\
 {T_0}_R+\epsilon^{\lambda+1}{T_0}_\tau+\epsilon^\lambda {T_1}_R+\ldots=&\begin{aligned}[t]&
 \epsilon^\lambda\left( \eta_1-T_0(1-V_0)+B\sin(R)\right)\\
-&+\epsilon^{2\lambda}\left(-T_1+T_0V_1+T_1V_0\right)+\ldots
+&+\epsilon^{2\lambda}\left(-T_1+T_0V_1+T_1V_0\right)+\ldots.
 \end{aligned}
 \end{aligned}
 \end{equation*}
@@ -740,11 +740,11 @@ O(\epsilon^\lambda):\quad & \begin{cases}
 \label{eq:twoD_slowosc_outerO3}
 O(\epsilon^{2\lambda}):\quad & \begin{cases}
 	{V_2}_R+\epsilon^{1-\lambda}{V_0}_\tau = & \eta_3(T_1-V_1)-T_1+2V_0V_1,\\
-	{T_2}_R +\epsilon^{1-\lambda}{T_0}_\tau =& -T_1(1-V_0)+T_0V_1,
+	{T_2}_R +\epsilon^{1-\lambda}{T_0}_\tau =& -T_1(1-V_0)+T_0V_1.
 \end{cases}
 \end{align}
 
-Here we consider a $\lambda$ where the next order in \eqref{eq:twoD_slowosc_outerexpansion} is $O(\epsilon^{2\lambda})$. Similar results follow from a choice in $\lambda$ where $O(\epsilon^{\lambda+1})<O(\epsilon^{2\lambda})$. From \eqref{eq:twoD_slowosc_outerO1} the leading order terms in our expansion are only dependent on slow time, $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. The solutions of \eqref{eq:twoD_slowosc_outerO2} and \eqref{eq:twoD_slowosc_outerO3} are found in \autoref{app:twoD}, giving the outer solution 
+We consider a $\lambda$ where the next order in \eqref{eq:twoD_slowosc_outerexpansion} is $O(\epsilon^{2\lambda})$. Similar results follow from a choice in $\lambda$ where $O(\epsilon^{\lambda+1})<O(\epsilon^{2\lambda})$. From \eqref{eq:twoD_slowosc_outerO1} the leading order terms in our expansion are only dependent on slow time, $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. The solutions of \eqref{eq:twoD_slowosc_outerO2} and \eqref{eq:twoD_slowosc_outerO3} are found in \autoref{app:twoD}, giving the outer solution 
 
 \begin{equation}\label{eq:twoD_slowosc_outersoln}
 \begin{aligned}
@@ -753,12 +753,12 @@ T\sim& T_0 + \frac{\epsilon {T_0}_\tau}{1-V_0}-\frac{\epsilon T_0({V_0}_\tau(1-V
 \end{aligned}
 \end{equation}
 
-where $V_0$ and $T_0$ are the same leading order solutions from the slowly varying Stommel model in \autoref{sec:twoD_slow}. Unfortunately the common theme of the Stommel model is that these outer solutions are complex but it is clear the outer expansion breaks down as $V_0\to 0$. Thus we derive a scaling for the inner equations analogous to that of \autoref{sec:oneD_slowosc}.
+where $V_0$ and $T_0$ are the same leading order solutions from the slowly varying Stommel model in \autoref{sec:twoD_slow}. Unfortunately, the common theme of the Stommel model is that these outer solutions are complex but it is clear the outer expansion breaks down as $V_0\to 0$ as the scale separation between $V_0$ and $V_1$ no longer exists. Thus we derive a scaling for the inner equations which is analogous to that of \autoref{sec:oneD_slowosc}.
 
-For simplicity, we assume that the scaling for both $V$ and $T$ are the same, but this isn't necessary to arrive at the same conclusion. Hence we rescale about the bifurcation point $({\eta_2}_{ns},V_{ns},T_{ns})=(\eta_1\eta_3,0,\eta_1)$ with
+\indent For simplicity, we assume that the scaling for both $V$ and $T$ is the same, but this isn't necessary to arrive at the same conclusion. Hence we rescale about the bifurcation point $({\eta_2}_{\text{ns}},V_{\text{ns}},T_{\text{ns}})=(\eta_1\eta_3,0,\eta_1)$ with
 
 \begin{equation}\label{eq:twoD_slowosc_general_scaling}
-V=\epsilon^\alpha X, \quad T=\eta_1+\epsilon^\alpha Y ,\quad \eta_2(t)={\eta_2}_{ns}+\epsilon^\beta n(t),
+V=\epsilon^\alpha X, \quad T=\eta_1+\epsilon^\alpha Y ,\quad \eta_2(t)={\eta_2}_{\text{ns}}+\epsilon^\beta n(t),
 \end{equation}
 
 where both $\alpha>0$ and $\beta>0$ allow for this to be a local scaling. Applying the local variables in \eqref{eq:twoD_slowosc_general_scaling} to the full Stommel model \eqref{eq:twoD_canonical} gives
@@ -781,9 +781,9 @@ n_t=&-\epsilon^{1-\beta}.
 \end{aligned}
 \end{equation}
 
-Here we balance the leading order terms in each equation of \eqref{eq:twoD_slowosc_innergeneral}, $\epsilon^{\alpha-\lambda}X_R$ and $A\sin(R)$ as well as $\epsilon^{\alpha-\lambda}Y_R$ with $B\sin(R)$, which gives us that $\alpha=\lambda$ and confirms that the scales $V$ and $T$ are the same. The scaling for $\eta_2$ has yet to be determined and could have multiple possibilities depending on $\lambda$, but due to this choice in $\alpha$ we expect the oscillatory term to persist in the inner asymptotic expansion of \eqref{eq:twoD_canonical} regardless of choice in $\lambda$.
+Next we balance the leading order terms in each equation of \eqref{eq:twoD_slowosc_innergeneral}, $\epsilon^{\alpha-\lambda}X_R$ and $A\sin(R)$ as well as $\epsilon^{\alpha-\lambda}Y_R$ with $B\sin(R)$, which gives us that $\alpha=\lambda$ and confirms that the scales $V$ and $T$ are the same. The scaling for $\eta_2$ has yet to be determined and could have multiple possibilities depending on $\lambda$. Due to this choice in $\alpha$ we expect the oscillatory term to persist in the inner asymptotic expansion of \eqref{eq:twoD_canonical} regardless of choice in $\lambda$.
 
-We use a multiple scales approach with $t$ and $R=\epsilon^{-\lambda}t$ on the full Stommel model \eqref{eq:twoD_canonical} along with the general scaling \eqref{eq:twoD_slowosc_general_scaling} on $\eta_2$ which gives
+\indent Here we use a multiple scales approach with $t$ and $R=\epsilon^{-\lambda}t$ on the full Stommel model \eqref{eq:twoD_canonical} along with the general scaling \eqref{eq:twoD_slowosc_general_scaling} on $\eta_2$ which gives
 
 \begin{equation}\label{eq:twoD_slowosc_general_outermulti}
 \begin{aligned}
@@ -793,16 +793,16 @@ n_t =&-\epsilon^{1-\beta}.
 \end{aligned}
 \end{equation}
 
-In \autoref{sec:oneD_slowosc} the results depended on the relative size of the slow variation with respect to the oscillations. The distinction in that case was when $\lambda\le1$ where a mixture between the slow variation and oscillations influence the tipping or $\lambda>1$ where the slow variation dominates the tipping. We find a similar distinction here and hence consider a separate asymptotic expansion for the following Case I: $\lambda\le 1$ and Case II: $\lambda >1$ to find an accurate classification of behavior for the full Stommel model.
+In \autoref{sec:oneD_slowosc} the results depended on the relative size of the slow variation with respect to the oscillations. The distinction in that case was when $\lambda\le1$, where a mixture between the slow variation and oscillations influence the tipping or $\lambda>1$, where the slow variation dominates the tipping. We find a similar distinction here and hence consider a separate asymptotic expansion for Case I: $\lambda\le 1$ and Case II: $\lambda >1$ to find an accurate classification of behavior for the full Stommel model.
 
 \subsection{Case I: $\lambda \le 1$}
 
-We call this the mixed effects case where there is significant influence from both slow variation and fast oscillations due to the size of $\lambda$. Here we cannot determine what the next term in the expansion should be and thus we choose a general expansion with
+We call this the 'mixed effects' case where there is significant influence from both slow variation and fast oscillations due to the size of $\lambda$. Here we cannot determine what the next term in the expansion should be and thus we choose a general expansion with
 
 \begin{equation}\label{eq:twoD_slowosc_caseI_expansion}
 \begin{aligned}
-V(t,R)\sim& \epsilon^{\lambda} X_0(t,R)+\epsilon^q X_1(t,R)+\ldots\\
-T(t,R)\sim& \eta_1+\epsilon^{\lambda} Y_0(t,R)+\epsilon^q Y_1(t,R)+\ldots
+V(t,R)\sim& \epsilon^{\lambda} X_0(t,R)+\epsilon^q X_1(t,R)+\ldots,\\
+T(t,R)\sim& \eta_1+\epsilon^{\lambda} Y_0(t,R)+\epsilon^q Y_1(t,R)+\ldots,
 \end{aligned}
 \end{equation}
 
@@ -812,7 +812,7 @@ with $q>\lambda$ to allow for $O(\epsilon^\lambda)$ to be the leading order term
 \begin{aligned}
  {X_0}_R+\epsilon^{\lambda}{X_0}_t+\epsilon^{q-\lambda} {X_1}_R\ldots={} & -\epsilon^{\beta}n(t)-\epsilon^{\lambda} (\eta_3X_0+(1-\eta_3)Y_0) \\
 &-\epsilon^{2\lambda}(X_0+\epsilon^{q-\lambda} X_1+\ldots)|X_0+\epsilon^{q-\lambda} X_1+\ldots|\\
-& - \epsilon^{q}(\eta_3X_1+(1-\eta_3)Y_1) + A\sin(R) +\ldots
+& - \epsilon^{q}(\eta_3X_1+(1-\eta_3)Y_1) + A\sin(R) +\ldots,
 \end{aligned}
 \end{equation*}
 
@@ -820,11 +820,11 @@ with $q>\lambda$ to allow for $O(\epsilon^\lambda)$ to be the leading order term
 \begin{aligned}
 {Y_0}_R+\epsilon^{\lambda}{Y_0}_t+\epsilon^{q-\lambda} {Y_1}_R+\ldots= &-\epsilon^\lambda(\eta_1| X_0 +\epsilon^{q-\lambda} X_1+\ldots|+ Y_0+\epsilon^{q-\lambda} Y_1+\ldots)\\
 &+\epsilon^{2\lambda}|X_0 +\epsilon^{q-\lambda} X_1+\ldots|(Y_0+\epsilon^{q-\lambda} Y_1+\ldots)\\
-&+ B\sin (R)+\ldots
+&+ B\sin (R)+\ldots.
 \end{aligned}
 \end{equation*}
 
-We separate by the distinct orders of $\epsilon$ to find the following equations at each order
+Separating by the distinct orders of $\epsilon$ gives the following equations at each order
 
 \begin{align} \label{eq:twoD_slowosc_caseI_O1}
 O(1):\, &\begin{cases}
@@ -837,7 +837,7 @@ O(\epsilon^\lambda): \, & \begin{cases}
 \end{cases}
 \end{align}
 
-We learn from \eqref{eq:twoD_slowosc_caseI_O2} that $q= 2\lambda$ balances the terms, which implies that $\lambda> \frac{1}{2}$ for an expansion to be found. If $\lambda\le \frac{1}{2}$ then we would need to include the quadratic terms in $O(\epsilon^\lambda)$ and our equations would just be the same as the full Stommel model \eqref{eq:twoD_canonical}. This indicates that our local approximation would no longer hold and that the high frequency assumption is failing. Without this, the physical behavior of the problem is qualitatively different and this we explore in the conclusion in \autoref{chap:conclusion}. On this range of $\lambda$, there are two choices for the scaling of $\eta_2$ with $\beta=1$ or $\beta=\lambda$. The advantage to choosing $\beta=\lambda$ is that the equation \eqref{eq:twoD_slowosc_caseI_O2} is simple, but the slow variation equation has the form $n_t = -\epsilon^{1-\lambda}$ and implies a slower time scale. On the other hand, $\beta=1$ keeps a small coefficient on $n$ in \eqref{eq:twoD_slowosc_caseI_O2} but gives the slow variation equation as $n_t=-1$, which allows the time scale $t$ to be used. Both of these choices result in the same approximation of the tipping point in original variables, so here we choose $\beta=1$ for convenience. From \eqref{eq:twoD_slowosc_caseI_O1} we find the appropriate form of the leading order terms, $X_0=P_0(t)-A\cos(R)$ and $Y_0=Q_0(t)-B\cos(R)$. Using these forms for the leading order term and applying the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:twoD_slowosc_caseI_O2} we find 
+\indent We learn from \eqref{eq:twoD_slowosc_caseI_O2} that $q= 2\lambda$ balances the equations, which implies that $\lambda> \frac{1}{2}$ for an expansion to be found. If $\lambda\le \frac{1}{2}$ then we would need to include the quadratic terms in $O(\epsilon^\lambda)$ and our reduced equations would be the same as the full Stommel model \eqref{eq:twoD_canonical}. This indicates that our local approximation would no longer hold and that the high frequency assumption is failing. Without this, the physical behavior of the problem is qualitatively different and we explore this further in \autoref{chap:conclusion}. On this range of $\lambda$, there are two choices for the scaling of $\eta_2$ with $\beta=1$ or $\beta=\lambda$. The advantage to choosing $\beta=\lambda$ is that the equation \eqref{eq:twoD_slowosc_caseI_O2} is simple, but the slow variation equation has the form $n_t = -\epsilon^{1-\lambda}$ and implies a slower time scale. On the other hand, $\beta=1$ keeps a small coefficient on $n$ in \eqref{eq:twoD_slowosc_caseI_O2} but gives the slow variation equation as $n_t=-1$, which allows the time scale $t$ to be used. Both of these choices result in the same approximation of the tipping point in original variables. Here we choose $\beta=1$ for convenience. From \eqref{eq:twoD_slowosc_caseI_O1} we find the appropriate forms of the leading order terms, $X_0=P_0(t)-A\cos(R)$ and $Y_0=Q_0(t)-B\cos(R)$. Using these forms for the leading order term and applying the Fredholm alternative \eqref{eq:Fredholm} to \eqref{eq:twoD_slowosc_caseI_O2} we find 
 
 \begin{equation}\label{eq:twoD_slowosc_caseI_fullinner}
 \begin{aligned}
@@ -847,11 +847,11 @@ n_t =& -1.
 \end{aligned}
 \end{equation}
 
-We learned in \autoref{sec:twoD_highfreqosc} that we must approach the integration with the relative size of $P_0(t)$ to the amplitude of oscillation $A$ in mind as these sizes determine the contributions of the integral in \eqref{eq:twoD_slowosc_caseI_fullinner}. We consider these sizes of $P_0(t)$ as Sub-Case I: $P_0(t)\le -|A|$ and Sub-Case II: $|P_0(t)|<|A|$ similar to \autoref{sec:twoD_highfreqosc}. These cases separate $X_0=P_0-A\cos(R)$ from either staying entirely below $V=0$ or changing signs respectively and allows for the integration to have two distinct forms.
+\indent Analogously to \autoref{sec:twoD_highfreqosc} we must approach this integration with the relative size of $P_0(t)$ to the amplitude of oscillation $A$ in mind. This is due to the sizes determining the contributions of the integral in \eqref{eq:twoD_slowosc_caseI_fullinner}. We consider these sizes of $P_0(t)$ as Sub-case I: $P_0(t)\le -|A|$ and Sub-case II: $|P_0(t)|<|A|$ similar to \autoref{sec:twoD_highfreqosc}. These cases separate $X_0=P_0-A\cos(R)$ from either staying entirely below $V=0$ or changing signs respectively and allows for the integration to have two distinct forms.
 
 \subsubsection{Sub-Case I: $P_0(t)\le -|A|$}
 
-We call this the below-axis sub-case where the solution $P_0(t)$ is entirely below the axis $V=0$ and this means the full solution $X_0$ has oscillations far from crossing. Under these conditions we don't expect any tipping behavior as the solution is far from $V=0$, but we may use this size of $P_0(t)$ to find the range of $\eta_2$ that distinguishes these cases. With $P_0(t)\le -|A|$, we find \eqref{eq:twoD_slowosc_caseI_fullinner} simplifies to
+We call this the 'below-axis' sub-case, where the solution $P_0(t)$ is entirely below the axis $V=0$ and this means the full solution $X_0$ has oscillations far from crossing. Under these conditions we don't expect any tipping behavior as the solution is far from $V=0$, but we may use this size of $P_0(t)$ to find the range of $\eta_2$ that distinguishes these cases. With $P_0(t)\le -|A|$, we find \eqref{eq:twoD_slowosc_caseI_fullinner} simplifies to
 
 \begin{equation}\label{eq:twoD_slowosc_subcaseI_full}
 \begin{aligned}
@@ -860,35 +860,35 @@ We call this the below-axis sub-case where the solution $P_0(t)$ is entirely bel
 \end{aligned}
 \end{equation}
 
-We have the means available to solve \eqref{eq:twoD_slowosc_subcaseI_full} as it takes the form of an equation we have seen in \autoref{sec:twoD_slow}, but instead we search for when the pseudo-equilibrium fails the assumption of this sub-case. This results in the parameter range between these sub-cases and taking this approach is more convenient than solving the system. Here the form of the pseudo-equilibria is simple to find as $Q_0(P_0) = \eta_1P_0$ and thus 
+\indent Although we have the means available to solve \eqref{eq:twoD_slowosc_subcaseI_full} as it takes the form of an equation we have seen in \autoref{sec:twoD_slow}, instead we search for when the pseudo-equilibrium fails the assumption of this sub-case. This results in the parameter range between these sub-cases and taking this approach is more convenient than solving the system. Here the form of the pseudo-equilibria is simple to find as $Q_0(P_0) = \eta_1P_0$ and thus 
 
 \begin{equation*}
 P_0(t) = -\epsilon^{1-\lambda}\frac{n(t)}{\eta_3+\eta_1(1-\eta_3)}.
 \end{equation*}
 
-But we recall that for this sub-case $P_0(t)\le -|A|$, which gives the range for $n$ and we rewrite this in the original variables of $\eta_2$ with
+We recall that for this sub-case $P_0(t)\le -|A|$, which gives the range for $n$ and we rewrite this in the original variables of $\eta_2$ with
 
 \begin{equation}\label{eq:twoD_slowosc_subcaseboundary}
 \begin{aligned}
 \epsilon n \ge & \epsilon^\lambda (\eta_3+\eta_1(1-\eta_3))|A|,\\
-\eta_2 \ge& {\eta_2}_{ns} +\frac{(\eta_3+\eta_1(1-\eta_3))|A|}{\Omega}.
+\eta_2 \ge& {\eta_2}_{\text{ns}} +\frac{(\eta_3+\eta_1(1-\eta_3))|A|}{\Omega}.
 \end{aligned}
 \end{equation}
 
-With the parameter range \eqref{eq:twoD_slowosc_subcaseboundary}, we now have an effective region for Sub-Case I and have the range for Sub-Case II in terms of the parameter $\eta_2$.
+With the parameter range \eqref{eq:twoD_slowosc_subcaseboundary}, we now have an effective region for sub-case I and have the range for sub-case II in terms of the parameter $\eta_2$.
 
 \subsubsection{Sub-Case II: $|P_0(t)|\le |A|$}
 
-We call this the crossing sub-case and under these conditions we see the integral in \eqref{eq:twoD_slowosc_caseI_fullinner} is more complex. As this contribution changes, there is an increasing effect on the system and it is here that we anticipate the tipping point to occur. In \autoref{sec:oneD_slowosc}, we found a similar integral to \eqref{eq:twoD_slowosc_caseI_fullinner} that we could evaluate with the assumption that $A\sim O(1)$. Note that the assumptions that allowed for evaluation of the integral in \eqref{eq:oneD_slowosc_caseIintegral} from \autoref{sec:oneD_slowosc} still hold here with a fast time $R$ that is sufficiently large due to the high frequency. Thus we follow the approach from \autoref{sec:oneD_slowosc} by integrating with $R_1=\arccos(P_0/A)$ and $R_2 = 2\pi-\arccos(P_0/A)$ analogous to $T_1$ and $T_2$ from \autoref{sec:oneD_slowosc} and then use a quadratic Taylor approximation about $P_0=0$ as in \eqref{eq:oneD_slowosc_subcaseIItaylor} to give
+We call this the 'crossing' sub-case and under these conditions we see the integral in \eqref{eq:twoD_slowosc_caseI_fullinner} is more complex. As this contribution changes, there is an increasing effect on the system and it is here that we anticipate the tipping point to occur. In \autoref{sec:oneD_slowosc}, we found a similar integral to \eqref{eq:twoD_slowosc_caseI_fullinner} that we could evaluate with the assumption that $A\sim O(1)$. Note that the assumptions that allowed for evaluation of the integral in \eqref{eq:oneD_slowosc_caseIintegral} from \autoref{sec:oneD_slowosc} still hold here with a fast time $R$ that is sufficiently large due to the high frequency. Thus we follow the approach from \autoref{sec:oneD_slowosc} by integrating with $R_1=\arccos(P_0/A)$ and $R_2 = 2\pi-\arccos(P_0/A)$ which is analogous to $T_1$ and $T_2$ from \autoref{sec:oneD_slowosc} and then use a quadratic Taylor approximation about $P_0=0$ as in \eqref{eq:oneD_slowosc_subcaseIItaylor} to give
 
 \begin{equation}\label{eq:twoD_slowosc_subcaseII_taylor}
 \begin{aligned}
-{P_0}_t =& -\epsilon^{1-\lambda}n(t)-\eta_3 P_0(s)-(1-\eta_3)Q_0\\
+{P_0}_t =& -\epsilon^{1-\lambda}n(t)-\eta_3 P_0(s)-(1-\eta_3)Q_0,\\
 {Q_0}_t =&-\frac{2\eta_1|A|}{\pi}-\frac{\eta_1}{\pi|A|}P_0^2-Q_0.
 \end{aligned}
 \end{equation}
 
-Here the form in \eqref{eq:twoD_slowosc_subcaseII_taylor} is known as a quadratic two-dimensional Riccati-type equation. We recall the assumption that the solution to the equation for $T$ to be in terms of $V$ was realistic to the THC, so any behavior that we are interested in lies within the dynamics for $V$. For this reason, we choose to approximate by reducing \eqref{eq:twoD_slowosc_subcaseII_taylor} to a one-dimensional model by assuming our equation for $Q_0$ is in pseudo-equilibrium with 
+\indent The form in \eqref{eq:twoD_slowosc_subcaseII_taylor} is known as a quadratic two component Riccati-type equation. We recall the assumption that the solution to the equation for $T$ being in terms of $V$ was realistic to the THC, so the behavior we are interested in lies within the dynamics for $V$. For this reason, we choose to approximate by reducing \eqref{eq:twoD_slowosc_subcaseII_taylor} to a one component model by assuming our equation for $Q_0$ is in pseudo-equilibrium with 
 
 \begin{equation}\label{eq:twoD_slowosc_subcaseII_equilreduction}
 {Q_0}(P_0) = -\frac{2\eta_1|A|}{\pi}-\frac{\eta_1}{\pi|A|}P_0^2.
@@ -903,7 +903,7 @@ n_t=&-1.
 \end{aligned}
 \end{equation}
 
-Again for convenience, we rewrite the differentiation in \eqref{eq:twoD_slowosc_subcaseII_reducedeq} in terms of parameter $n$ giving 
+Again for convenience, we rewrite the differentiation in \eqref{eq:twoD_slowosc_subcaseII_reducedeq} in terms of the parameter $n$ giving 
 
 \begin{equation} \label{eq:twoD_slowosc_subcaseII_reducedn}
 \begin{aligned}
@@ -916,20 +916,20 @@ Now \eqref{eq:twoD_slowosc_subcaseII_reducedn} is in a form where the result fro
 \begin{equation}\label{eq:twoD_slowosc_subcaseII_tipping}
 \begin{aligned}
 n_{\text{tip}} =& -\epsilon^{(\lambda-1)/3}\left(\frac{\pi|A|}{\eta_1(1-\eta_3)}\right)^{1/3}(2.33810)+\epsilon^{\lambda-1}\frac{\eta_1(1-\eta_3)|A|}{\pi}\left(2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right),\\
-{\eta_2}_{\text{tip}} =& \epsilon^{(\lambda-1)/3}\left(\frac{\pi|A|}{\eta_1(1-\eta_3)}\right)^{1/3}\mu_{\text{smooth}}+{\eta_2}_{\text{osc}}
+{\eta_2}_{\text{tip}} =& \left(\frac{\pi|A|}{\eta_1(1-\eta_3)\Omega}\right)^{1/3}\mu_{\text{smooth}}+{\eta_2}_{\text{osc}}.
 \end{aligned}
 \end{equation}
 
-We conclude that the tipping point in \eqref{eq:twoD_slowosc_subcaseII_tipping} has a similar fom as the tipping point found with \eqref{eq:oneD_slowosc_caseItipping} in \autoref{sec:oneD_slowosc} where we found a weighted average between the smooth tipping point $\mu_{\text{smooth}}$ from \cite{zhu2015tipping} and the oscillatory bifurcation ${\eta_2}_{\text{osc}}$ for this range of $\lambda$. We also found in \eqref{eq:twoD_slowosc_caseI_O2} that any choice for $\lambda\le\frac{1}{2}$ gave equations that can not be studied using the multiple scales approach in this section. This heuristically makes sense since for $\lambda\le \frac{1}{2}$ we have low frequency oscillations with our polynomial relationship and the contributions to the dynamics from this behavior require a different approach than presented in this paper. For more, see \cite{zhu2015tipping} for an example of a low-frequency method.
+\indent We conclude that the tipping point in \eqref{eq:twoD_slowosc_subcaseII_tipping} has a similar form as the tipping point found with \eqref{eq:oneD_slowosc_caseItipping} in \autoref{sec:oneD_slowosc}, where we found a weighted average between the smooth tipping point $\mu_{\text{smooth}}$ from \cite{zhu2015tipping} and the oscillatory bifurcation ${\eta_2}_{\text{osc}}$ for this range of $\lambda$. We also found in \eqref{eq:twoD_slowosc_caseI_O2} that any choice for $\lambda\le\frac{1}{2}$ gave equations that cannot be studied using the multiple scales approach in this section. This heuristically makes sense since for $\lambda\le \frac{1}{2}$ we have low frequency oscillations with our polynomial relationship and the contributions to the dynamics from this behavior require a different approach than presented in this paper. See \cite{zhu2015tipping} for an example of a low-frequency method.
 
 \subsection{Case II: $\lambda>1$}
 
-We call this case the slowly varying dominant case; here we expect integer powers of $\epsilon$ to appear in leading order due to the $O(\epsilon^\lambda)$ being quite small for this range of $\lambda$ and thus we choose the expansion 
+We call this case the 'slowly varying dominant' case. Here we expect integer powers of $\epsilon$ to appear in leading order due to the $O(\epsilon^\lambda)$ being quite small for this range of $\lambda$ and thus we choose the expansion 
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_expansion}
 \begin{aligned}
-V(t,R) \sim& \epsilon X_0(t,R)+\epsilon^\lambda X_1(t,R)+\epsilon^q X_2(t,R)+\ldots\\
-T(t,R) \sim& \epsilon Y_0(s,R) + \epsilon^\lambda Y_1(t,R) +\epsilon^q Y_2(t,R)+\ldots
+V(t,R) \sim& \epsilon X_0(t,R)+\epsilon^\lambda X_1(t,R)+\epsilon^q X_2(t,R)+\ldots,\\
+T(t,R) \sim& \epsilon Y_0(s,R) + \epsilon^\lambda Y_1(t,R) +\epsilon^q Y_2(t,R)+\ldots.
 \end{aligned}
 \end{equation}
 
@@ -951,7 +951,7 @@ Substituting \eqref{eq:twoD_slowosc_caseII_expansion} into \eqref{eq:twoD_slowos
 \end{aligned}
 \end{equation*}
 
-Here we separate by each distinct order of $\epsilon$ to find the following equations at each order of $\epsilon$
+We separate by each distinct order of $\epsilon$ to find the equations
 
 \begin{align} \label{eq:twoD_slowosc_caseII_O1}
 O(\epsilon):\, &\begin{cases}
@@ -965,11 +965,11 @@ O(\epsilon^\lambda): \, & \begin{cases}
 \label{eq:twoD_slowosc_caseII_O3}
 O(\epsilon^{\lambda+1}):\, &\begin{cases}
 	\epsilon^{q-\lambda-1}{X_2}_R+{X_0}_t =& -\epsilon^{\beta-1}n(t)-\eta_3X_0-(1-\eta_3)Y_0, \\
-	\epsilon^{q-\lambda-1}{Y_2}_R+{Y_0}_t =& -\eta_1|\epsilon^{\lambda}|X_0+\epsilon^{\lambda-1}X_1|-Y_0,\\
+	\epsilon^{q-\lambda-1}{Y_2}_R+{Y_0}_t =& -\eta_1|\epsilon^{\lambda}|X_0+\epsilon^{\lambda-1}X_1|-Y_0.\\
 \end{cases}
 \end{align}
 
-We learn in \eqref{eq:twoD_slowosc_caseII_O3} that $q=\lambda+1$ balances terms in the expansion. We also find that $\beta =1$ gives both simple expressions in \eqref{eq:twoD_slowosc_caseII_O3} but also $n_t=-1$. Here a single choice is clear as opposed to Case I where we chose the value of $\beta$ for convenience. In \eqref{eq:twoD_slowosc_caseII_O1} we find that the leading order behavior for this case depends only on slow time, $X_0=X_0(t)$ and $Y_0=Y_0(t)$, thus giving dominant behavior in this case. With \eqref{eq:twoD_slowosc_caseII_O2} we find the correction terms are given by $X_1=P_1(t)-A\cos(R)$ and $Y_1=Q_1(t)-B\cos(R)$ and since the slow behavior in $X_1$ and $Y_1$ are just next order corrections to the purely slow $X_0$ and $Y_0$, without loss of generality we set $P_1\equiv Q_1\equiv 0$; thus we have purely oscillatory corrections, $X_1=-A\cos(R)$ and $Y_1=-B\cos(R)$. Applying Fredholm \eqref{eq:Fredholm} to \eqref{eq:twoD_slowosc_caseII_O3} then gives
+We learn in \eqref{eq:twoD_slowosc_caseII_O3} that $q=\lambda+1$ balances terms in the expansion. We also find that $\beta =1$ gives both simple expressions in \eqref{eq:twoD_slowosc_caseII_O3} but also $n_t=-1$. Here a single $\beta$ is found as opposed to case I where we chose the value of $\beta$ for convenience. In \eqref{eq:twoD_slowosc_caseII_O1} we find that the leading order behavior for this case depends only on slow time, $X_0=X_0(t)$ and $Y_0=Y_0(t)$, thus giving dominant behavior in this case. With \eqref{eq:twoD_slowosc_caseII_O2} we find the correction terms are given by $X_1=P_1(t)-A\cos(R)$ and $Y_1=Q_1(t)-B\cos(R)$ and since the slow behavior in $X_1$ and $Y_1$ is just next order corrections to the purely slow $X_0$ and $Y_0$, without loss of generality we set $P_1\equiv Q_1\equiv 0$. This gives purely oscillatory corrections, $X_1=-A\cos(R)$ and $Y_1=-B\cos(R)$. Applying Fredholm \eqref{eq:Fredholm} to \eqref{eq:twoD_slowosc_caseII_O3} then gives
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_fullinner}
 \begin{aligned}
@@ -979,19 +979,19 @@ n_t=& -1.
 \end{aligned}
 \end{equation}
 
-From Case I, we used the pseudo-equilibrium of $Q_0$ for an integral of this type regardless of the size of the oscillations to find a solvable equation. Here we expect \eqref{eq:twoD_slowosc_caseII_fullinner} to have some kind of quadratic form as Case I, so we choose a priori to use a similar reduction by assuming the equation for $Y_0$ is in it's pseudo-equilibrium with
+\indent In case I, we used the pseudo-equilibrium of $Q_0$ regardless of the size of the oscillations to find a solvable equation. Here we expect \eqref{eq:twoD_slowosc_caseII_fullinner} to have a quadratic form like case I, so we choose a priori to use a similar reduction by assuming the equation for $Y_0$ is in it's pseudo-equilibrium with
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_equilreduction}
 {Y_0}(X_0)= -\frac{\eta_1}{2\pi}\int_0^{2\pi}|X_0-\epsilon^{\lambda-1}A\cos(R)|\,dR.
 \end{equation}
 
-We find the resulting reduced one-dimensional equation by introducing \eqref{eq:twoD_slowosc_caseII_equilreduction} into the inner equation \eqref{eq:twoD_slowosc_caseII_fullinner} with
+We find the resulting reduced one component equation by introducing \eqref{eq:twoD_slowosc_caseII_equilreduction} into the inner equation \eqref{eq:twoD_slowosc_caseII_fullinner} with
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_reducedeq}
 {X_0}_t = -n(t)-\eta_3 X_0+\frac{\eta_1(1-\eta_3)}{2\pi}\int_0^{2\pi}|X_0(t)-\epsilon^{\lambda-1}A\cos(R)|\,dR.
 \end{equation}
 
-Here with \eqref{eq:twoD_slowosc_caseII_reducedeq} the behavior is very similar to Case I as long as the amplitude of oscillations inside the integral are consistent with the assumptions from Case I, $\epsilon^{\lambda-1}A \sim O(1)$. With this assumption we have that $\lambda \approx 1$ to see mixed behavior of Case I and thus we once more follow the method of \autoref{sec:oneD_slowosc}. Our assumption on the size of the oscillations allow us to integrate \eqref{eq:twoD_slowosc_caseII_reducedeq} with $R_1= \arccos(X_0/\epsilon^{\lambda-1}A)$ and $R_2 = 2\pi - \arccos(X_0/\epsilon^{\lambda-1}A)$ analogous to $T_1$ and $T_2$ from \autoref{sec:oneD_slowosc}. Another application of a quadratic Taylor approximation about $X_0=0$ as in \eqref{eq:oneD_slowosc_caseII_taylor} then yields
+\indent The behavior in \eqref{eq:twoD_slowosc_caseII_reducedeq} is similar to case I as long as the amplitude of oscillation inside the integral are consistent with the assumptions of case I, $\epsilon^{\lambda-1}A \sim O(1)$. Under this assumption, we find that $\lambda \approx 1$ to see mixed behavior of case I and thus we once more follow the method of \autoref{sec:oneD_slowosc}. Our assumption on the size of the oscillations allow us to integrate \eqref{eq:twoD_slowosc_caseII_reducedeq} with $R_1= \arccos(X_0/\epsilon^{\lambda-1}A)$ and $R_2 = 2\pi - \arccos(X_0/\epsilon^{\lambda-1}A)$ which again are analogous to $T_1$ and $T_2$ from \autoref{sec:oneD_slowosc}. Another application of a quadratic Taylor approximation about $X_0=0$ as in \eqref{eq:oneD_slowosc_caseII_taylor} then yields
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_taylor}
 \begin{aligned}
@@ -999,16 +999,16 @@ Here with \eqref{eq:twoD_slowosc_caseII_reducedeq} the behavior is very similar 
 \end{aligned}
 \end{equation}
 
-Once more, we find a form to which we apply the result from \eqref{eq:intro_Zhueq} to. Thus we find the tipping point for the local parameter $n$ with \eqref{eq:intro_Zhuresult} and then transform back into the original variables to find the tipping point in $\eta_2$ with
+Once more, we find a form to which we apply the result from \eqref{eq:intro_Zhueq}. Thus we find the tipping point for the local parameter $n$ with \eqref{eq:intro_Zhuresult} and then transform back into the original variables to find the tipping point in $\eta_2$ with
 
 \begin{equation}
 \begin{aligned}
 n_{\text{mixed}}=&-\epsilon^{(\lambda-1)/3}\left(\frac{\pi|A|}{\eta_1(1-\eta_3)}\right)^{1/3}(2.33810)+\epsilon^{\lambda-1}\frac{\eta_1(1-\eta_3)|A|}{\pi}\left(2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right),\\
-{\eta_2}_{\text{mixed}}=& \epsilon^{(\lambda-1)/3}\left(\frac{\pi|A|}{\eta_1(1-\eta_3)}\right)^{1/3}\mu_{\text{smooth}}+{\eta_2}_{\text{osc}}.
+{\eta_2}_{\text{mixed}}=& \left(\frac{\pi|A|}{\eta_1(1-\eta_3)\Omega}\right)^{1/3}\mu_{\text{smooth}}+{\eta_2}_{\text{osc}}.
 \end{aligned}
 \end{equation}
 
-Here our result for ${\eta_2}_{\text{mixed}}$ is not surprising as we had similar forms and assumptions to that of Case I. For $\lambda>1$ and away from 1, the amplitude of the oscillations is smaller, and inside the integral in \eqref{eq:twoD_slowosc_innergeneral} the contribution from the oscillations is reduced. Although no exact cut off exists and depending on the choice in other model parameters $\eta_1$ and $\eta_3$, we find this is typically for $\lambda\ge 1.5$, the system \eqref{eq:twoD_slowosc_caseII_fullinner} is approximated by
+\indent Our result for ${\eta_2}_{\text{mixed}}$ is not surprising as we had similar forms and assumptions to the ones of case I. For $\lambda>1$ and away from 1, the amplitude of the oscillations is smaller, and inside the integral in \eqref{eq:twoD_slowosc_innergeneral} the contribution from the oscillations is reduced. Although no exact cut-off exists and, depending on the choice in other model parameters $\eta_1$ and $\eta_3$, we find this is typically for $\lambda\ge 1.5$, the system \eqref{eq:twoD_slowosc_caseII_fullinner} is approximated by
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_sloweq}
 \begin{aligned}
@@ -1020,31 +1020,31 @@ n_t =&-1.
 
 Here \eqref{eq:twoD_slowosc_caseII_sloweq} is the same system as the slowly varying model in \autoref{sec:twoD_slow}. With the same inner equation and slowly varying $n$, we are able to use the approximation found in \autoref{sec:twoD_slow} for the tipping point ${\eta_2}_{\text{slow}}$ from \eqref{eq:twoD_slow_tipping} here as well. This indicates that the amplitude of the oscillations are small for larger $\lambda$, so that only the slow variation affects the tipping of the Stommel model.
 
-With both Case I and Case II, we have the tipping behavior for any choice in $\lambda$. For $\lambda\le1$, we found a similar combination of contributions from the oscillatory bifurcation ${\eta_2}_{\text{osc}}$ and the smooth tipping point ${\mu}_{\text{smooth}}$ in the Airy equation as in \autoref{sec:oneD_slowosc}. This behavior is observed for both $\lambda\le 1$ and $\lambda>1$ but the oscillatory behavior contributes less to the advance of the tipping point for larger $\lambda$. For $\lambda$ sufficiently large, the oscillations have a negligible contribution and we recover the tipping point ${\eta_2}_{\text{slow}}$ from the slowly varying model. The results for the tipping point in the Stommel model with slowly varying parameter $\eta_2$ and oscillatory forcing is summarized in the following table.
+\indent With both case I and case II, we have described the tipping behavior for any choice in $\lambda$. For $\lambda\le1$, we found a similar combination of contributions from the oscillatory bifurcation ${\eta_2}_{\text{osc}}$ and the smooth tipping point ${\mu}_{\text{smooth}}$ in the Airy equation as in \autoref{sec:oneD_slowosc}. The weighted averaging is reminiscent of the smooth tipping point analysis in \cite{zhu2015tipping} where here the weight depends on the frequency $\Omega$. With this frequency dependency, we have further evidence to see mixed behavior for medium sized frequency (which corresponds to smaller $\lambda$). This behavior is observed for both $\lambda\le 1$ and $\lambda>1$ but the oscillatory behavior contributes less to the advance of the tipping point for larger $\lambda$. For $\lambda$ sufficiently large, the oscillations have a negligible contribution and we recover the tipping point ${\eta_2}_{\text{slow}}$ from the slowly varying model. The results for the tipping point in the Stommel model with slowly varying parameter $\eta_2$ and oscillatory forcing are summarized in the following table.
 
 \begin{table}[H]
 \begin{center}
 \begin{tabular}{|c|c|}
 \hline 
- \multicolumn{2}{|c|}{Two-Dimensional Tipping} \\ 
+ \multicolumn{2}{|c|}{Two Component Tipping Points} \\ 
 \hline
-$\epsilon>0$ and $A=0$ & ${\eta_2}_{\text{slow}}=\min(\eta_1\eta_3 -\epsilon\log(\epsilon)/\lambda_i)$ for $i\in\{1,2\}$ \\ 
+$\epsilon>0$ and $A=0$: & ${\eta_2}_{\text{slow}}=\min(\eta_1\eta_3 -\epsilon\log(\epsilon)/\lambda_i)$ for $i\in\{1,2\}$ \\ 
 \hline 
-$\epsilon=0$ and $A\not=0$ with $\Omega\gg 1$ & ${\eta_2}_{\text{osc}}=\eta_1\eta_3+\frac{\eta_1(1-\eta_3)|A|}{\pi\Omega}\left(2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right)$ \\ 
+$\epsilon=0$ and $A\not=0$ with $\Omega\gg 1$: & ${\eta_2}_{\text{osc}}=\eta_1\eta_3+\frac{\eta_1(1-\eta_3)|A|}{\pi\Omega}\left(2-\left(\frac{\pi\eta_3}{2\eta_1(1-\eta_3)}\right)^2\right)$ \\ 
 \hline 
-$\epsilon>0$, $A\not=0$ and $\frac{1}{2}<\lambda\le 1$: & ${\eta_2}_{\text{mixed}}=\epsilon^{(\lambda-1)/3}\left(\frac{\pi |A|}{\eta_1(1-\eta_3)}\right)^{1/3} \mu_{\text{smooth}}+{\eta_2}_{\text{osc}}$ \\ 
+$\epsilon>0$, $A\not=0$ and $\frac{1}{2}<\lambda\le 1$: & ${\eta_2}_{\text{mixed}}=\left(\frac{\pi |A|}{\eta_1(1-\eta_3)\Omega}\right)^{1/3} \mu_{\text{smooth}}+{\eta_2}_{\text{osc}}$ \\ 
 \hline 
-$\epsilon>0$, $A\not=0$ and $\lambda >1$ with $\lambda \approx 1$: &${\eta_2}_{\text{mixed}}=\epsilon^{(\lambda-1)/3}\left(\frac{\pi |A|}{\eta_1(1-\eta_3)}\right)^{1/3} \mu_{\text{smooth}}+{\eta_2}_{\text{osc}}$ \\ 
+$\epsilon>0$, $A\not=0$ and $\lambda >1$ with $\lambda \approx 1$: &${\eta_2}_{\text{mixed}}=\left(\frac{\pi |A|}{\eta_1(1-\eta_3)\Omega}\right)^{1/3} \mu_{\text{smooth}}+{\eta_2}_{\text{osc}}$ \\ 
 \hline 
 $\epsilon>0$, $A\not=0$ and $\lambda>1$:
  & ${\eta_2}_{\text{slow}}=\min(\eta_1\eta_3 -\epsilon\log(\epsilon)/\lambda_i)$ for $i\in\{1,2\}$ \\
 \hline
 \end{tabular} 
-\caption{The tipping of the two-dimensional model for each mechanism and case.}
+\caption{Overview of the tipping points in the two component model for each mechanism and case.}
 \end{center}
 \end{table}
 
-In figure~\ref{fig:twoD_slowosc_Vnumerics_small}, we see an example of the numerical solution of $V$ to the Stommel model \eqref{eq:twoD_canonical} with slow variation and oscillatory forcing. This example illustrates tipping for Case I with $\lambda\in (\frac{1}{2},1]$, so that both the slow variation and oscillations influence tipping. The vertical lines are the tipping, black solid for the numerical and blue dotted for the approximation for this case \eqref{eq:twoD_slowosc_subcaseII_tipping}. Although there is a mixture of effects, the tipping point gives a value near the oscillatory bifurcation ${\eta_2}_{\text{osc}}$. This tells us that for these choices in the model parameters that the strongest effect is the oscillatory forcing. The results are shown in figure \eqref{fig:twoD_slowosc_Tnumerics_small} in the $V-T$ plane. Here we see that due to the early tipping in $V$, the solution for $T$ also never achieves it's maximum and there is early tipping here as well, which agrees with the assumptions we had made of considering $T$ responding to $V$.
+\indent In figure~\ref{fig:twoD_slowosc_Vnumerics_small}, we see an example of the numerical solution of $V$ to the Stommel model \eqref{eq:twoD_canonical} with slow variation and oscillatory forcing. This example illustrates the tipping for case I with $\lambda\in (\frac{1}{2},1]$, so that both the slow variation and oscillatory forcing influence the tipping point. The vertical lines are the tipping, black solid for the numerical and blue dotted for the approximation for this case \eqref{eq:twoD_slowosc_subcaseII_tipping}. Although there is a mixture of effects, the tipping point gives a value near the oscillatory bifurcation ${\eta_2}_{\text{osc}}$. This tells us that for these choices in the model parameters the strongest effect is the oscillatory forcing. The results are shown in figure \eqref{fig:twoD_slowosc_Tnumerics_small} in the $V-T$ plane. Here we see that due to the early tipping in $V$, the solution for $T$ also never achieves it's maximum and there is early tipping here as well, which agrees with the assumptions we had made of considering $T$ responding to $V$.
 
 \begin{figure}[H]
 \centering
@@ -1058,7 +1058,7 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_small}, we see an example of the numer
  \includegraphics[width=\linewidth]{twoD/slowosc_bif_diagram_small_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{Model values are $\lambda=.8$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$, $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping} and the black vertical line is the numerically obtained tipping for $V>V_{\text{smooth}}$.}
+\caption{The model values are $\lambda=.8$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$, $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping} and the black vertical line are the tipping points with the tipping criterion $V>V_{\text{smooth}}$ on the numerical solution.}
 \label{fig:twoD_slowosc_Vnumerics_small}
 \end{figure}
 
@@ -1074,11 +1074,11 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_small}, we see an example of the numer
  \includegraphics[width=\linewidth]{twoD/slowosc_Tplot_small_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{Model values are $\lambda=.8$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area.}
+\caption{The model values are $\lambda=.8$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area.}
 \label{fig:twoD_slowosc_Tnumerics_small}
 \end{figure}
 
-In figure~\ref{fig:twoD_slowosc_Vnumerics_medium} we have chosen a value of $\lambda$ in Case II as $\lambda>1$ but this choice is close to 1. Thus we see comparable behavior to Case I with the addition that the slow variation is now dominant. Upon a zoom in, it is apparent that oscillations are still present and we see the mixture of effects that cause a similar tipping to Case I to take place. We've plotted the tipping point ${\eta_2}_{\text{slow}}$ from the slowly varying model \eqref{eq:twoD_slow_tipping} as the green vertical dotted line for comparison. As the numerical tipping point is moving towards the slowly varying tipping point this confirms that the slow variation is indeed dominating the tipping. In figure~\ref{fig:twoD_slowosc_Tnumerics_medium} we again see very similar behavior to the slowly varying model in \autoref{sec:twoD_slow} but the zoom in further reveals the oscillations are present and have minor influence by forcing the solution to cross the $V=0$ axis near the tipping.
+\indent In figure~\ref{fig:twoD_slowosc_Vnumerics_medium} we have chosen a value of $\lambda$ in case II as $\lambda>1$ but we also have that $\lambda\approx 1$. Thus we see comparable behavior to case I with the addition that the slow variation is now dominant. Upon a zoom in, it is apparent that oscillations are still present and we see a mixture of effects that cause a similar tipping to case I to take place. We've plotted the tipping point ${\eta_2}_{\text{slow}}$ from the slowly varying model \eqref{eq:twoD_slow_tipping} as the green vertical dotted line for comparison. As the numerical tipping point is moving towards the slowly varying tipping point this confirms that the slow variation is indeed dominating the tipping. In figure~\ref{fig:twoD_slowosc_Tnumerics_medium} we again see very similar behavior to the slowly varying model in \autoref{sec:twoD_slow} but the zoom-in further reveals the oscillations are present and have minor influence by forcing the solution to cross the $V=0$ axis near the tipping.
 
 \begin{figure}[H]
 \centering
@@ -1092,7 +1092,7 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_medium} we have chosen a value of $\la
  \includegraphics[width=\linewidth]{twoD/slowosc_bif_diagram_medium_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{Model values are $\lambda=1.05$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$ and $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the mixed tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping}, green dotted verticle line is the slow tipping point \eqref{eq:twoD_slow_tipping} and the black solid vertical line is the numerically obtained tipping for $V>V_{\text{smooth}}$.}
+\caption{The model values are $\lambda=1.05$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$ and $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the mixed tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping}, green dotted verticle line is the slow tipping point \eqref{eq:twoD_slow_tipping} and the black vertical line are the tipping points with the tipping criterion $V>V_{\text{smooth}}$ on the numerical solution.}
 \label{fig:twoD_slowosc_Vnumerics_medium}
 \end{figure}
 
@@ -1108,11 +1108,11 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_medium} we have chosen a value of $\la
  \includegraphics[width=\linewidth]{twoD/slowosc_Tplot_medium_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{Model values are $\lambda=1.05$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area.}
+\caption{The model values are $\lambda=1.05$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area is given.}
 \label{fig:twoD_slowosc_Tnumerics_medium}
 \end{figure}
 
-In figure~\ref{fig:twoD_slowosc_Vnumerics_large} we show the numerics for a $\lambda$ large enough so that the oscillations are negligible and we recover the slowly varying model in \autoref{sec:twoD_slow}. Even upon a zoom it is almost impossible to see oscillations in this solution. The green dotted vertical line is the slowly varying tipping estimate \eqref{eq:twoD_slow_tipping} where the blue dotted is the mixed approximation \eqref{eq:twoD_slowosc_subcaseII_tipping}. Further evidence is seen in figure~\ref{fig:twoD_slowosc_Tnumerics_large} where this figure resembles the slowly varying $V-T$ plot \eqref{fig:twoD_slow_Tnumerics}.
+\indent In figure~\ref{fig:twoD_slowosc_Vnumerics_large} we show the numerics for a $\lambda$ large enough so that the oscillations are negligible and we recover the slowly varying model in \autoref{sec:twoD_slow}. Even upon a zoom it is almost impossible to see oscillations in this solution. The green dotted vertical line is the slowly varying tipping estimate \eqref{eq:twoD_slow_tipping} where the blue dotted is the mixed approximation \eqref{eq:twoD_slowosc_subcaseII_tipping}. Further evidence is seen in figure~\ref{fig:twoD_slowosc_Tnumerics_large}, where this figure resembles the slowly varying $V-T$ plot \eqref{fig:twoD_slow_Tnumerics}.
 
 \begin{figure}[H]
 \centering
@@ -1126,7 +1126,7 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_large} we show the numerics for a $\la
  \includegraphics[width=\linewidth]{twoD/slowosc_bif_diagram_large_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{ Model values are $\lambda=2$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$ and $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the mixed tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping}, the green dotted vertical line is the slow tipping point \eqref{eq:twoD_slow_tipping} and the black vertical line is the numerically obtained tipping point for $V>V_{\text{smooth}}$.}
+\caption{The model values are $\lambda=2$, $\epsilon=.01$ with $A=B=2$. In (a) the numerical solution (black dotted line) to \eqref{eq:twoD_canonical} is given with $\eta_1=4$ and $\eta_3=.375$. In (b) a zoom in closer to the non-smooth bifurcation region where the blue dotted vertical line is the mixed tipping point \eqref{eq:twoD_slowosc_subcaseII_tipping}, the green dotted vertical line is the slow tipping point \eqref{eq:twoD_slow_tipping} and the black vertical line are the tipping points with the tipping criterion $V>V_{\text{smooth}}$ on the numerical solution.}
 \label{fig:twoD_slowosc_Vnumerics_large}
 \end{figure}
 
@@ -1142,20 +1142,20 @@ In figure~\ref{fig:twoD_slowosc_Vnumerics_large} we show the numerics for a $\la
  \includegraphics[width=\linewidth]{twoD/slowosc_Tplot_large_zoom.jpg}
  \caption{}
 \end{subfigure}
-\caption{Model values are $\lambda=2$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area.}
+\caption{The model values are $\lambda=2$, $\epsilon=.01$ with $A=B=2$. In (a) we have the numerical solution (black dotted) over the static equilibrium plot for $V$ vs. $T$. In (b) a zoom of the bifurcation area is provided.}
 \label{fig:twoD_slowosc_Tnumerics_large}
 \end{figure}
 
-Although the figures above show that we have classified the behavior appropriately for the various cases in $\lambda$ and relative solution sizes, performance of our approximate tipping point needs to be evaluated to compare with numerical results. In figure~\ref{fig:twoD_slowosc_lambdacomp} we compare the tipping points between Case I and Case II with the numerically obtained tipping points across a range of $\lambda$ with a fixed $\epsilon$. For smaller $\lambda$, the frequency $\Omega$ is smaller and the influence of the oscillations on tipping become more predominant. But recall the assumption that $\Omega=\epsilon^{-\lambda}\gg 1$ and for $\lambda\le\frac{1}{2}$ we observe $\Omega\sim O(1)$. We do not consider low frequency corresponding to $\lambda<\frac{1}{2}$ in this section. For larger $\lambda$, there is a reduced influence for the oscillatory forcing until it is negligible for some $\lambda>1$. We notice that our reduction tipping approximation for $\lambda<1$ has some bias and this can be attributed the information lost from reducing the full two-dimensional Riccati equations to a one-dimensional model. Although we use a one-dimensional reduced equation to get these approximations, they seem to be performing quite well across all $\lambda$ hence validating the method developed for finding tipping points with varying $\lambda$.
+\indent Although the figures above show that we have classified the behavior appropriately for the various cases in $\lambda$ and relative solution sizes, performance of this approximate tipping point needs to be evaluated to compare with numerical results. In figure~\ref{fig:twoD_slowosc_lambdacomp} we compare the tipping points between case I and case II with the numerically obtained tipping points across a range of $\lambda$ with a fixed $\epsilon$. For smaller $\lambda$, the frequency $\Omega$ is smaller and the influence of the oscillations on tipping become more predominant. Recall the assumption that $\Omega=\epsilon^{-\lambda}\gg 1$ and that for $\lambda\le\frac{1}{2}$ we observe $\Omega\sim O(1)$. We do not consider low frequency corresponding to $\lambda<\frac{1}{2}$ in this section. For larger $\lambda$, there is a reduced influence for the oscillatory forcing until it is negligible for some $\lambda>1$. We notice that our reduction tipping approximation for $\lambda<1$ has some bias which can be attributed the information lost from reducing the full two component Riccati equations to a one component model. Even though we use a one component reduced equation to get these approximations, they seem to be performing quite well across all $\lambda$ which confirms the approach leads to a sufficient approximation.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.7\textwidth]{twoD/slowosc_lambdacomp.jpg}
-\caption{An example of numerical tipping (red stars) as the numerical solution to \eqref{eq:oneD_canonical} passes $V>V_{\text{smooth}}$. Parameter values are $\epsilon=.01$ and $A=B=3$. The lines are the Case I tipping estimate (black solid line) and the Case II tipping estimate (blue dotted line).}
+\caption{An example of numerical tipping (red stars) as the numerical solution to \eqref{eq:twoD_canonical} passes the tipping criterion $V>V_{\text{smooth}}$. The parameter values are $\epsilon=.01$ and $A=B=3$. The lines are the case I tipping estimate (black solid line) and the case II tipping estimate (blue dotted line).}
 \label{fig:twoD_slowosc_lambdacomp}
 \end{figure} 
 
-We also are interested in the performance of the tipping approximations across values of $\epsilon$ for $\lambda$ fixed. The performance of each estimate is seen in figure~\ref{fig:twoD_slowosc_epscomp}. For Case I tipping, the range of appropriate $\epsilon$ is highly dependent on the choice in $\lambda$. Often, the range is very small to get accurate estimates which is another artifact of using a reduced model. For Case II tipping, we that the numerical results are being approximated by the slowly varying tipping \autoref{sec:twoD_slow} as the effective oscillations shrink, $\epsilon^{\lambda-1}A\to 0$ as $\lambda\to\infty$.
+\indent We also are interested in the performance of the tipping approximations across values of $\epsilon$ for $\lambda$ fixed, which is seen in figure~\ref{fig:twoD_slowosc_epscomp}. For case I tipping, the range of appropriate $\epsilon$ is highly dependent on the choice in $\lambda$. Often, the range is very small to get accurate estimates which is another artifact of using a reduced model. For case II tipping, we see that the numerical results are being approximated by the slowly varying tipping \autoref{sec:twoD_slow} as the effective oscillations shrink, $\epsilon^{\lambda-1}A\to 0$ as $\lambda\to\infty$.
 
 
 \begin{figure}[H]
@@ -1170,11 +1170,11 @@ We also are interested in the performance of the tipping approximations across v
  \includegraphics[width=\linewidth]{twoD/slowosc_epscomp_slow.jpg}
  \caption{$\lambda=1.3$}
 \end{subfigure}
-\caption{The numerical tipping (red stars) follows the appropriate case depending on $\lambda$ for $\epsilon=0.01$. The Case I tipping estimate ${\eta_2}_{\text{mixed}}$ (black solid line) and slowly varying tipping estimate ${\eta_2}_{\text{slow}}$ (blue dotted line) are shown.}
+\caption{The numerical tipping (red stars) follows the appropriate case depending on $\lambda$ for $\epsilon=0.01$. The case I tipping estimate ${\eta_2}_{\text{mixed}}$ (black solid line) and slowly varying tipping estimate ${\eta_2}_{\text{slow}}$ (blue dotted line) are shown.}
 \label{fig:twoD_slowosc_epscomp}
 \end{figure}
 
-With the numerical results agreeing with our results, we may finally conclude that this method is both useful for analyzing the non-smooth behavior in the Stommel model but also results in an approximation that is more accurate in the extremes of the model (i.e $\Omega \gg 1$ or $\epsilon \ll 1$). This gives us a very accessible means of extracting the tipping in the full two-dimensional without needing to solve difficult Riccati equations or other complex systems that appear from the full problem. All that is needed to verify is our solutions are attracting until we arrive at the region of tipping.
+\indent With the numerical results agreeing with our analytic results, we may finally conclude that this method is both useful for analyzing the non-smooth behavior in the Stommel model and also results in an approximation that is more accurate in the extremal cases of the model (i.e $\Omega \gg 1$ or $\epsilon \ll 1$). This gives us a very accessible means of extracting the tipping in the full two component model without needing to solve difficult Riccati equations or other complex systems that appear in the full problem. We still need to confirm that the solutions we've found are attracting until stability is lost at the tipping point.
 
 \subsection{Stability}
 
@@ -1189,11 +1189,11 @@ From the analysis, we obtained the inner equations that govern the behavior of t
 \end{aligned}
 \end{equation}
 
-But we also found that the relative size of $P_0(t)$ dictates the contribution from the integral in \eqref{eq:twoD_slowosc_stability_caseI_full}. In the analysis we treat these as Sub-Case I: $P_0(t)\le-|A|$ and Sub-Case II: $|P_0(t)|<|A|$ that each require a separate analysis.
+But we also found that the relative size of $P_0(t)$ dictates the contribution from the integral in \eqref{eq:twoD_slowosc_stability_caseI_full}. In the analysis we treat these as Sub-case I: $P_0(t)\le-|A|$ and Sub-case II: $|P_0(t)|<|A|$ that each require a separate analysis.
 
 \subsubsection{Sub-Case I: $P_0(t)\le-|A|$}
 
-We called this the entirely below-axis sub-case due to the solution remaining below the axis and thus we anticipate this sub-case to remain attracting to a solution near the lower branch. The equation \eqref{eq:twoD_slowosc_stability_caseI_full} simplifies for this sub-case to
+We called this the 'below-axis' sub-case due to the solution remaining below the axis and thus we anticipate this sub-case to remain attracting to a solution near the lower branch. The equation \eqref{eq:twoD_slowosc_stability_caseI_full} simplifies for this sub-case to
 
 \begin{equation}\label{eq:twoD_slowosc_stability_subcaseI_full}
 \begin{aligned}
@@ -1202,7 +1202,7 @@ We called this the entirely below-axis sub-case due to the solution remaining be
 \end{aligned}
 \end{equation}
 
-From the analysis we choose to reduce \eqref{eq:twoD_slowosc_stability_subcaseI_full} with the pseudo-equilibria $Q_0(P_0)=\eta_1 P_0$. This gives the following reduced equation with it's pseudo-equilibria $Z^0(t)$ as 
+From the analysis we choose to reduce \eqref{eq:twoD_slowosc_stability_subcaseI_full} with the pseudo-equilibria $Q_0(P_0)=\eta_1 P_0$. This gives the following reduced equation with the pseudo-equilibria $Z^0(t)$ as 
 
 \begin{equation}\label{eq:twoD_slowosc_stability_subcaseI_reduced}
 \begin{aligned}
@@ -1210,7 +1210,7 @@ From the analysis we choose to reduce \eqref{eq:twoD_slowosc_stability_subcaseI_
 \end{aligned}
 \end{equation}
 
-We adopt a similar strategy for analyzing the stability from the one-dimensional model in \autoref{sec:oneD_slowosc} due to \eqref{eq:twoD_slowosc_stability_subcaseI_reduced} being a one-dimensional equation. Hence we take a simple linear perturbation about the pseudo-equilibrium with $P_0(t)=Z^0(t)+U(t)$ and $\lVert U(t)\rVert \ll 1$. Taking special care to note that $Z^0(t)$ also varies in time, we find the Taylor approximation
+\indent We adopt a similar strategy for analyzing the stability of the one component model in \autoref{sec:oneD_slowosc} due to \eqref{eq:twoD_slowosc_stability_subcaseI_reduced} being a one-dimensional equation. Hence we perform a simple linear perturbation about the pseudo-equilibrium with $P_0(t)=Z^0(t)+U(t)$ and $\lVert U(t)\rVert \ll 1$. Taking special care to note that $Z^0(t)$ also varies in time, we find the Taylor approximation
 
 \begin{equation}\label{eq:twoD_slowosc_subcaseI_perturb}
 \begin{aligned}
@@ -1219,11 +1219,11 @@ U_t =& -\epsilon^{1-\lambda}\frac{1}{\eta_3+\eta_1(1-\eta_3)}-(\eta_3+\eta_1(1-\
 \end{aligned}
 \end{equation}
 
-From \eqref{eq:twoD_slowosc_subcaseI_perturb} we find that the perturbations decay exponentially to just below the pseudo-equilibrium $Z^0$. This indicates the solution for this sub-case is hyperbolically attracting and there is no tipping for this range of the parameter $\eta_2$.
+From \eqref{eq:twoD_slowosc_subcaseI_perturb} we find that the perturbations decay exponentially to just below the pseudo-equilibrium $Z^0$. This indicates that the solution for this sub-case is hyperbolically attracting and that there is no tipping for this range of the parameter $\eta_2$.
 
 \subsubsection{Sub-Case II: $|P_0(t)|<|A|$}
 
-We called this the crossing case and from the analysis we anticipate the tipping to occur as the solution is no longer attracting due to contributions from $V>0$ and thus we anticipate a tipping point here. Under the condition $|P_0(t)|<|A|$, we integrate \eqref{eq:twoD_slowosc_stability_caseI_full} with $R_1=\arccos(P_0/A)$ and $R_2=2\pi-\arccos(P_0/A)$ and use a Taylor approximation about $P_0=0$ leads to 
+We called this the 'crossing' sub-case and from the analysis above we anticipate the tipping to occur here. The contributions from $V>0$ cause the solution to grow and thus we expect to lose stability. Under the condition $|P_0(t)|<|A|$, we integrate \eqref{eq:twoD_slowosc_stability_caseI_full} with $R_1=\arccos(P_0/A)$ and $R_2=2\pi-\arccos(P_0/A)$ and use a Taylor approximation about $P_0=0$, which leads to 
 
 \begin{equation}\label{eq:twoD_slowosc_stability_subcaseII,full}
 \begin{aligned}
@@ -1232,8 +1232,8 @@ We called this the crossing case and from the analysis we anticipate the tipping
 \end{aligned}
 \end{equation}
 
-Once more, we assume that the equation for $Q_0$ is in pseudo-equilibrium 
-to reduce to the following one-dimensional inner equation with pseudo-equilibrium $Z^0(t)$, here we let $a=\frac{\eta_1(1-\eta_3)}{\pi|A|}$ for simplicity,
+\indent Once more, we assume that $Q_0$ has reached its pseudo-equilibrium 
+to reduce to the following one component inner equation with pseudo-equilibrium $Z^0(t)$. Here we let $a=\frac{\eta_1(1-\eta_3)}{\pi|A|}$ for simplicity, thus the reduced equations are
 
 \begin{equation}\label{eq:twoD_slowosc_stability_subcaseII,reduced}
 \begin{aligned}
@@ -1242,7 +1242,7 @@ Z^0(t) =& \frac{1}{2a}\left(\eta_3-\sqrt{4a(\epsilon^{1-\lambda}n(t)-n_{\text{os
 \end{aligned}
 \end{equation}
 
-We choose to write the argument of the square root in terms of the local oscillatory bifurcation ${n}_{\text{osc}}$ found in \eqref{eq:twoD_osc_bifurcation}. We then consider the linear perturbation about the pseudo-equilibrium $P_0(t)= Z^0(t)+U(t)$ with $\lVert U(t)\rVert \ll 1$. We take a Taylor expansion about the pseudo-equilibrium here to find the local behavior of the perturbations, but recall that we have contributions to the derivative from both the perturbation $U_t$ as well as the pseudo-equilibrium $Z^0_t$. This is seen with
+We choose to write the argument of the square root in terms of the local oscillatory bifurcation ${n}_{\text{osc}}$ found in \eqref{eq:twoD_osc_bifurcation}. Next, we allow for linear perturbation about the pseudo-equilibrium $P_0(t)= Z^0(t)+U(t)$ with $\lVert U(t)\rVert \ll 1$. Taking a Taylor expansion about the pseudo-equilibrium then allows us to find the local behavior of the perturbations, but recall that we have contributions in the derivative from the perturbation $U_t$ as well as the pseudo-equilibrium $Z^0_t$. This is seen with
 
 \begin{equation}
 \begin{aligned}
@@ -1266,11 +1266,11 @@ Thus we find the following Taylor expansion for the perturbations
 \end{aligned}
 \end{equation}
 
-From \eqref{eq:twoD_slowosc_stability_subcaseII_perturb} we find exponentially decaying perturbations to just under the pseudo-equilibrium which gives asymptotic attraction to a small value for $\eta_2>{\eta_2}_{\text{osc}}$ which is the oscillatory bifurcation from \autoref{sec:twoD_highfreqosc}. This corresponds to loss of the pseudo-equilibrium and so there is no longer attraction to it, yielding a tipping point for $\eta_2<{\eta_2}_{\text{osc}}$ which agrees with our analysis.
+From \eqref{eq:twoD_slowosc_stability_subcaseII_perturb} we find exponentially decaying perturbations to just under the pseudo-equilibrium this gives asymptotic attraction to a small value for $\eta_2>{\eta_2}_{\text{osc}}$ which is the oscillatory bifurcation from \autoref{sec:twoD_highfreqosc}. This corresponds to loss of the pseudo-equilibrium and so there is no longer attraction to it, yielding a tipping point for $\eta_2<{\eta_2}_{\text{osc}}$ which agrees with the results of our analysis.
 
 \subsubsection{Case II: $\lambda>1$}
 
-From the analysis we determined this to be the slowly varying dominant case and we obtained the inner equations that govern the behavior of the solution for this range of $\lambda$ to be
+In the analysis we determined this to be the 'slowly varying dominant' case and we obtained the inner equations that govern the behavior of the solution for this range of $\lambda$ to be
 
 \begin{equation}\label{eq:twoD_slowosc_caseII_full}
 \begin{aligned}
@@ -1279,7 +1279,7 @@ From the analysis we determined this to be the slowly varying dominant case and 
 \end{aligned}
 \end{equation}
 
-The behavior of this case when $\lambda\approx 1$ is similar to Case I, thus we anticipate the similar attraction as well. Hence we consider the behavior when $|X_0(t)|<\epsilon^{\lambda-1}|A|$ which is the sub-case where we found tipping point to occur in the analysis. As long as we have $\epsilon^{\lambda-1}A\sim O(1)$, we are able to follow the same approach as Case I where we integrate \eqref{eq:twoD_slowosc_caseII_full} with a $R_1=\arccos(X_0/\epsilon^{\lambda-1}A)$ and $R_2=2\pi-\arccos(X_0/\epsilon^{\lambda-1}A)$ and use a Taylor approximation about $X_0=0$ to get
+The behavior of this case when $\lambda\approx 1$ is similar to case I, thus we anticipate the similar attraction as well. Hence we consider the behavior when $|X_0(t)|<\epsilon^{\lambda-1}|A|$ which is the sub-case where we found the tipping point to occur in the analysis. As long as we have $\epsilon^{\lambda-1}A\sim O(1)$, we are able to follow the same approach as case I where we integrate \eqref{eq:twoD_slowosc_caseII_full} with a $R_1=\arccos(X_0/\epsilon^{\lambda-1}A)$ and $R_2=2\pi-\arccos(X_0/\epsilon^{\lambda-1}A)$ and use a Taylor approximation about $X_0=0$ to get
 
 \begin{equation*}
 \begin{aligned}
@@ -1288,16 +1288,16 @@ The behavior of this case when $\lambda\approx 1$ is similar to Case I, thus we 
 \end{aligned}
 \end{equation*}
 
-Like in Case I we expect to use the pseudo-equilibrium reduction for $Y_0$ and thus we find the inner equation with pseudo-equilibrium $Z^0(t)$, taking $a=\frac{\eta_1(1-\eta_3)}{\pi|A|}$ for simplicity,
+\indent As in case I, we expect to use the pseudo-equilibrium reduction for $Y_0$ and thus we find the inner equation with pseudo-equilibrium $Z^0(t)$, taking $a=\frac{\eta_1(1-\eta_3)}{\pi|A|}$ for simplicity,
 
 \begin{equation*}
 \begin{aligned}
 {X_0}_t =& -n(t)+\epsilon^{\lambda-1}\frac{2\eta_1(1-\eta_3)|A|}{\pi}-\eta_3 X_0+\epsilon^{1-\lambda}aX_0^2,\\
-Z^0(t) =& \frac{1}{2a}\left(\epsilon^{\lambda-1}\eta_3-\sqrt{4a\epsilon^{\lambda-1}(n(t)-\epsilon^{\lambda-1}n_{\text{osc}})}\right)
+Z^0(t) =& \frac{1}{2a}\left(\epsilon^{\lambda-1}\eta_3-\sqrt{4a\epsilon^{\lambda-1}(n(t)-\epsilon^{\lambda-1}n_{\text{osc}})}\right).
 \end{aligned}
 \end{equation*}
 
-For a linear stability analysis, we consider the linear perturbation about the pseudo-equilibrium $X_0(t)= Z^0(t)+U(t)$ with $\lVert U(t)\rVert \ll 1$. We take a Taylor expansion here to find a linear equation for perturbations, but again recall that we have contributions to the derivative from both the perturbation $U_t$ as well as the pseudo-equilibrium $Z^0_t$. This is seen with
+For a linear stability analysis, we consider the linear perturbation of the pseudo-equilibrium $X_0(t)= Z^0(t)+U(t)$ with $\lVert U(t)\rVert \ll 1$. We apply a Taylor expansion to find a linear equation for perturbations, but again recall that we have contributions to the derivative from both the perturbation $U_t$ as well as the pseudo-equilibrium $Z^0_t$. This is seen with
 
 \begin{equation}
 \begin{aligned}
@@ -1321,7 +1321,7 @@ U_t = & \begin{cases}
 \end{aligned}
 \end{equation}
 
-Much like Case I, \eqref{eq:twoD_slowosc_stability_caseII_perturb} gives that the perturbations decay exponentially to just under the pseudo-equilibrium and we have hyperbolic stability for $\eta_2>{\eta_2}_{\text{osc}}$ which is the oscillatory bifurcation from \autoref{sec:twoD_highfreqosc}. After this point is reached, the system loses its pseudo-equilibrium which indicates the tipping point occurs after the bifurcation ${\eta_2}_{\text{osc}}$. Comparing this to Case I, we see there is small nuances between these perturbations, although the overall stability remains the same. As for when $\lambda$ gets large, we already established this behaves like the slowly varying model and hence we use the stability from \autoref{sec:twoD_slow} to conclude that our solution is still stable until the slow tipping point ${\eta_2}_{\text{osc}}$.
+\indent Similarly to case I, \eqref{eq:twoD_slowosc_stability_caseII_perturb} shows that the perturbations decay exponentially to just under the pseudo-equilibrium and we have hyperbolic stability for $\eta_2>{\eta_2}_{\text{osc}}$ which is the oscillatory bifurcation from \autoref{sec:twoD_highfreqosc}. After this point is reached, the system loses its pseudo-equilibrium which indicates that the tipping point occurs after the bifurcation ${\eta_2}_{\text{osc}}$. Comparing this to case I, we see there are small nuances between these perturbations, although the overall stability remains the same. As for when $\lambda$ gets large, we already established that this behaves like the slowly varying model and hence we use the stability from \autoref{sec:twoD_slow} to conclude that our solution is still stable until the slow tipping point ${\eta_2}_{\text{osc}}$.
 
 
-Thus the stability for both Case I and Case II agrees with the results found in the analysis. We have that the behavior of the solution is stable from the outer solution, stability holds before the solution begins to cross the axis $V=0$ and once the crossing begins to happen we lose stability at ${\eta_2}_{\text{osc}}$. Because there is slow variation in this model, there is delayed behavior and thus the tipping point occurs after the oscillatory bifurcation ${\eta_2}_{\text{osc}}$. In both cases we discovered that the pseudo-equilibrium has a contribution to the derivative and this in turn causes the perturbations to decay towards a small constant below the pseudo-equilibrium. This means that there is a small region around the pseudo-equilibrium that attracts the solution.
+\indent Thus, the stability for both case I and case II agrees with the results found in the analysis. We have that the behavior of our solution is stable from the outer solution and that this stability holds before the solution begins to cross the axis $V=0$. Once the crossing starts to happen, we lose stability at ${\eta_2}_{\text{osc}}$. Because there is slow variation in this model, there is delayed behavior and thus the tipping point occurs after the oscillatory bifurcation ${\eta_2}_{\text{osc}}$. In both cases we discovered that the pseudo-equilibrium has a contribution to the derivative and this in turn causes the perturbations to decay towards a small constant below the pseudo-equilibrium. This means that there is a small region around the pseudo-equilibrium that attracts the solution.

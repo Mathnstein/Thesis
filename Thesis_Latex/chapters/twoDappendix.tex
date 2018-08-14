@@ -1,6 +1,6 @@
 \section*{High Frequency Oscillatory Forcing}
 
-Here we show that the correction term for the outer solution is purely oscillatory. From the analysis, we found both leading order terms to be purely slow dependent $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. To find the explicit form for these, we apply Fredholm \eqref{eq:Fredholm} to the $O(\Omega^{-1})$ equations in \eqref{eq:twoD_osc_outerO2} to find
+Here we show that the correction term of the outer solution is purely oscillatory. From the analysis, we found both leading order terms to be purely slow time dependent, i.e. $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. To find the explicit form for these, we apply Fredholm \eqref{eq:Fredholm} to the $O(\Omega^{-1})$ equations in \eqref{eq:twoD_osc_outerO2} to find
 
 \begin{equation}\label{eq:twoD_app_osc1}
 \begin{aligned}
@@ -16,7 +16,7 @@ Here we show that the correction term for the outer solution is purely oscillato
 \end{aligned}
 \end{equation}
 
-Since we have a fixed parameter $\eta_2$, we find the following equilibria both $V_0$ and $T_0$ as well as the form of the correction terms
+Since we have a fixed parameter $\eta_2$, we find the equilibria $V_0$ and $T_0$ as well as the form of the correction terms
 
 \begin{equation*}
 \begin{aligned}
@@ -26,7 +26,7 @@ V_1 =& X_1(t)-A\cos(R),  \quad T_1 = Y_1(t)-B\cos(R).
 \end{aligned}
 \end{equation*}
 
-Where we note these equilibria to be the same as the static problem with no forcing from the introduction. But with the form of the correction terms, we now solve the equation at $O(\Omega^{-2})$ \eqref{eq:twoD_osc_outerO3} by applying Fredholm \eqref{eq:Fredholm} again. This results in
+Here we note these equilibria to be the same as in the static problem with no forcing from the introduction. But with the form of the correction terms, we now solve the equation at $O(\Omega^{-2})$ \eqref{eq:twoD_osc_outerO3} by applying Fredholm \eqref{eq:Fredholm}. This results in
 
 \begin{equation}\label{eq:twoD_app_osc2}
 \begin{aligned}
@@ -36,12 +36,12 @@ Where we note these equilibria to be the same as the static problem with no forc
 \end{cases}\\
 &\begin{cases}
 	{X_1}_t = & \eta_3(Y_1-X_1)-Y_1+2X_0X_1,\\
-	 {Y_1}_t =&  Y_1(1-X_0)+Y_0X_1,
+	 {Y_1}_t =&  Y_1(1-X_0)+Y_0X_1.
 \end{cases}
 \end{aligned}
 \end{equation}
 
-We then search for the equilibria of \eqref{eq:twoD_app_osc2} to find
+We then search for the equilibria of \eqref{eq:twoD_app_osc2} and find
 
 \begin{equation*}
 \begin{aligned}
@@ -50,11 +50,11 @@ Y_1&(X_1) =-\frac{Y_0X_1}{1-X_0},\\
 \end{aligned}
 \end{equation*}
 
-Thus we find that the correction terms are purely oscillatory since $X_1\equiv 0$ and $Y_1 \equiv 0$. Thus we have $V_1=-A\cos(R)$ and $T_1=-B\cos(R)$.
+Thus we find that the correction terms are purely oscillatory since $X_1\equiv 0$ and $Y_1 \equiv 0$. This gives $V_1=-A\cos(R)$ and $T_1=-B\cos(R)$.
 
 \section*{Slow Variation and Oscillatory Forcing}
 
-Here we continue to find terms of the outer solution by working through the equations \eqref{eq:twoD_slowosc_outerO2}-\eqref{eq:twoD_slowosc_outerO3}. From the analysis, we had already determined that the leading order terms are purely slow, $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. To find their exact form, we apply Fredholm \eqref{eq:Fredholm} to the $O(\epsilon^\lambda)$ equation \eqref{eq:twoD_slowosc_outerO2} to find 
+Here we continue to find terms of the outer solution by working through the equations \eqref{eq:twoD_slowosc_outerO2}-\eqref{eq:twoD_slowosc_outerO3}. In the analysis, we had already determined that the leading order terms are purely slow time dependent, $V_0=V_0(\tau)$ and $T_0=T_0(\tau)$. To find their exact form, we apply Fredholm \eqref{eq:Fredholm} to the $O(\epsilon^\lambda)$ equation \eqref{eq:twoD_slowosc_outerO2} to find 
 
 \begin{equation}\label{eq:twoD_app_slowosc1}
 \begin{aligned}
@@ -70,7 +70,7 @@ Here we continue to find terms of the outer solution by working through the equa
 \end{aligned}
 \end{equation}
 
-The leading order solution to \eqref{eq:twoD_app_slowosc1} is the same as the purely slow problem in \autoref{sec:twoD_slow} with
+The leading order solution to \eqref{eq:twoD_app_slowosc1} is the same as the slowly varying problem from \autoref{sec:twoD_slow} with
 
 \begin{equation*}
 \begin{aligned}
@@ -79,22 +79,22 @@ T_0&(V_0)=\frac{\eta_3}{1-V_0},\\
 \end{aligned}
 \end{equation*}
 
-But we also find the form of the correction terms, $V_1 = X_1(\tau) -A\cos(R)$ and $T_1 = Y_1(\tau)-B\cos(R)$, which allow us to solve the $O(\epsilon^{2\lambda})$ equation \eqref{eq:twoD_slowosc_outerO3}. Applying Fredholm \eqref{eq:Fredholm} here results in 
+We also find the form of the correction terms, $V_1 = X_1(\tau) -A\cos(R)$ and $T_1 = Y_1(\tau)-B\cos(R)$, which allow us to solve the $O(\epsilon^{2\lambda})$ equation \eqref{eq:twoD_slowosc_outerO3}. Applying Fredholm \eqref{eq:Fredholm} here results in 
 
 \begin{equation}\label{eq:twoD_app_slowosc2}
 \begin{aligned}
 &\begin{cases}
-	0 = & \frac{1}{2\pi}\int_0^{2\pi}-\epsilon^{1-\lambda}{V_0}_\tau+\eta_3(T_1-V_1)-T_1+2V_0V_1+A\sin(R)\,dR,\\
-	 0 =& \frac{1}{2\pi}\int_0^{2\pi} \epsilon^{1-\lambda}{T_0}_\tau-T_1(1-V_0)+T_0V_1\,dR,
+	0 = & \frac{1}{2\pi}\int_0^{2\pi}\left(-\epsilon^{1-\lambda}{V_0}_\tau+\eta_3(T_1-V_1)-T_1+2V_0V_1+A\sin(R)\right)\,dR,\\
+	 0 =& \frac{1}{2\pi}\int_0^{2\pi} \left(\epsilon^{1-\lambda}{T_0}_\tau-T_1(1-V_0)+T_0V_1\right)\,dR,
 \end{cases}\\
 &\begin{cases}
 	\epsilon^{1-\lambda}{V_0}_\tau=&\eta_3(Y_1-X_1)-Y_1+2V_0X_1, \\
-	 \epsilon^{1-\lambda}{T_0}_\tau =&  Y_1(1-V_0)+T_0X_1,
+	 \epsilon^{1-\lambda}{T_0}_\tau =&  Y_1(1-V_0)+T_0X_1.
 \end{cases}
 \end{aligned}
 \end{equation}
 
-We recall that ${\eta_2}_\tau=-1$ and solving \eqref{eq:twoD_app_slowosc2} requires the derivatives of $V_0$ and $T_0$ which are solvable explicitly as
+Recalling that ${\eta_2}_\tau=-1$ and solving \eqref{eq:twoD_app_slowosc2} requires the derivatives of $V_0$ and $T_0$ which are solvable explicitly as
 
 \begin{equation*}
 \begin{aligned}
@@ -112,7 +112,7 @@ X_1=&\frac{\epsilon^{1-\lambda}({V_0}_\tau(1-V_0)+(1-\eta_3){T_0}_\tau)}{(1-\eta
 \end{aligned}
 \end{equation*}
 
-Where we now have the first correction term as
+Here we now have the first correction term as
 
 \begin{equation*}
 \begin{aligned}

@@ -1,12 +1,12 @@
 \section*{High Frequency Oscillatory Forcing}
 
-Here we continue the analysis to explicitly find the solution to the outer equation for the purely oscillatory model. Recall we found $x_1 = v_1(t)-A\cos(T)$, we then apply the Fredholm alternative \eqref{eq:Fredholm} to the $O(\Omega^{-2})$ equation in \eqref{eq:oneD_osc_outerO3} to get
+Here we continue the analysis to explicitly find the solution of the outer equation for the purely oscillatory model. Recall that we found $x_1 = v_1(t)-A\cos(T)$, we then apply the Fredholm alternative \eqref{eq:Fredholm} to the $O(\Omega^{-2})$ equation in \eqref{eq:oneD_osc_outerO3} to get
 
 \begin{equation}\label{eq:oneD_app_osc}
 \begin{aligned}
 0=&\frac{1}{2\pi}\int_0^{2\pi}-{x_1}_t-2x_1+2x_0x_1\, dT,\\
 {v_1}_t=& -2v_1+2(1-\sqrt{1+\mu})v_1,\\
-{v_1}_t=& -2\sqrt{1+\mu}v_1
+{v_1}_t=& -2\sqrt{1+\mu}v_1.
 \end{aligned}
 \end{equation}
 
@@ -14,14 +14,14 @@ We search for the equilibrium to find stable behavior on this order but since \e
 
 \section*{Slow Variation and Oscillatory Forcing}
 
-Here we continue to find the terms of the outer solution for the slow varying and oscillatory forcing model. We have thus far found $x_0=x_0(\tau)$ and we have equations at $O(\epsilon^\lambda)$ and $O(\epsilon^{2\lambda})$ that give information about $x_0$ and $x_1$ respectively. From the $O(\epsilon^\lambda)$ equation \eqref{eq:oneD_slowosc_outerO2}, we apply the Fredholm alternative \eqref{eq:Fredholm} to find
+Here we continue to find the terms of the outer solution for the slowly varying and oscillatory forcing model. We have thus far found $x_0=x_0(\tau)$ and we have equations at $O(\epsilon^\lambda)$ and $O(\epsilon^{2\lambda})$ that give information about $x_0$ and $x_1$ respectively. We apply the Fredholm alternative \eqref{eq:Fredholm} to the $O(\epsilon^\lambda)$ equation \eqref{eq:oneD_slowosc_outerO2} to find
 
 \begin{equation}\label{eq:oneD_app_slowosc1}
 \begin{aligned}
 0 = & \frac{1}{2\pi}\int_0^{2\pi} -\mu(\tau) -2x_0(\tau)+x_0(\tau)^2+A\sin(T)\,dT,\\
 0=&-\mu(\tau)-2x_0(\tau)+x_0(\tau)^2,\\
 x_0(\tau) =& 1-\sqrt{1+\mu(\tau)},\\
-{x_1}_T = & A\sin(T)
+{x_1}_T = & A\sin(T).
 \end{aligned}
 \end{equation}
 
@@ -35,7 +35,7 @@ v_1(\tau) =& -\epsilon^{1-\lambda}\frac{{x_0}_\tau}{2\sqrt{1+\mu(\tau)}}.
 \end{aligned}
 \end{equation}
 
-Where we recall that $\mu_\tau=-1$ and that ${x_0}_\tau = -\frac{{\mu}_\tau}{2\sqrt{1+\mu(\tau)}}=\frac{1}{2\sqrt{1+\mu(\tau)}}$ thus we have the form of the next order term in the expansion as
+Recall that $\mu_\tau=-1$ and that ${x_0}_\tau = -\frac{{\mu}_\tau}{2\sqrt{1+\mu(\tau)}}=\frac{1}{2\sqrt{1+\mu(\tau)}}$ and thus we find the form of the next order term in the expansion as
 
 \begin{equation}
 x_1(\tau,T) = -\epsilon^{1-\lambda}\frac{1}{4(1+\mu(\tau))}-A\cos(T).
